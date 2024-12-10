@@ -1,0 +1,68 @@
+body{
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+.titulo{
+  font-family: "Bungee Shade", serif;
+  font-size: 40px;
+  color: blue;
+  background-color: white;
+  border: dimgray solid 8px;
+  border-radius: 0 25px 0 25px;
+  margin: 5% 0% 0% 0%
+}
+.cred{
+  font-family: "Varela Round", sans-serif;
+  font-size: 25px;
+  color: red;
+  background-color: white;
+  border: dimgray solid 10px;
+  border-radius: 25px 0 25px 0;
+  margin: 90px 13% 0% 13%
+}
+.possivel{
+  font-style: italic;
+  font-family: arial;
+  font-size: 8px;
+  color: dimgray;
+  margin: 5px 0 40px 0;
+}
+.minecraft{
+  font-family: Minecraft;
+  font-size: 30px;
+  color: lightgray;
+  background-color: #64442c;
+  border: #6cc44c solid 5px;
+  margin: 50px 20% 15px 20%;
+  padding: 8px 0 0 0;
+}
+.mine1{
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+
+a{
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 5px;
+}
+.regpol{
+  color: white;
+  background-color: #6997ac;
+  border: #4c88bc solid 8px;
+  border-radius: 15px;
+}
+.gatojoia{
+  color: black;
+  background-color: #c7af9d;
+  border: #e7cac4 solid 8px;
+  border-radius: 15px;
+}
+.conversa{
+  color: black;
+  background-color: white;
+  border: red solid 8px;
+  border-radius: 15px;
+}
