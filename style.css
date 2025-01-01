@@ -19,7 +19,8 @@ body{
   background-color: white;
   border: dimgray solid 10px;
   border-radius: 25px 0 25px 0;
-  margin: 90px 13% 0% 13%
+  margin: 90px 13% 0% 13%;
+  padding: 3px 0 0 0;
 }
 .possivel{
   font-style: italic;
@@ -51,4 +52,16 @@ a{
   background-color: white;
   border: red solid 8px;
   border-radius: 15px;
+}
+.aperte-botao{
+  background-color: red;
+  color: black;
+  border: white solid 8px;
+  border-radius: 8px;
+}
+.versiculo-dia{
+  background-color: #c6a78d;
+  color: white;
+  border: #e4861a solid 8px;
+  border-radius: 8px;
 }
