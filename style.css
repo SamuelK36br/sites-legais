@@ -57,11 +57,11 @@ a{
   background-color: red;
   color: black;
   border: white solid 8px;
-  border-radius: 8px;
+  border-radius: 15px;
 }
 .versiculo-dia{
   background-color: #c6a78d;
   color: white;
   border: #e4861a solid 8px;
-  border-radius: 8px;
+  border-radius: 15px;
 }
