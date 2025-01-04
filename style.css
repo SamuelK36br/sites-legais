@@ -65,3 +65,9 @@ a{
   border: #e4861a solid 8px;
   border-radius: 15px;
 }
+.senha{
+  background-color: black;
+  color: greenyellow;
+  border: grey solid 8px;
+  border-radius: 15px;
+}
