@@ -1,0 +1,20 @@
+body{
+  background-color: grey;
+}
+img{
+  max-width: 90%;
+  height: auto;
+  margin: 1% 0 0 1.5%;
+  border: white solid 15px;
+  border-radius: 0 40px 0px 40px;
+}
+p{
+  background-color: white;
+  color: red;
+  font-size: 24px;
+  font-family: times;
+  padding: 0.5%;
+  text-align: center;
+  border: black solid 8px;
+  margin: 10px 25% 0 25%;
+}
