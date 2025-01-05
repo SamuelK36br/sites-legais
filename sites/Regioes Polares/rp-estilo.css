@@ -1,0 +1,82 @@
+body{
+  background-color: #cceafb;/*cor 2 da paleta*/
+  text-align: center;
+}
+.titulo{
+  text-align: center;
+  font-family: times;
+  font-size: 30px;
+  background-color: white;
+  border: #0f6f94 solid 8px;/*cor 3 da paleta*/
+  border-radius: 20px;
+  margin: 0 8% 6% 8%;
+  padding: 0px 0 4px 0;
+}
+p {
+  font-size: 18px;
+  font-family: arial;
+  margin: 5px 0 5px 0;
+  padding: 0 4px 0 4px;
+  background-color: white;
+  border: #b7c1d5 solid 4px;
+  border-radius: 5px;
+  text-align: left
+}
+.img1{
+  border: #3ab4d5 solid 8px;
+  border-radius: 0 40px 0 40px;
+  margin: 2% 0 1% 0%;
+  
+}
+h2{ /*Circulo artico e antartico*/
+  font-family: times;
+  text-align: left;
+  background-color: white;
+  border: #0f6f94 solid 7px;
+  border-radius: 25px 25px 25px 0;
+  padding: 3px 0 0px 2px;
+  margin: 10% 18% 1.8% 0;
+}
+.img2{
+  border: #3ab4d5 solid 9px;
+  border-radius: 0 40px 0 40px;
+  margin: 1% 0 0 0;
+}
+.leg-img2{
+  font-family: arial;
+  text-align: center;
+  background-color: white;
+  border: #3ab4d5 solid 5px;
+  border-radius: 20px;
+  margin: 0 0 0 0;
+  padding: 0.5% 0 0 0;
+}
+.img3{
+  border: #3ab4d5 solid 9px;
+  border-radius: 0 40px 0 40px;
+  margin: 1% 0 0px 0;
+}
+.leg-img3{
+  font-family: arial;
+  text-align: center;
+  background-color: white;
+  border: #3ab4d5 solid 5px;
+  border-radius: 20px;
+  margin: 0 0 0 0;
+}
+.refe{
+  font-size: 22px;
+  font-family: times;
+  background-color: white;
+  border: #0f6f94 solid 8px;
+  border-radius: 20px;
+  margin: 40px 0 5px 0;
+}
+.cred{
+  font-size: 17px;
+  font-family: times;
+  background-color: white;
+  border: #0f6f94 solid 8px;
+  border-radius: 20px;
+  margin: 0 8.5% 0 8.5%;
+}
