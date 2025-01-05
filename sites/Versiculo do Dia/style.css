@@ -1,0 +1,37 @@
+body{
+  background-color: #221404;
+  color: white;
+  text-align: center;
+  font-family: times;
+}
+h1{
+  font-weight: normal;
+  font-size: 30px;
+  background-color: #c6a78d;
+  border: #e4861a solid 12px;
+  border-radius: 0 45px 0 45px;
+  margin: 10px 8% 20px 8%;
+}
+button{
+  font-size: 20px;
+  border: #97765d solid 5px;
+  padding: 8px;
+}
+#versiculo{
+  font-size: 18px;
+  font-style: italic;
+}
+img{
+  height: 250px;
+  width: 380px;
+  border: #e4861a solid 8px;
+  border-radius: 20px;
+}
+.info{
+  background-color: white;
+  color: black;
+  border: #97765d solid 6px;
+  border-radius: 25px 0 25px 0;
+  padding: 3px;
+  margin: 10px 14% 0 14%;
+}
