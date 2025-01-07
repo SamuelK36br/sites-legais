@@ -1,0 +1,12 @@
+@font-face{
+  font-family: retro;
+  src: url('fontes/retro.ttf') format('truetype');
+}
+@font-face{
+  font-family: windows;
+  src: url('fontes/Windows.ttf') format('truetype');
+}
+body{
+  background-color: #007B7B;
+}
+
