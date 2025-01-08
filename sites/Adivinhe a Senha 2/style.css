@@ -6,7 +6,141 @@
   font-family: windows;
   src: url('fontes/Windows.ttf') format('truetype');
 }
-body{
-  background-color: #007B7B;
+@font-face{
+  font-family: welbut;
+  src: url('fontes/Welbut.ttf') format('truetype');
 }
 
+body{
+  background-color: #007B7B;
+  text-align: center;
+}
+
+/* #### CABEÇALHO #### */
+.titulo{
+  font-family: retro;
+  font-size: 40px;
+  background-color: #BDBDBD;
+  color: black;
+  border: #00007B solid 8px;
+  margin: 10px 0 10px 0;
+}
+.creditos{
+  font-family: windows;
+  font-size: 20px;
+  background-color: #BDBDBD;
+  color: black;
+  border: #00007B solid 8px;
+  margin: 10px 0 25px 0;
+}
+/* ↓--- Objetivo ---↓ */
+.divObjetivo{
+  font-family: windows;
+  background-color: #BDBDBD;
+  color: black;
+  padding: 1% 0 0 0;
+  text-align: left;
+}
+.h2-Objetivo{
+  font-size: 28px;
+  background-color: #00007B;
+  color: white;
+  border: #7B7B7B solid 4px;
+  margin: 0 1% 0 1%;
+  padding: 0 0 0 4px;
+}
+.p-Objetivo{
+  margin: 5px 1.5% 0 1.5%;
+  font-size: 18px;
+}
+/* ↑--- Objetivo ---↑ */
+/* #### CABEÇALHO #### */
+
+/* #### ENIGMAS #### */
+.imgPasta{
+  width: 150px;
+  height: 150px;
+}
+.certoOuErrado{
+  width: 55px;
+  height: 55px;
+}
+.divEnigma{
+  background-color: #BDBDBD;
+  margin: 120px 0 20px 0;
+  padding: 1% 0 0 0;
+}
+.h1-Enigma{
+  font-family: windows;
+  text-align: left;
+  background-color: #00007B;
+  color: white;
+  border: #7B7B7B solid 4px;
+  border-radius: ;
+  margin: 0 1% 0px 1%;
+  padding: 0% 0 0 5px;
+}
+input{
+  font-family: windows;
+  font-size: 20px;
+  max-width: 35%;
+  padding: 4px 0 0 4px;
+  background-color: white;
+  border: #7B7B7B solid 3px;
+}
+button{
+  font-family: windows;
+  font-size: 22px;
+  background-color: #BDBDBD;
+  color: black;
+  margin: 4px 0 0px 0;
+  border: black groove 2px;
+}
+.resposta{
+  font-weight: bold;
+  font-family: windows;
+  font-size: 25px;
+  padding: 0px 0 0px 0;
+  margin: 10px 0 0 0;
+}
+/* ↓--- Dicas ---↓ */
+.divDicas{
+  background-color: #BDBDBD;
+  padding: 1% 0 5px 0;
+  margin: 0 0 10px 0;
+}
+.h1Dicas{
+  font-family: windows;
+  text-align: left;
+  background-color: #7B7B7B;
+  color: #BDBDBD;
+  margin: 0 1% 0 1%;
+  padding: 0 0 0 4px;
+}
+.pDicas{
+  font-family: windows;
+  font-size: 20px;
+  text-align: left;
+  margin: 5px 1.5% 0 1.5%;
+}
+/* ↑--- Dicas ---↑ */
+/* ↓--- Console ---↓ */
+.divConsole{
+  background-color: black;
+  border: #BDBDBD solid 4px;
+}
+.h1Console{
+  color: white;
+  font-family: retro;
+  font-size: 30px;
+  margin: 0 0 0 0;
+}
+.pConsole{
+  text-align: left;
+  font-family: welbut;
+  color: white;
+  margin: 5px 0 0 0;
+  padding: 0 0 0 4px;
+}
+/* ↑--- Console ---↑*/
+/* #### ENIGMAS #### */
