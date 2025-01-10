@@ -71,3 +71,9 @@ a{
   border: grey solid 8px;
   border-radius: 15px;
 }
+.senha2{
+  background-color: #BDBDBD;
+  color: black;
+  border: #00007B solid 8px;
+  border-radius: 15px;
+}
