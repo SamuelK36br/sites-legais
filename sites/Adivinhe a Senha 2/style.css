@@ -23,7 +23,7 @@ body{
   background-color: #BDBDBD;
   color: black;
   border: #00007B solid 8px;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 0px 0;
 }
 .creditos{
   font-family: windows;
@@ -31,7 +31,7 @@ body{
   background-color: #BDBDBD;
   color: black;
   border: #00007B solid 8px;
-  margin: 10px 0 25px 0;
+  margin: 5px 0 25px 0;
 }
 /* ↓--- Objetivo ---↓ */
 .divObjetivo{
