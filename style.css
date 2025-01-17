@@ -77,3 +77,9 @@ a{
   border: #00007B solid 8px;
   border-radius: 15px;
 }
+.conversor{
+  background-color: plum;
+  color: black;
+  border: crimson inset 8px;
+  border-radius: 15px;
+}
