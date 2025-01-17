@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Conversor de Unidades</title>
+</head>
+
+<body>
+  <h1 class="cabecalho">Conversor de <span class="sublinhado">unidades</span></h1>
+  <p class="creditos"><strong>Feito por:</strong> Samuel Bernardo</p>
+  
+  <!-- Conversor de metros: -->
+  <div class="conteúdo-metro">
+    <span class="titulo">
+      Conversor de <span class="sublinhado">Metros</span>
+    </span>
+    <div class="conversor-metro">
+      <span>
+        Insira o tamanho da medida:
+      </span>
+      <br>
+    <input type="number">
+      <br><br>
+      
+      Para qual medida quer converter:
+      <br>
+      <select>
+        <option class="metro" selected disabled>Escolha!</option>
+        <option class="metro">mm (milímetro)</option>
+        <option class="metro">cm (centímetro)</option>
+        <option class="metro">dm (decímetro)</option>
+        <option class="metro">dam (decâmetro)</option>
+        <option class="metro">hm (hectômetro)</option>
+        <option class="metro">km (quilômetro)</option>
+      </select>
+      <br><br>
+      <button onclick="converterMetro()">Converter</button>
+      <br><br>
+      Resultado: <span id="respostaMetro">...</span>
+    </div> <!--Final de "conversor"-->
+  </div> <!--Final do conteudo-->
+  <!-- ---- Conversor de metros ---- -->
+  
+  <!-- Conversor de litros: -->
+  <div class="conteúdo-litro">
+    <span class="titulo">
+      Conversor de <span class="sublinhado">Litros</span>
+    </span>
+    <div class="conversor-litro">
+      <span>
+        Insira a quantidade de litros:
+      </span>
+      <br>
+    <input type="number">
+      <br><br>
+      
+      Para qual tipo de litro quer converter:
+      <br>
+      <select>
+        <option class="litro" selected disabled>Escolha!</option>
+        <option class="litro">ml (mililitros)</option>
+        <option class="litro">cl (centilitros)</option>
+        <option class="litro">dl (decilitros)</option>
+        <option class="litro">dal (decalitros)</option>
+        <option class="litro">hl (hectolitros)</option>
+        <option class="litro">kl (quilolitros)</option>
+      </select>
+      <br><br>
+      <button onclick="converterLitro()">Converter</button>
+      <br><br>
+      Resultado: <span id="respostaLitro">...</span>
+    </div> <!--Final de "conversor"-->
+  </div> <!--Final do conteudo-->
+  <!-- --- Conversor de metros: --- -->
+  <script src="script.js"></script>
+</body>
+</html>
