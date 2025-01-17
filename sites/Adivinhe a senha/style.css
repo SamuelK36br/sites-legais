@@ -16,13 +16,20 @@ body{
   color: white;
   text-align: center;
 }
-.cabecalho{
+
+.displayPaginaWeb{
+  display: inline-block;
+}
+.controle{
+}
+.titulo{
   font-family: retro;
   font-size: 40px;
   background-color: black;
   color: greenyellow;
   border: grey solid 7.5px;
   margin: 10px 0% 10px 0%;
+  padding: 0 5px 0 5px;
 }
 /*↓ Como Jogar ↓*/
 ol{
@@ -50,26 +57,22 @@ ol{
 } .data{
   color: blue;
 }
-.enigma{
+.enigma, .enigmaBonus{
   font-family: computer;
-  text-align: left;
   background-color: black;
   color: greenyellow;
   border: grey solid 6.5px;
   border-radius: 20px 0 20px 0;
-  padding: 2px 0 4px 15px;
-  margin: 120px 55% 30px 0;
+  padding: 2px 3% 4px 15px;
+  margin: 120px 0% 30px 0;
+  display: inline-block;
+  position: relative;
+  right: 30%;
 }
-.enigma-bonus{
-  font-family: computer;
-  text-align: left;
-  background-color: black;
-  color: greenyellow;
-  border: grey solid 6.5px;
-  border-radius: 20px 0 20px 0;
-  padding: 2px 0 4px 15px;
-  margin: 120px 35% 30px 0;
+.enigmaBonus{
+  right: 7%;
 }
+
 .cadeado{
   background-color: white;
   border-radius: 40px;
