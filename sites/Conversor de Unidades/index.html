@@ -8,12 +8,18 @@
 </head>
 
 <body>
+  <div class="alinharCabeçalho">
   <h1 class="cabecalho">Conversor de <span class="sublinhado">unidades</span></h1>
+    <br>
   <p class="creditos"><strong>Feito por:</strong> Samuel Bernardo</p>
-  
+  </div>
+    
   <!-- Conversor de metros: -->
+  <div class="alinharConteúdos">
+  <div class="displayConteúdos">
+    
   <div class="conteúdo-metro">
-    <span class="titulo">
+    <span class="tituloConteúdo">
       Conversor de <span class="sublinhado">Metros</span>
     </span>
     <div class="conversor-metro">
@@ -39,13 +45,14 @@
       <button onclick="converterMetro()">Converter</button>
       <br><br>
       Resultado: <span id="respostaMetro">...</span>
-    </div> <!--Final de "conversor"-->
-  </div> <!--Final do conteudo-->
+    </div> <!--Final do "DIV CONVERSOR"-->
+  </div> <!--Final de "DIV CONTEÚDO"-->
   <!-- ---- Conversor de metros ---- -->
   
+    
   <!-- Conversor de litros: -->
   <div class="conteúdo-litro">
-    <span class="titulo">
+    <span class="tituloConteúdo">
       Conversor de <span class="sublinhado">Litros</span>
     </span>
     <div class="conversor-litro">
@@ -71,9 +78,12 @@
       <button onclick="converterLitro()">Converter</button>
       <br><br>
       Resultado: <span id="respostaLitro">...</span>
-    </div> <!--Final de "conversor"-->
-  </div> <!--Final do conteudo-->
-  <!-- --- Conversor de metros: --- -->
+    </div> <!--Final do "DIV CONVERSOR"-->
+  </div>   <!--Final de "DIV CONTEÚDO"-->
+    
+  </div>   <!--Final de "DISPLAY CONTEÚDOS"-->
+  </div>   <!--Final de "ALINHAR CONTEÚDOS"-->
+  <!-- --- Conversor de litros --- -->
   <script src="script.js"></script>
 </body>
 </html>
