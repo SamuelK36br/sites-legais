@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ultra Conversor de Metros</title>
+</head>
+<body>
+  <div class="cabeçalho">
+    <h1 class="nomeDaPagina">
+      Ultra Conversor de <span class="sublinhado">Metros</span>
+    </h1>
+    <p class="creditos">
+      Feito por: <strong>Samuel Bernardo</strong>
+      <br>
+      24 de Janeiro de 2025
+    </p>
+  </div>
+  
+  <div class="conversorDeUnidades-DIV">
+    <p class="conversorInicial-P">
+      Insira o valor da medida e da unidade que você vai converter:
+    </p>
+    <select>
+      <option class="medidaInicial" selected disabled>Medida</option>
+      <option class="medidaInicial">km (quilômetro)</option>
+      <option class="medidaInicial">hm (hectômetro)</option>
+      <option class="medidaInicial">dam (decâmetro)</option>
+      <option class="medidaInicial">m (metro)</option>
+      <option class="medidaInicial">dm (decímetro)</option>
+      <option class="medidaInicial">cm (centímetro)</option>
+      <option class="medidaInicial">mm (milímetro)</option>
+    </select>
+    <input placeholder="Unidade" type="number">
+    
+    <p class="conversorFinal-P">
+      Insira para qual medida você quer converter:
+    </p>
+    <select>
+      <option class="medidaFinal" selected disabled>Escolha!</option>
+      <option class="medidaFinal">km (quilômetro)</option>
+      <option class="medidaFinal">hm (hectômetro)</option>
+      <option class="medidaFinal">dam (decâmetro)</option>
+      <option class="medidaFinal">m (metro)</option>
+      <option class="medidaFinal">dm (decímetro)</option>
+      <option class="medidaFinal">cm (centímetro)</option>
+      <option class="medidaFinal">mm (milímetro)</option>
+    </select>
+    
+    <br><br><br>
+    <button onclick="conversao()">Realizar conversão!</button>
+    <br><br>
+    
+    <p class="resultado">
+      Resultado: <span id="resultado">...</span>
+    </p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
