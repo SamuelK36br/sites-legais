@@ -3,6 +3,20 @@ body{
   text-align: center;
   color: white;
 }
+.DIV-gatoJoia{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.gatoJoia{
+  position: absolute;
+  top: 125px;
+  width: 95%;
+  height: 530px;
+  z-index: -10;
+  opacity: 0.4;
+  border-radius: 50px;
+}
 .titulo{
   font-family: "Bungee Shade", serif;
   font-size: 40px;
@@ -21,7 +35,7 @@ body{
   background-color: white;
   border: dimgray solid 10px;
   border-radius: 25px 0 25px 0;
-  margin: 50px 0% 0% 0%;
+  margin: 20px 0% 0% 0%;
   padding: 5px 1% 0 1%;
   display: inline-block;
 }
