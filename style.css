@@ -1,0 +1,107 @@
+body{
+  background-color: black;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.titulo{
+  font-family: "Bungee Shade", serif;
+  font-size: 40px;
+  color: blue;
+  background-color: white;
+  border: dimgray solid 8px;
+  border-radius: 0 25px 0 25px;
+  padding: 0 5px 0 5px;
+  margin: 2% 0% 0% 0%;
+  display: inline-block;
+}
+.possivelmente{
+  font-style: italic;
+  font-family: arial;
+  font-size: 8px;
+  color: dimgray;
+  margin: 5px 0 20px 0;
+}
+
+
+.creditos{
+  font-family: "Varela Round", sans-serif;
+  font-size: 25px;
+  color: red;
+  background-color: white;
+  border: dimgray solid 10px;
+  border-radius: 25px 0 25px 0;
+  margin: 20px 0% 8px 0%;
+  padding: 5px 1% 0 1%;
+  display: inline-block;
+}
+
+/* SITES: */
+a{
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 15px;
+}
+.sites{
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.fundo-DIV_sites{
+  background-color: #0D1B2A;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  border-radius: 40px;
+}
+
+.regioesPolares{
+  color: white;
+  background-color: #6997ac;
+  border: #4c88bc solid 8px;
+  
+}
+.gatojoia{
+  color: black;
+  background-color: #c7af9d;
+  border: #e7cac4 solid 8px;
+  
+}
+.aTalConversa{
+  color: black;
+  background-color: white;
+  border: red solid 8px;
+  
+}
+.versiculoDoDia{
+  background-color: #c6a78d;
+  color: white;
+  border: #e4861a solid 8px;
+}
+.adivinhe_A_Senha{
+  background-color: black;
+  color: greenyellow;
+  border: grey solid 8px;
+}
+.adivinhe_A_Senha2{
+  background-color: #BDBDBD;
+  color: black;
+  border: #00007B solid 8px;
+}
+.conversorDeUnidades{
+  background-color: plum;
+  color: black;
+  border: crimson inset 8px;
+}
+.ultraConversorDeUnidades{
+  background-color: mediumblue;
+  color: white;
+  border: aqua outset 8px;
+}
+/* --- SITES --- */
