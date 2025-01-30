@@ -1,6 +1,14 @@
 body{
-  background-color: #cceafb;/*cor 2 da paleta*/
+  background-color: #cceafb;
   text-align: center;
+  margin: 0;
+}
+
+/* Estilo do Titulo*/
+.DISPLAY-titulo{
+  display: flex;
+  justify-content: center;
+  
 }
 .titulo{
   text-align: center;
@@ -9,10 +17,14 @@ body{
   background-color: white;
   border: #0f6f94 solid 8px;/*cor 3 da paleta*/
   border-radius: 20px;
-  margin: 0 8% 6% 8%;
-  padding: 0px 0 4px 0;
+  margin: 8px 0% 20px 0%;
+  padding: 0 5px 5px 5px;
 }
+
+
 p {
+  display: inline-block;
+  width: 380px;
   font-size: 18px;
   font-family: arial;
   margin: 5px 0 5px 0;
@@ -20,63 +32,78 @@ p {
   background-color: white;
   border: #b7c1d5 solid 4px;
   border-radius: 5px;
-  text-align: left
+  text-align: left;
 }
-.img1{
+img{
   border: #3ab4d5 solid 8px;
   border-radius: 0 40px 0 40px;
-  margin: 2% 0 1% 0%;
-  
 }
-h2{ /*Circulo artico e antartico*/
+
+.fotoElegenda{
+  margin: 0;
+  display: inline-block;
+}
+.foto1{
+  margin: 2% 0 1% 0%;
+}
+.foto2e3{
+  margin: 1% 0 0 0;
+  border-radius: 0 40px 0 0;
+}
+.legenda{
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+  width: 300px;
+  padding: 4px 0 4px 0;
+  font-family: arial;
+  text-align: center;
+  background-color: white;
+  border: #3ab4d5 solid 8px;
+  border-top: 0;
+  border-radius: 0 0 20px 20px;
+}
+
+
+h2{ /* <-- Circulo artico e antartico | */
+  display: inline-block;
   font-family: times;
+  position: relative;
+  right: 60px;
   text-align: left;
   background-color: white;
   border: #0f6f94 solid 7px;
   border-radius: 25px 25px 25px 0;
-  padding: 3px 0 0px 2px;
-  margin: 10% 18% 1.8% 0;
+  padding: 3px 10px 0 4px;
+  margin: 80px 0 1.8% 0;
 }
-.img2{
-  border: #3ab4d5 solid 9px;
-  border-radius: 0 40px 0 40px;
-  margin: 1% 0 0 0;
+.antartica{
+  right: 41px;
 }
-.leg-img2{
-  font-family: arial;
-  text-align: center;
-  background-color: white;
-  border: #3ab4d5 solid 5px;
-  border-radius: 20px;
-  margin: 0 0 0 0;
-  padding: 0.5% 0 0 0;
+
+
+.finalização{
+  margin: 80px 8px 8px 8px;
 }
-.img3{
-  border: #3ab4d5 solid 9px;
-  border-radius: 0 40px 0 40px;
-  margin: 1% 0 0px 0;
-}
-.leg-img3{
-  font-family: arial;
-  text-align: center;
-  background-color: white;
-  border: #3ab4d5 solid 5px;
-  border-radius: 20px;
-  margin: 0 0 0 0;
-}
-.refe{
+.referencia{
+  display: inline-block;
   font-size: 22px;
   font-family: times;
   background-color: white;
   border: #0f6f94 solid 8px;
   border-radius: 20px;
-  margin: 40px 0 5px 0;
+  margin: 0px 0 0px 0;
+  padding: 3px 8px 3px 8px;
+  width: 360px;
 }
-.cred{
+.creditos{
+  display: inline-block;
   font-size: 17px;
   font-family: times;
   background-color: white;
   border: #0f6f94 solid 8px;
-  border-radius: 20px;
-  margin: 0 8.5% 0 8.5%;
+  border-top: 0;
+  border-radius: 0 0 20px 20px;
+  margin: 0 0% 0 0%;
+  padding: 0 5px 0 5px;
 }
