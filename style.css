@@ -2,21 +2,9 @@ body{
   background-color: black;
   text-align: center;
   color: white;
+  margin: 0;
 }
-.DIV-gatoJoia{
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-.gatoJoia{
-  position: absolute;
-  top: 125px;
-  width: 95%;
-  height: 530px;
-  z-index: -10;
-  opacity: 0.4;
-  border-radius: 50px;
-}
+
 .titulo{
   font-family: "Bungee Shade", serif;
   font-size: 40px;
@@ -28,6 +16,15 @@ body{
   margin: 2% 0% 0% 0%;
   display: inline-block;
 }
+.possivelmente{
+  font-style: italic;
+  font-family: arial;
+  font-size: 8px;
+  color: dimgray;
+  margin: 5px 0 20px 0;
+}
+
+
 .creditos{
   font-family: "Varela Round", sans-serif;
   font-size: 25px;
@@ -35,16 +32,9 @@ body{
   background-color: white;
   border: dimgray solid 10px;
   border-radius: 25px 0 25px 0;
-  margin: 20px 0% 0% 0%;
+  margin: 20px 0% 8px 0%;
   padding: 5px 1% 0 1%;
   display: inline-block;
-}
-.possivel{
-  font-style: italic;
-  font-family: arial;
-  font-size: 8px;
-  color: dimgray;
-  margin: 5px 0 40px 0;
 }
 
 /* SITES: */
@@ -55,7 +45,23 @@ a{
   display: inline-block;
   border-radius: 15px;
 }
-.regpol{
+.sites{
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.fundo-DIV_sites{
+  background-color: #0D1B2A;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  border-radius: 40px;
+}
+
+.regioesPolares{
   color: white;
   background-color: #6997ac;
   border: #4c88bc solid 8px;
@@ -67,45 +73,35 @@ a{
   border: #e7cac4 solid 8px;
   
 }
-.conversa{
+.aTalConversa{
   color: black;
   background-color: white;
   border: red solid 8px;
   
 }
-.aperte-botao{
-  background-color: red;
-  color: black;
-  border: white solid 8px;
-  
-}
-.versiculo-dia{
+.versiculoDoDia{
   background-color: #c6a78d;
   color: white;
   border: #e4861a solid 8px;
-  
 }
-.senha{
+.adivinhe_A_Senha{
   background-color: black;
   color: greenyellow;
   border: grey solid 8px;
 }
-.senha2{
+.adivinhe_A_Senha2{
   background-color: #BDBDBD;
   color: black;
   border: #00007B solid 8px;
-  
 }
-.conversor{
+.conversorDeUnidades{
   background-color: plum;
   color: black;
   border: crimson inset 8px;
-  
 }
-.ultraConversor{
+.ultraConversorDeUnidades{
   background-color: mediumblue;
   color: white;
   border: aqua outset 8px;
-  
 }
 /* --- SITES --- */
