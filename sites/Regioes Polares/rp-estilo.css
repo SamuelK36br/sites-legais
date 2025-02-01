@@ -4,7 +4,7 @@ body{
   margin: 0;
 }
 
-/* Estilo do Titulo*/
+/* Estilo do Titulo: */
 .DISPLAY-titulo{
   display: flex;
   justify-content: center;
@@ -13,75 +13,76 @@ body{
 .titulo{
   text-align: center;
   font-family: times;
-  font-size: 30px;
+  font-size: 250%;
   background-color: white;
-  border: #0f6f94 solid 8px;/*cor 3 da paleta*/
+  border: #0f6f94 solid 8px;
   border-radius: 20px;
-  margin: 8px 0% 20px 0%;
+  margin: 8px 0 15px 0;
   padding: 0 5px 5px 5px;
 }
 
 
 p {
   display: inline-block;
-  width: 380px;
+  width: 92%;
   font-size: 18px;
   font-family: arial;
-  margin: 5px 0 5px 0;
+  margin: 5px 0% 5px 0%;
   padding: 0 4px 0 4px;
   background-color: white;
   border: #b7c1d5 solid 4px;
   border-radius: 5px;
   text-align: left;
 }
+
+/* Estilo das Imagens: */
 img{
   border: #3ab4d5 solid 8px;
   border-radius: 0 40px 0 40px;
+  width: 350px;
+  margin: 10px 0 10px 0;
+  position: relative;
 }
 
+/* Estilos das legendas das Imagens*/
 .fotoElegenda{
-  margin: 0;
   display: inline-block;
 }
-.foto1{
-  margin: 2% 0 1% 0%;
-}
 .foto2e3{
-  margin: 1% 0 0 0;
+  margin-bottom: 0;
   border-radius: 0 40px 0 0;
 }
 .legenda{
   display: inline-block;
   position: relative;
   bottom: 4px;
-  width: 300px;
-  padding: 4px 0 4px 0;
+  width: 350px;
   font-family: arial;
   text-align: center;
   background-color: white;
   border: #3ab4d5 solid 8px;
   border-top: 0;
   border-radius: 0 0 20px 20px;
+  padding: 4px 0 4px 0;
 }
 
-
-h2{ /* <-- Circulo artico e antartico | */
-  display: inline-block;
-  font-family: times;
+/* Estilos heading artico e antartica: */
+h2{
   position: relative;
-  right: 60px;
-  text-align: left;
+  font-family: times;
   background-color: white;
   border: #0f6f94 solid 7px;
   border-radius: 25px 25px 25px 0;
   padding: 3px 10px 0 4px;
-  margin: 80px 0 1.8% 0;
+  margin: 80px 0 5px 0;
 }
-.antartica{
-  right: 41px;
+.container-Artico_E_Antartica{
+  display: flex;
+  position: relative;
+  margin: 0 0 0 3.2%;
 }
 
-
+/* Parte de baixo: */
 .finalização{
   margin: 80px 8px 8px 8px;
 }
@@ -104,6 +105,6 @@ h2{ /* <-- Circulo artico e antartico | */
   border: #0f6f94 solid 8px;
   border-top: 0;
   border-radius: 0 0 20px 20px;
-  margin: 0 0% 0 0%;
-  padding: 0 5px 0 5px;
+  margin: 0;
+  padding: 3px 5px 0 5px;
 }
