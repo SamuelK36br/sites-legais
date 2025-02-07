@@ -47,7 +47,7 @@ a{
 }
 .sites{
   display: flex;
-  height: 500px;
+  height: 600px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -103,5 +103,10 @@ a{
   background-color: mediumblue;
   color: white;
   border: aqua outset 8px;
+}
+.curiosidadeAnime{
+  background-color: #BC002D;
+  color: white;
+  border: white solid 8px;
 }
 /* --- SITES --- */
