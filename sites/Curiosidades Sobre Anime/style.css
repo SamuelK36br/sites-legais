@@ -1,0 +1,120 @@
+body{
+  background-color: dimgrey;
+  color: white;
+  margin: 0px;
+}
+
+.tituloIntroduçaoCriador{
+  text-align: center;
+  margin: 8px 8px 0 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.titulo{
+  background-color: #BC002D;
+  border: white solid 13px;
+  font-size: 45px;
+  margin: 0px 0 0px 0;
+  padding: 0 10px 0 10px;
+}
+.introduçao{
+  background-color: #BC002D;
+  border: white solid 10px;
+  border-top: none;
+  width: 320px;
+  margin: 0px;
+  padding: 5px 10px 5px 10px;
+}
+.criador{
+  background-color: #BC002D;
+  border: white solid 8px;
+  border-top: none;
+  width: 250px;
+  margin: 0px;
+  padding: 5px 0px 5px 0px;
+}
+
+/* Curiosidades: */
+.caixa-curiosidades{
+  margin: 80px 8% 40px 8%;
+  text-align:  center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.curiosidade-h2{
+  margin: 0 0 10px 0;
+  background-color: black;
+  border: white solid 7px;
+  border-radius: 30px 0 30px 0;
+  padding: 5px 35px 5px 35px;
+}
+.curiosidade-span{
+  margin: 0;
+  font-size: 18px;
+}
+.imgCuriosidades{
+  border: white outset 6.5px;
+  height: 170px;
+  margin: 20px 8px 5px 8px;
+}
+
+/* Curiosidades individuais: */
+.curiosidade1{
+  background-color: #6F553F;
+  border: #294023 solid 10px;
+}
+.curiosidade2{
+  background-color: black;
+  border: #0a3d6b solid 10px;
+}
+.curiosidade3{
+  background-color: #f2a30b;
+  border: #0c2fdf solid 10px;
+  color: black;
+}
+.curiosidade4{
+  background-color: #f3c8ac;
+  color: black;
+  border-top: #f75700 solid 10px;
+  border-left: #f75700 solid 10px;
+  border-right: #113bd6 solid 10px;
+  border-bottom: #113bd6 solid 10px;
+}
+.curiosidade5{
+  background-color: #d34a56;
+  border: #eecb4b solid 10px;
+}
+.curiosidade6{
+  background-color: #000000;
+  border: #ffe62d solid 10px;
+}
+.curiosidade7{
+  background-color: #46b077;
+  border: #863841 solid 10px;
+}
+.curiosidade8{
+  background-color: #27254c;
+  border: #9b8ab4 solid 10px;
+}
+.curiosidade9{
+  background-color: #372b2b;
+  border: #850a0a solid 10px;
+}
+.curiosidade10{
+  background-color: #101010;
+  border: #660000 solid 10px;
+}
+
+/* Classes especiais: */
+.efeito{
+  padding: 4px 10px 4px 10px;
+  border-radius: 30px;
+}
+.pikachu{
+  border: none;
+}
