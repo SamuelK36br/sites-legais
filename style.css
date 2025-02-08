@@ -1,3 +1,16 @@
+@font-face{
+  font-family: bungee;
+  src: url('fontes/BungeeShade-Regular.ttf') format('truetype');
+}
+@font-face{
+  font-family: varela;
+  src: url('fontes/VarelaRound-Regular.ttf') format('truetype');
+}
+@font-face{
+  font-family: montserrat;
+  src: url('fontes/Montserrat-Bold.ttf') format('truetype');
+}
+
 body{
   background-color: black;
   text-align: center;
@@ -6,7 +19,7 @@ body{
 }
 
 .titulo{
-  font-family: "Bungee Shade", serif;
+  font-family: bungee;
   font-size: 40px;
   color: blue;
   background-color: white;
@@ -26,26 +39,28 @@ body{
 
 
 .creditos{
-  font-family: "Varela Round", sans-serif;
+  font-family: varela;
   font-size: 25px;
   color: red;
   background-color: white;
   border: dimgray solid 10px;
   border-radius: 25px 0 25px 0;
-  margin: 20px 0% 8px 0%;
-  padding: 5px 1% 0 1%;
+  margin: 20px 8px 8px 8px;
+  padding: 5px 5px 0 5px;
   display: inline-block;
+}
+.google-fonts{
+  color: black;
 }
 
 /* SITES: */
 a{
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-family: montserrat;
   padding: 5px;
   display: inline-block;
   border-radius: 15px;
 }
-.sites{
+.CONTAINER-sites{
   display: flex;
   height: 600px;
   flex-direction: column;
