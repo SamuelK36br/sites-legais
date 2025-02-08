@@ -1,13 +1,22 @@
+@font-face{
+  font-family: anime ace;
+  src: url('fontes/anime ace.ttf') format('truetype');
+}
+@font-face{
+  font-family: anime inept;
+  src: url('fontes/Anime Inept.otf') format('opentype');
+}
+
 body{
   background-color: dimgrey;
   color: white;
   margin: 0px;
-  font-family: arial;
+  font-family: times;
 }
 
 .tituloIntroduçaoCriador{
   text-align: center;
-  margin: 8px 8px 0 8px;
+  margin: 8px 4px 0 4px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -15,6 +24,7 @@ body{
   align-items: center;
 }
 .titulo{
+  font-family: anime inept;
   background-color: #BC002D;
   border: white solid 13px;
   font-size: 45px;
@@ -22,20 +32,30 @@ body{
   padding: 0 10px 0 10px;
 }
 .introduçao{
+  font-family: anime ace;
+  font-size: 14px;
   background-color: #BC002D;
   border: white solid 10px;
   border-top: none;
-  width: 320px;
+  width: 340px;
   margin: 0px;
   padding: 5px 10px 5px 10px;
 }
-.criador{
+.creditos{
+  font-family: anime ace;
+  font-size: 14px;
   background-color: #BC002D;
   border: white solid 8px;
   border-top: none;
-  width: 250px;
+  width: 320px;
   margin: 0px;
   padding: 5px 0px 5px 0px;
+}
+.link-fontes{
+  background-color: black;
+  color: white;
+  padding: 0px 8px 2px 8px;
+  border-radius: 15px;
 }
 
 /* Curiosidades: */
@@ -48,11 +68,13 @@ body{
   align-items: center;
 }
 .curiosidade-h2{
+  font-family: anime inept;
+  font-size: 40px;
   margin: 0 0 10px 0;
   background-color: black;
   border: white solid 7px;
-  border-radius: 30px 0 30px 0;
-  padding: 5px 35px 5px 35px;
+  border-radius: 35px 0 35px 0;
+  padding: 5px 15px 5px 15px;
 }
 .curiosidade-span{
   margin: 0;
