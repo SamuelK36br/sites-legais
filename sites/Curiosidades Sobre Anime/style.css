@@ -132,12 +132,34 @@ body{
   background-color: #101010;
   border: #660000 solid 10px;
 }
+.curiosidade11{
+  background-color: #f2eded;
+  border: #848db8 solid 10px;
+  color: black;
+}
+.curiosidade12{
+  background-color: #30522a;
+  border: #4a9f46 solid 10px;
+}
+.curiosidade13{
+  background-color: #002c8b;
+  border: #004b36 solid 10px;
+}
+.curiosidade14{
+  background-color: #25262E;
+  border: #F6A652 solid 10px;
+}
+.curiosidade15{
+  background-color: #e9bf5c;
+  border: #9c3c37 solid 10px;
+  color: black;
+}
 
 /* Classes especiais: */
 .efeito{
   padding: 4px 10px 4px 10px;
   border-radius: 30px;
 }
-.pikachu{
+.img-semBorda{
   border: none;
 }
