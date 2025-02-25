@@ -66,7 +66,7 @@ a{
 }
 .CONTAINER-sites{
   display: flex;
-  height: 600px;
+  height: 700px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -96,33 +96,44 @@ a{
   color: black;
   background-color: white;
   border: red solid 8px;
-  
 }
+
+.aTalConversa2{
+  color: black;
+  background-color: white;
+  border: blue solid 8px;
+}
+
 .versiculoDoDia{
   background-color: #c6a78d;
   color: white;
   border: #e4861a solid 8px;
 }
+
 .adivinhe_A_Senha{
   background-color: black;
   color: greenyellow;
   border: grey solid 8px;
 }
+
 .adivinhe_A_Senha2{
   background-color: #BDBDBD;
   color: black;
   border: #00007B solid 8px;
 }
+
 .conversorDeUnidades{
   background-color: plum;
   color: black;
   border: crimson inset 8px;
 }
+
 .ultraConversorDeUnidades{
   background-color: mediumblue;
   color: white;
   border: aqua outset 8px;
 }
+
 .curiosidadeAnime{
   background-color: #BC002D;
   color: white;
