@@ -18,6 +18,7 @@ body{
   margin: 0;
 }
 
+/* PARTE DE CIMA: */
 .titulo{
   font-family: bungee;
   font-size: 40px;
@@ -37,8 +38,8 @@ body{
   margin: 5px 0 20px 0;
 }
 
-
-.creditos{
+/* PARTE DE BAIXO: */
+.creditos, #creditosFontes{
   font-family: varela;
   font-size: 25px;
   color: red;
@@ -49,15 +50,18 @@ body{
   padding: 5px 5px 0 5px;
   display: inline-block;
 }
-.google-fonts{
-  color: black;
+#creditosFontes{
+  padding-bottom: 10px;
 }
-.fontes{
-  color: black;
+#fontes{
   font-size: 18px;
+  position: relative;
+  top: 6px;
+  color: black;
 }
 
-/* SITES: */
+
+/* ESTILO SITES PADRÃO: */
 a{
   font-family: montserrat;
   padding: 5px;
@@ -80,63 +84,63 @@ a{
   border-radius: 40px;
 }
 
-.regioesPolares{
+/* ESTILO SITES INDIVIDUAIS: */
+#regioesPolares{
   color: white;
   background-color: #6997ac;
   border: #4c88bc solid 8px;
-  
 }
-.gatojoia{
-  color: black;
-  background-color: #c7af9d;
-  border: #e7cac4 solid 8px;
-  
-}
-.aTalConversa{
+
+#aTalConversa{
   color: black;
   background-color: white;
   border: red solid 8px;
 }
 
-.aTalConversa2{
+#aTalConversa2{
   color: black;
   background-color: white;
   border: blue solid 8px;
 }
 
-.versiculoDoDia{
+#aTalConversaWiki{
+  color: black;
+  background-color: white;
+  border: forestgreen solid 8px;
+}
+
+#versiculoDoDia{
   background-color: #c6a78d;
   color: white;
   border: #e4861a solid 8px;
 }
 
-.adivinhe_A_Senha{
+#adivinhe_A_Senha{
   background-color: black;
   color: greenyellow;
   border: grey solid 8px;
 }
 
-.adivinhe_A_Senha2{
+#adivinhe_A_Senha2{
   background-color: #BDBDBD;
   color: black;
   border: #00007B solid 8px;
 }
 
-.conversorDeUnidades{
+#conversorDeUnidades{
   background-color: plum;
   color: black;
   border: crimson inset 8px;
 }
 
-.ultraConversorDeUnidades{
+#ultraConversorDeUnidades{
   background-color: mediumblue;
   color: white;
   border: aqua outset 8px;
 }
 
-.curiosidadeAnime{
+#curiosidadeAnime{
   background-color: #BC002D;
   color: white;
   border: white solid 8px;
 }
-/* --- SITES --- */
