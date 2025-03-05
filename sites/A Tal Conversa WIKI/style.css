@@ -1,7 +1,6 @@
 @font-face{
   font-family: redacted;
-  src: url('fontes/redacted.ttf')
-  format('truetype');
+  src: url('fontes/redacted.ttf') format('truetype');
 }
 
 body{
