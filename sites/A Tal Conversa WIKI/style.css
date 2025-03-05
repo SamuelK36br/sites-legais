@@ -1,3 +1,9 @@
+@font-face{
+  font-family: redacted;
+  src: url('fontes/redacted.ttf')
+  format('truetype');
+}
+
 body{
   margin: 0;
   font-family: arial;
@@ -34,7 +40,7 @@ body{
   margin: 0 8px 20px 8px;
 }
 
-/* ESTILO PADRÃO DOS TEXTOS DA WIKI: */
+/* TEXTOS DA WIKI: */
 #textoWiki{
   background-color: white;
   color: black;
@@ -44,12 +50,13 @@ body{
   margin: 10px 8px 0 8px;
   padding: 5px;
 }
-
 .marcacao{
   color: blue;
   font-style: italic;
   font-weight: bold;
-  
+}
+.censurado{
+  font-family: redacted;
 }
 
 /* TOPICOS UNIVERSAL: */
