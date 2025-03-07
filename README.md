@@ -1,7 +1,5 @@
 <h1>Bem Vindo ao...</h1>
 <img src="https://i.imgur.com/RuHR0aR.png">
-<h2>Entre no site aqui:<br>
-  <a href="https://samuelk36br.github.io/sites-legais/">Sites Legais</a></h2>
 
   <h3>O que é a droga desse site ridículo?</h3>
 <p>Este é um <em><strong>lugarzinho</strong></em> onde eu coloco alguns dos meus sites <em><strong>bem legais!</strong></em></p>
