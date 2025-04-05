@@ -1,1 +1,1114 @@
+<!DOCTYPE html>
 
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Máquina de Enigmas</title>
+</head>
+
+<body>
+  <div id="parteDeCima">
+  <h1 id="titulo">
+    Máquina de Enigmas
+  </h1>
+    
+    <p id="info">
+      Bem vinde a <strong>Máquina de Enigmas</strong>! Aqui você encontra-rá vários tipos de enigmas, seja um fácil (fundo verde), médio (fundo laranja) e difícil (fundo vermelho).
+      <br><br>
+      Seu objetivo aqui é desvendar os enigmas, como por exemplo: Pigpen, Morse, Alfabeto Náutico, entre outros.
+      <br>
+      <em>Caso não saiba como resolver alguns desses enigmas, é necessário que você use alguma ferramenta externa.</em>
+      <br>
+      No entanto haverá (ou não) a "Colinha", que te ajudará de alguma forma a resolver os enigmas.
+      <br><br>
+      <strong>Observações:</strong>
+      <br>
+      Toda resposta de qualquer enigma está em letra maiúscula.
+      <br>
+      Nenhum enigma tem em sua resposta qualquer tipo de acento e espaços.
+      <br>
+      É recomendado estar com um lápis/caneta e papel para resolver certos enigmas.
+      <br><br>
+      Para terminar, há no total <strong>21 enigmas.</strong> Espero que se divirta e boa sorte!
+    </p>
+    
+    <p id="creditos">
+      <strong>Feito por:</strong> Samuel Bernardo
+      <br><br>
+      <strong>As fontes foram baixadas no
+        <a href="https://fonts.google.com/share?selection.family=Anta|Oxanium:wght@200..800|Winky+Sans:ital,wght@0,300..900;1,300..900">
+          Google Fonts.
+        </a>
+      </strong>
+    </p>
+  </div>
+    
+  <!-- ENIGMAS: -->
+  <div id="todosOsEnigmas">
+    
+    <!-- Enigma 1: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      1. O velho e clássico Pigpen.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/DQDO8Zb.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img 
+          id='colinhaEnig1'
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Pigpen_cipher_key.svg/200px-Pigpen_cipher_key.svg.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma1()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 2: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+      <!-- Nome do enigma: -->
+    <span class="textoGrande">
+      2. Pigpen de trás pra frente.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/HbBsskA.png">
+    </span>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma2()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 3: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      3. Pigpen modificado 1.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/dVPkvwc.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          id="colinha3"
+          src="https://i.imgur.com/tC0LsWL.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma3()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 4: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      4. Pigpen modificado 2.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/lTdYmZu.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/BZBGrTJ.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma4()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 5: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      5. Pigpen modificado 3.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/FHk64s4.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/EnpjX1v.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma5()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 6: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      6. Ponto. Traço.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <audio controls>
+        <source src="audios/enigma6.wav" type="audio/wav">
+        Seu navagador não tem suporte a audio. :(
+      </audio>
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://blog.mackenzie.br/wp-content/uploads/2021/12/image-1024x682.jpeg">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma6()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 7: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      7. Ponto e traço.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <audio controls>
+        <source src="audios/enigma7.wav" type="audio/wav">
+        Seu navagador não tem suporte a audio. :(
+      </audio>
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://blog.mackenzie.br/wp-content/uploads/2021/12/image-1024x682.jpeg">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma7()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 8: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> dificil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      8. • e –
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <audio controls>
+        <source src="audios/enigma8.wav" type="audio/wav">
+        Seu navagador não tem suporte a audio. :(
+      </audio>
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://blog.mackenzie.br/wp-content/uploads/2021/12/image-1024x682.jpeg">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'
+        placeholder="2 letras apenas">
+      <br>
+      <button
+        onclick='enigma8()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 9: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      9. Tem em todo computador.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      46 52 55 49 52
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/JBDZMaY.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma9()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 10: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      10. Parzinhos de números.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      42 41 4E 5A 41 54 49 56 4F
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/JBDZMaY.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma10()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 11: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      11. ASCII
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      47 52 41 4D 41 54 49 43 41 4C 4D 45 4E 54 45
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/JBDZMaY.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma11()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 12: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      12. Esse aqui é só ponto.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/v8zGBbU.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbAmn_7UxT0gXLY8IDtLNWBG0Q7he0t4byp20Ngk6XnvVdHit2Q-ZzHHI&s=10">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma12()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 13: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      13. Outro ponto, outro ponto.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/Y0hP1U5.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbAmn_7UxT0gXLY8IDtLNWBG0Q7he0t4byp20Ngk6XnvVdHit2Q-ZzHHI&s=10">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma13()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 14: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      14. Muito e muito ponto.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/hbUuCrV.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbAmn_7UxT0gXLY8IDtLNWBG0Q7he0t4byp20Ngk6XnvVdHit2Q-ZzHHI&s=10">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma14()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 15: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      15. Piririm, piririm, piririm.
+Alguém ligou pra mim...
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      3 6 4 6
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/JX9i2Y2.jpeg">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma15()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 16: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      16. Vai me enterrar na areia?
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      2 8 6 5 2 7
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/JX9i2Y2.jpeg">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma16()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 17: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      17. O Telefone Tocou Novamente...
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      2 6 6 7
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/JX9i2Y2.jpeg">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma17()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 18: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      18. Bandeirinhas.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/MKKRIuu.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/7Ht6vD2.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma18()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 19: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> facil">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      19. A resposta é o número 4 (mas não do jeito que você pensa).
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/M58aMZb.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        <img
+          src="https://i.imgur.com/7Ht6vD2.png">
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma19()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 20: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      20. sahniriednaB saditrevni.
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/E3g5n4x.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        Alfabeto Naútico Invertido.
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma20()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+    
+    
+    
+    <!-- Enigma 21: -->
+    <div class="fundoHud
+      <!--DIFICULDADE:--> medio">
+      
+    <span class="textoGrande">
+      <!-- Nome do enigma: -->
+      21. A atsopser é o oremún 8
+      (sam oãn od otiej euq êcov asnep).
+    </span>
+      
+      <!-- Enigma: -->
+    <span class="textoPrincipal">
+      <img
+        src="https://i.imgur.com/5iNi8wz.png">
+    </span>
+      
+      <br>
+      
+      <!-- Colinha: -->
+      <span class='colinhaTexto'>
+        Colinha:</span>
+      <br>
+      <div class='colinhaDiv'>
+        Alfabeto Naútico Invertido.
+      </div>
+      
+      <br>
+      
+      <!-- Resposta: -->
+      <span class='respostaTexto'>
+        Resposta:</span>
+      <br>
+      <input class='respostaInput'>
+      <br>
+      <button
+        onclick='enigma21()'
+        class='respostaBotao'>
+        Será que está certo?
+        <br>
+        (aperte)
+      </button>
+      <br>
+      <span class="condicao"></span>
+      <br>
+      <img
+        class='imagemConfirmacao'
+        src=''>
+  </div>
+  </div> <!--Final do DIV: todosOsEnigmas-->
+  
+  <script src="script.js"></script>
+</body>
+</html>
