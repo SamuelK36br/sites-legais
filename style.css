@@ -38,6 +38,7 @@ body{
   margin: 5px 0 20px 0;
 }
 
+
 /* PARTE DE BAIXO: */
 .creditos, #creditosFontes{
   font-family: varela;
@@ -50,6 +51,7 @@ body{
   padding: 5px 5px 0 5px;
   display: inline-block;
 }
+
 #creditosFontes{
   padding-bottom: 10px;
 }
@@ -61,23 +63,24 @@ body{
 }
 
 
-/* ESTILO SITES PADRÃO: */
+/* ESTILO PADRÃO LINKS SITES: */
 a{
   font-family: montserrat;
   padding: 5px;
   display: inline-block;
   border-radius: 15px;
 }
-.CONTAINER-sites{
+#DIVsites{
   display: flex;
-  height: 700px;
+  /*MUDAR ALTURA:*/
+  height: 600px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
   align-items: center;
 }
-.fundo-DIV_sites{
+#fundo-DIVsites{
   background-color: #0D1B2A;
   display: inline-block;
   padding: 5px 20px 5px 20px;
@@ -85,7 +88,7 @@ a{
 }
 
 
-/* ESTILO SITES INDIVIDUAIS: */
+/* ESTILO INDIVIDUAL LINKS SITES: */
 #regioesPolares{
   color: white;
   background-color: #6997ac;
@@ -110,16 +113,16 @@ a{
   border: forestgreen solid 8px;
 }
 
-#versiculoDoDia{
-  background-color: #c6a78d;
-  color: white;
-  border: #e4861a solid 8px;
-}
-
 #adivinhe_A_Senha{
   background-color: black;
   color: greenyellow;
   border: grey solid 8px;
+}
+
+#maquinaEnigmas{
+  background-color: navajowhite;
+  color: black;
+  border: peru solid 8px;
 }
 
 #conversorDeUnidades{
@@ -138,10 +141,4 @@ a{
   background-color: #BC002D;
   color: white;
   border: white solid 8px;
-}
-
-#maquinaEnigmas{
-  background-color: navajowhite;
-  color: black;
-  border: peru solid 8px;
 }
