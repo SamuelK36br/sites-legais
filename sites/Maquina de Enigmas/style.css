@@ -1,0 +1,181 @@
+/* Anta: */
+@font-face{
+  font-family: anta;
+  src: url('fontes/Anta.ttf') format('truetype');
+}
+
+/* Oxanium: */
+@font-face{
+  font-family: oxanium;
+  src: url('fontes/Oxanium.ttf') format('truetype');
+}
+
+/* Winky: */
+@font-face{
+  font-family: winky;
+  src: url('fontes/WinkySans.ttf') format('truetype');
+}
+
+body{
+  background-color: lightsalmon;
+  margin: 0;
+}
+
+/* PARTE DE CIMA: */
+#parteDeCima{
+  text-align: center;
+}
+#titulo, #info, #creditos{
+  display: inline-block;
+  background-color: navajowhite;
+  border: peru solid 9.5px;
+  text-align: center;
+  margin: 8px 0 0 0;
+  padding: 0 5px 2px 5px;
+  font-family: anta;
+  font-size: 38.5px;
+}
+#info, #creditos{
+  font-size: 16px;
+  font-family: oxanium;
+  font-weight: 375;
+  margin: 0 5px 0 5px;
+  padding: 2px 5px 0 5px;
+  border-width: 7px;
+}
+#titulo{
+  border-bottom-width: 15px;
+}
+#creditos{
+  border-top-width: 15px;
+}
+
+
+/* ENIGMAS: */
+#todosOsEnigmas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 10px 0 10px;
+}
+
+/* Estilo do HUD dos enigmas: */
+.fundoHud{
+  color: black;
+  width: 90%;
+  border: peru solid 7px;
+  border-radius: 20px;
+  margin: 8px 0 120px 0;
+  text-align: center;
+}
+.textoGrande{
+  position: relative;
+  left: 0px;
+  display: block;
+  padding: 2px 0 2px 7px;
+  background-color: navajowhite;
+  border-radius: 13px 13px 0 0;
+  border-bottom: peru solid 5.5px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: anta;
+  text-align: left;
+}
+.textoPrincipal{
+  position: relative;
+  top: 30%;
+  display: inline-block;
+  margin: 15px 3% 0px 3%;
+  padding: 5px 4.5px 2px 4.5px;
+  border-radius: 10px;
+  background-color: navajowhite;
+  text-align: center;
+  font-size: 25px;
+  font-family: winky;
+}
+
+/* Estilo: resposta, confirmaçao e condição: */
+.respostaTexto, .colinhaTexto{
+  display: inline-block;
+  font-size: 20px;
+  font-family: oxanium;
+  font-weight: bold;
+  background-color: peru;
+  border-radius: 10px;
+  margin: 13px 0 0 0;
+  padding: 1px 7px 1px 7px;
+}
+.respostaInput{
+  text-align: center;
+  padding: 0 0 0 0;
+  margin: 3px 0 4px 0;
+  font-family: winky;
+  font-size: 20px;
+  border: peru inset 4.5px;
+  border-radius: 10px;
+}
+.respostaBotao{
+  margin: 0 0 8px 0;
+  font-family: oxanium;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 4px;
+  background-color: navajowhite;
+  border: peru outset 5px;
+  border-radius: 10px;
+}
+
+.confirmacao{
+  display: inline-block;
+  font-family: anta;
+  margin: 0 0 10px 0;
+}
+.imagemConfirmacao{
+  position: absolute;
+  width: 100px;
+  margin: 0 0 4px 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 100px;
+  visibility: hidden;
+}
+
+.condicao{
+  position: absolute;
+  display: inline-block;
+  font-family: oxanium;
+  font-weight: bold;
+  font-size: 18.5px;
+  color: white;
+  margin: 0 0 5px 0;
+}
+
+/* Estilo da parte da colinha: */
+.colinhaTexto{
+  margin-bottom: 5px;
+}
+.colinhaDiv{
+  background-color: white;
+  padding: 5px;
+  display: inline-block;
+  font-family: oxanium;
+}
+
+
+/* IMAGENS ENIGMAS: */
+img{
+  max-width: 320px;
+}
+
+
+/* DIFICULDADES: */
+.facil{
+  background-color: limegreen;
+}
+.medio{
+  background-color: darkorange;
+}
+.dificil{
+  background-color: red;
+}
