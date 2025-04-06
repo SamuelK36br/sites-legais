@@ -84,6 +84,7 @@ a{
   border-radius: 40px;
 }
 
+
 /* ESTILO SITES INDIVIDUAIS: */
 #regioesPolares{
   color: white;
@@ -121,12 +122,6 @@ a{
   border: grey solid 8px;
 }
 
-#adivinhe_A_Senha2{
-  background-color: #BDBDBD;
-  color: black;
-  border: #00007B solid 8px;
-}
-
 #conversorDeUnidades{
   background-color: plum;
   color: black;
@@ -143,4 +138,10 @@ a{
   background-color: #BC002D;
   color: white;
   border: white solid 8px;
+}
+
+#maquinaEnigmas{
+  background-color: navajowhite;
+  color: black;
+  border: peru solid 8px;
 }
