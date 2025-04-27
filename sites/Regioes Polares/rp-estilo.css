@@ -1,19 +1,19 @@
 body{
   background-color: #cceafb;
+  margin: 0 0 0 0;
   text-align: center;
-  margin: 0;
 }
 
-/* Estilo do Titulo: */
-.DISPLAY-titulo{
-  display: flex;
-  justify-content: center;
+/* ESTILO TÍTULO: */
+#centralizarTitulo{
   
 }
-.titulo{
+#titulo{
+  display: inline-block;
   text-align: center;
   font-family: times;
-  font-size: 250%;
+  font-weight: bold;
+  font-size: 35px;
   background-color: white;
   border: #0f6f94 solid 8px;
   border-radius: 20px;
@@ -21,21 +21,20 @@ body{
   padding: 0 5px 5px 5px;
 }
 
-
+/* ESTILO PARAGRAFOS: */
 p {
   display: inline-block;
-  width: 92%;
-  font-size: 18px;
+  font-size: 17px;
   font-family: arial;
-  margin: 5px 0% 5px 0%;
+  margin: 5px 3% 5px 3%;
   padding: 0 4px 0 4px;
   background-color: white;
   border: #b7c1d5 solid 4px;
   border-radius: 5px;
-  text-align: left;
+  text-align: justify;
 }
 
-/* Estilo das Imagens: */
+/* ESTILO IMAGENS: */
 img{
   border: #3ab4d5 solid 8px;
   border-radius: 0 40px 0 40px;
@@ -44,7 +43,7 @@ img{
   position: relative;
 }
 
-/* Estilos das legendas das Imagens*/
+/* ESTILO LEGENDAS DAS IMAGENS: */
 .fotoElegenda{
   display: inline-block;
 }
@@ -66,23 +65,26 @@ img{
   padding: 4px 0 4px 0;
 }
 
-/* Estilos heading artico e antartica: */
-h2{
+/* ESTILO ARTICO E ANTARTICA: */
+#circuloArtico, #circuloAntartico{
+  display: inline-block;
+  text-align: left;
   position: relative;
   font-family: times;
   background-color: white;
   border: #0f6f94 solid 7px;
   border-radius: 25px 25px 25px 0;
   padding: 3px 10px 0 4px;
-  margin: 80px 0 5px 0;
+  margin: 80px 0 5px 0%;
 }
-.container-Artico_E_Antartica{
-  display: flex;
-  position: relative;
-  margin: 0 0 0 3.2%;
+#circuloArtico{
+  right: 14%;
+}
+#circuloAntartico{
+  right: 9%;
 }
 
-/* Parte de baixo: */
+/* PARTE DE BAIXO: */
 .finalização{
   margin: 80px 8px 8px 8px;
 }
@@ -107,4 +109,18 @@ h2{
   border-radius: 0 0 20px 20px;
   margin: 0;
   padding: 3px 5px 0 5px;
+}
+
+/* MEDIA QUERY: */
+@media (min-width: 500px) {
+  p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  #circuloArtico{
+    right: 16.1%;
+  }
+  #circuloAntartico{
+    right: 14.1%;
+  }
 }
