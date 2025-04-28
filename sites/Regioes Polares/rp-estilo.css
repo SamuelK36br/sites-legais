@@ -5,9 +5,6 @@ body{
 }
 
 /* ESTILO TÍTULO: */
-#centralizarTitulo{
-  
-}
 #titulo{
   display: inline-block;
   text-align: center;
@@ -23,15 +20,44 @@ body{
 
 /* ESTILO PARAGRAFOS: */
 p {
-  display: inline-block;
   font-size: 17px;
   font-family: arial;
-  margin: 5px 3% 5px 3%;
   padding: 0 4px 0 4px;
   background-color: white;
   border: #b7c1d5 solid 4px;
   border-radius: 5px;
   text-align: justify;
+  margin: 0 0 0 0;
+}
+.intro{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+/* ESTILO ARTICO E ANTARTICA: */
+#DIV-circuloArtico, #DIV-circuloAntartico{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 80px 3% 5px 3%;
+}
+#DIV-circuloArtico{
+  height: 840px;
+}
+#DIV-circuloAntartico{
+  height: 560px;
+}
+
+#circuloArtico, #circuloAntartico{
+  text-align: left;
+  position: relative;
+  font-family: times;
+  background-color: white;
+  border: #0f6f94 solid 7px;
+  border-radius: 25px 25px 25px 0;
+  padding: 3px 10px 0 4px;
+  margin: 0px 0 0px 0%;
 }
 
 /* ESTILO IMAGENS: */
@@ -65,25 +91,6 @@ img{
   padding: 4px 0 4px 0;
 }
 
-/* ESTILO ARTICO E ANTARTICA: */
-#circuloArtico, #circuloAntartico{
-  display: inline-block;
-  text-align: left;
-  position: relative;
-  font-family: times;
-  background-color: white;
-  border: #0f6f94 solid 7px;
-  border-radius: 25px 25px 25px 0;
-  padding: 3px 10px 0 4px;
-  margin: 80px 0 5px 0%;
-}
-#circuloArtico{
-  right: 14%;
-}
-#circuloAntartico{
-  right: 9%;
-}
-
 /* PARTE DE BAIXO: */
 .finalização{
   margin: 80px 8px 8px 8px;
@@ -113,14 +120,18 @@ img{
 
 /* MEDIA QUERY: */
 @media (min-width: 500px) {
-  p {
+  .intro{
     margin-left: 20%;
     margin-right: 20%;
   }
-  #circuloArtico{
-    right: 16.1%;
+  #DIV-circuloArtico, #DIV-circuloAntartico{
+    margin-left: 20%;
+    margin-right: 20%;
   }
-  #circuloAntartico{
-    right: 14.1%;
+  #DIV-circuloArtico{
+    height: 600px;
+  }
+  #DIV-circuloAntartico{
+    height: 390px;
   }
 }
