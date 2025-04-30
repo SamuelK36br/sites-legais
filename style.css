@@ -73,7 +73,7 @@ a{
 #DIVsites{
   display: flex;
   /*MUDAR ALTURA:*/
-  height: 600px;
+  height: 550px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
