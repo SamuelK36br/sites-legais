@@ -1,3 +1,4 @@
+/* FONTES: */
 /* Anta: */
 @font-face{
   font-family: anta;
@@ -24,26 +25,26 @@ body{
 /* PARTE DE CIMA: */
 #parteDeCima{
   text-align: center;
+  margin: 8px 0 0 0;
 }
 #titulo, #info, #creditos{
   display: inline-block;
   background-color: navajowhite;
   border: peru solid 9.5px;
   text-align: center;
-  margin: 8px 0 0 0;
+  margin: 0 2% 0 2%;
   padding: 0 5px 2px 5px;
   font-family: anta;
-  font-size: 38.5px;
 }
 #info, #creditos{
   font-size: 16px;
   font-family: oxanium;
   font-weight: 375;
-  margin: 0 5px 0 5px;
   padding: 2px 5px 0 5px;
   border-width: 7px;
 }
 #titulo{
+  font-size: 50px;
   border-bottom-width: 15px;
 }
 #creditos{
@@ -54,9 +55,10 @@ body{
 /* ENIGMAS: */
 #todosOsEnigmas{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin: 50px 10px 0 10px;
+  margin: 50px 4% 0 4%;
 }
 
 /* Estilo do HUD dos enigmas: */
@@ -70,7 +72,6 @@ body{
 }
 .textoGrande{
   position: relative;
-  left: 0px;
   display: block;
   padding: 2px 0 2px 7px;
   background-color: navajowhite;
@@ -108,7 +109,6 @@ body{
 }
 .respostaInput{
   text-align: center;
-  padding: 0 0 0 0;
   margin: 3px 0 4px 0;
   font-family: winky;
   font-size: 20px;
@@ -165,7 +165,7 @@ body{
 
 /* IMAGENS ENIGMAS: */
 img{
-  max-width: 320px;
+  max-width: 300px;
 }
 
 
@@ -178,4 +178,16 @@ img{
 }
 .dificil{
   background-color: red;
+}
+
+
+/* MEDIA QUERY: */
+@media (min-width: 500px) {
+  #info{
+  margin: 0 23.9% 0 23.9%;
+  }
+  #todosOsEnigmas{
+    margin-left: 22%;
+    margin-right: 22%;
+  }
 }
