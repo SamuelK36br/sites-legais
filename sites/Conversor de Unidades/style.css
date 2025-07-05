@@ -1,0 +1,95 @@
+body{
+  background-color: indigo;
+  color: black;
+  font-family: arial;
+}
+
+/* CABEÇALHO: */
+.alinharCabeçalho{
+  text-align: center;
+}
+.cabecalho{
+  font-family: times;
+  font-size: 50px;
+  background-color: plum;
+  border: crimson inset 10px;
+  border-radius: 45px 0 45px 0;
+  margin: 2% 0 0 0;
+  padding: 5px 25px 5px 15px;
+  display: inline-block;
+}
+.creditos{
+  font-size: 20px;
+  color: black;
+  margin: 0% 0% 12% 0%;
+  padding: 5px;
+  display: inline-block;
+  background-color: plum;
+  border: crimson solid 7px;
+  border-top: 0px;
+  border-radius: 0 0 25px 25px;
+}
+/* --- CABEÇALHO --- */
+
+/* CONVERSORES: */
+
+/* Metro: */
+.conteúdo-metro{
+  margin: 5% 0% 80px 0%;
+  background-color: black;
+  border-radius: 20px;
+  border: white solid 9px;
+}
+.conversor-metro{
+  background-color: silver;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 0 0 11px 11px;
+}
+
+/* Litro: */
+.conteúdo-litro{
+  margin: 5% 0% 80px 0%;
+  background-color: mediumblue;
+  border-radius: 20px;
+  border: deepskyblue solid 9px;
+}
+.conversor-litro{
+  background-color: dodgerblue;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 0 0 11px 11px;
+}
+/* --- Conversores: --- */
+
+
+/* Elementos: */
+input{
+  width: 43.2%;
+}
+button, select{
+  font-size: 17px;
+}
+/* --- Elementos --- */
+
+
+/* Classes extras: */
+.alinharConteúdos{
+  text-align: center;
+}
+.displayConteúdos{
+  display: inline-block;
+}
+
+.sublinhado{
+  text-decoration: underline;
+}
+.tituloConteúdo{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  display: block;
+  padding: 5px;
+  color: white;
+}

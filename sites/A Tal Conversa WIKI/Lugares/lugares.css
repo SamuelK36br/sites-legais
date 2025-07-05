@@ -1,0 +1,45 @@
+#gridLugares{
+  margin: 20px 8px 0 8px;
+  display: grid;
+  grid-template-areas:
+  "praca casaGatoJoia"
+  "casaAlverinda lourencoPiaui"
+  "maysa arenaFelina"
+  "casaErios rayssa";
+  gap: 15px 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#pracaChafariz{
+  grid-area: praca;
+  border: #3CB2E0 solid 5px;
+}
+#casaGatoJoia{
+  grid-area: casaGatoJoia;
+  border: yellow solid 5px;
+}
+#casaAlverinda{
+  grid-area: casaAlverinda;
+  border: #E881A6 solid 5px;
+}
+#lourencoPiaui{
+  grid-area: lourencoPiaui;
+  border: #55A231 solid 5px;
+}
+#maysa{
+  grid-area: maysa;
+  border: purple solid 5px;
+}
+#arenaFelina{
+  grid-area: arenaFelina;
+  border: red solid 5px;
+}
+#casaErios{
+  grid-area: casaErios;
+  border: gray solid 5px;
+}
+#rayssa{
+  grid-area: rayssa;
+  border: #030798 solid 5px;
+}
