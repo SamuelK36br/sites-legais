@@ -1,16 +1,16 @@
 /* FONTES: */
-@font-face{
-  font-family: bungee;
-  src: url('fontes/BungeeShade-Regular.ttf') format('truetype');
-}
-@font-face{
-  font-family: varela;
-  src: url('fontes/VarelaRound-Regular.ttf') format('truetype');
-}
-@font-face{
-  font-family: montserrat;
-  src: url('fontes/Montserrat-Bold.ttf') format('truetype');
-}
+
+/* Bungee Shade: */
+/* "Bungee Shade", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+/* Varela Round: */
+/* "Varela Round", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Mountserrat: */
+/* "Montserrat", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
   background-color: black;
@@ -21,7 +21,7 @@ body{
 
 /* CABEÇALHO: */
 .titulo{
-  font-family: bungee;
+  font-family: "Bungee Shade", sans-serif;
   font-size: 40px;
   color: blue;
   background-color: white;
@@ -41,7 +41,7 @@ body{
 
 /* RODAPÉ: */
 #creditos, #creditosFontes{
-  font-family: varela;
+  font-family: "Varela Round", sans-serif;
   font-size: 25px;
   color: red;
   background-color: white;
@@ -62,14 +62,15 @@ main {
 
 /* ESTILO PADRÃO LINKS SITES: */
 #DIVsites > a{
-  font-family: montserrat;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   padding: 5px;
   display: inline-block;
   border-radius: 15px;
   border-width: 8px;
 }
 #DIVsites{
-  height: 550px; 
+  height: 550px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
