@@ -1,3 +1,4 @@
+/* FONTES: */
 @font-face{
   font-family: bungee;
   src: url('fontes/BungeeShade-Regular.ttf') format('truetype');
@@ -18,7 +19,7 @@ body{
   margin: 0;
 }
 
-/* PARTE DE CIMA: */
+/* CABEÇALHO: */
 .titulo{
   font-family: bungee;
   font-size: 40px;
@@ -27,7 +28,7 @@ body{
   border: dimgray solid 8px;
   border-radius: 0 25px 0 25px;
   padding: 0 5px 0 5px;
-  margin: 8px 0% 0% 0%;
+  margin: 8px 0 0 0;
   display: inline-block;
 }
 .possivelmente{
@@ -38,9 +39,8 @@ body{
   margin: 5px 0 20px 0;
 }
 
-
-/* PARTE DE BAIXO: */
-.creditos, #creditosFontes{
+/* RODAPÉ: */
+#creditos, #creditosFontes{
   font-family: varela;
   font-size: 25px;
   color: red;
@@ -48,97 +48,80 @@ body{
   border: dimgray solid 10px;
   border-radius: 25px 0 25px 0;
   margin: 20px 8px 8px 8px;
-  padding: 5px 5px 0 5px;
-  display: inline-block;
-}
-
-#creditosFontes{
-  padding-bottom: 10px;
-}
-#fontes{
-  font-size: 18px;
-  position: relative;
-  top: 6px;
-  color: black;
-}
-
-
-/* ESTILO PADRÃO LINKS SITES: */
-a{
-  font-family: montserrat;
   padding: 5px;
   display: inline-block;
-  border-radius: 15px;
 }
-#DIVsites{
-  display: flex;
-  /*MUDAR ALTURA:*/
-  height: 550px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
-}
-#fundo-DIVsites{
+
+/* CONTEÚDO PRINCIPAL: */
+main {
   background-color: #0D1B2A;
   display: inline-block;
   padding: 5px 20px 5px 20px;
   border-radius: 40px;
 }
 
+/* ESTILO PADRÃO LINKS SITES: */
+#DIVsites > a{
+  font-family: montserrat;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 15px;
+  border-width: 8px;
+}
+#DIVsites{
+  height: 550px; 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+/*A altura deve ser atualizada de acordo com a quantidade de sites adicionados.*/
 
 /* ESTILO INDIVIDUAL LINKS SITES: */
 #regioesPolares{
   color: white;
   background-color: #6997ac;
-  border: #4c88bc solid 8px;
+  border: #4c88bc solid;
 }
-
 #aTalConversa{
   color: black;
   background-color: white;
-  border: red solid 8px;
+  border: red solid;
 }
-
 #aTalConversa2{
   color: black;
   background-color: white;
-  border: blue solid 8px;
+  border: blue solid;
 }
-
 #aTalConversaWiki{
   color: black;
   background-color: white;
-  border: forestgreen solid 8px;
+  border: forestgreen solid;
 }
-
-#adivinhe_A_Senha{
+#adivinheSenha{
   background-color: black;
   color: greenyellow;
-  border: grey solid 8px;
+  border: grey solid;
 }
-
 #maquinaEnigmas{
   background-color: navajowhite;
   color: black;
-  border: peru solid 8px;
+  border: peru solid;
 }
-
 #conversorDeUnidades{
   background-color: plum;
   color: black;
-  border: crimson inset 8px;
+  border: crimson inset;
 }
-
 #ultraConversorDeUnidades{
   background-color: mediumblue;
   color: white;
-  border: aqua outset 8px;
+  border: aqua outset;
 }
-
 #curiosidadeAnime{
   background-color: #BC002D;
   color: white;
-  border: white solid 8px;
+  border: white solid;
 }
