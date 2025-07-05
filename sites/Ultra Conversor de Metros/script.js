@@ -1,245 +1,227 @@
+/* SELETORES: */
 const resultado = document.getElementById("resultado");
 const input = document.querySelector("input");
-const medidaInicial = document.getElementsByClassName("medidaInicial");
-const medidaFinal = document.getElementsByClassName("medidaFinal");
+const medida1 = document.getElementsByClassName("medidaInicial");
+const medida2 = document.getElementsByClassName("medidaFinal");
 let resultadoMedida = 0;
 const erro = "Algo deu errado.";
 
-const teste = medidaInicial[1].selected && medidaFinal[2].selected;
+// SCRIPT:
+function calculo(sinal, valor, mensg, inputVal=input.value) {
+  if (sinal === '*') {
+    resultadoMedida = inputVal * valor;
+    resultado.innerHTML = `${resultadoMedida} ${mensg}`;
+  }
+  else if (sinal === '/') {
+    resultadoMedida = inputVal / valor;
+    resultado.innerHTML = `${resultadoMedida} ${mensg}`;
+  }
+  else {
+    console.warn('SINAL INESPERADO NA FUNÇÃO: calculo');
+  }
+}
 
 function conversao(){
-    if (medidaInicial[0].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    
-    /* *↓* QUILOMETROS *↓* */
-    else if (medidaInicial[1].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[1].selected && medidaFinal[1].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[1].selected && medidaFinal[2].selected){
-        resultadoMedida = input.value * 10;
-        resultado.innerHTML = resultadoMedida + " hectômetros";
-    }
-    else if (medidaInicial[1].selected && medidaFinal[3].selected){
-        resultadoMedida = input.value * 100;
-        resultado.innerHTML = resultadoMedida + " decâmetros";
-    }
-    else if (medidaInicial[1].selected && medidaFinal[4].selected){
-        resultadoMedida = input.value * 1000;
-        resultado.innerHTML = resultadoMedida + " metros";
-    }
-    else if (medidaInicial[1].selected && medidaFinal[5].selected){
-        resultadoMedida = input.value * 10000;
-        resultado.innerHTML = resultadoMedida + " decímetros";
-    }
-    else if (medidaInicial[1].selected && medidaFinal[6].selected){
-        resultadoMedida = input.value * 100000 + " centímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[1].selected && medidaFinal[7].selected){
-        resultadoMedida = input.value * 1000000 + " milímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    /* *↑* QUILOMETROS *↑* */
-    
-    /* *↓* HECTOMETROS *↓* */
-    else if (medidaInicial[2].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[2].selected && medidaFinal[1].selected){
-        resultadoMedida = input.value / 10;
-        resultado.innerHTML = resultadoMedida + " quilômetros";
-    }
-    else if (medidaInicial[2].selected && medidaFinal[2].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[2].selected && medidaFinal[3].selected){
-        resultadoMedida = input.value * 10;
-        resultado.innerHTML = resultadoMedida + " decâmetros";
-    }
-    else if (medidaInicial[2].selected && medidaFinal[4].selected){
-        resultadoMedida = input.value * 100;
-        resultado.innerHTML = resultadoMedida + " metros";
-    }
-    else if (medidaInicial[2].selected && medidaFinal[5].selected){
-        resultadoMedida = input.value * 1000;
-        resultado.innerHTML = resultadoMedida + " decímetros";
-    }
-    else if (medidaInicial[2].selected && medidaFinal[6].selected){
-        resultadoMedida = input.value * 10000 + " centímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[2].selected && medidaFinal[7].selected){
-        resultadoMedida = input.value * 100000 + " milímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    /* *↑* HECTOMETROS *↑* */
-    
-    /* *↓* DECÂMETRO *↓* */
-    else if (medidaInicial[3].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[3].selected && medidaFinal[1].selected){
-        resultadoMedida = input.value / 100;
-        resultado.innerHTML = resultadoMedida + " quilômetros";
-    }
-    else if (medidaInicial[3].selected && medidaFinal[2].selected){
-        resultadoMedida = input.value / 10;
-        resultado.innerHTML = resultadoMedida + " hectômetros";
-    }
-    else if (medidaInicial[3].selected && medidaFinal[3].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[3].selected && medidaFinal[4].selected){
-        resultadoMedida = input.value * 10;
-        resultado.innerHTML = resultadoMedida + " metros";
-    }
-    else if (medidaInicial[3].selected && medidaFinal[5].selected){
-        resultadoMedida = input.value * 100;
-        resultado.innerHTML = resultadoMedida + " decímetros";
-    }
-    else if (medidaInicial[3].selected && medidaFinal[6].selected){
-        resultadoMedida = input.value * 1000 + " centímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[3].selected && medidaFinal[7].selected){
-        resultadoMedida = input.value * 10000 + " milímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    /* *↑* DECÂMETRO *↑* */
-    
-    /* ↓ METROS ↓ */
-     else if (medidaInicial[4].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[4].selected && medidaFinal[1].selected){
-        resultadoMedida = input.value / 1000;
-        resultado.innerHTML = resultadoMedida + " quilômetros";
-    }
-    else if (medidaInicial[4].selected && medidaFinal[2].selected){
-        resultadoMedida = input.value / 100;
-        resultado.innerHTML = resultadoMedida + " hectômetros";
-    }
-    else if (medidaInicial[4].selected && medidaFinal[3].selected){
-        resultadoMedida = input.value / 10;
-        resultado.innerHTML = resultadoMedida + " decâmetros";
-    }
-    else if (medidaInicial[4].selected && medidaFinal[4].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[4].selected && medidaFinal[5].selected){
-        resultadoMedida = input.value * 10;
-        resultado.innerHTML = resultadoMedida + " decímetros";
-    }
-    else if (medidaInicial[4].selected && medidaFinal[6].selected){
-        resultadoMedida = input.value * 100 + " centímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[4].selected && medidaFinal[7].selected){
-        resultadoMedida = input.value * 1000 + " milímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    /* ↑ METROS ↑ */
-     
-    /* ↓ DECIMETRO ↓ */
-    else if (medidaInicial[5].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[5].selected && medidaFinal[1].selected){
-        resultadoMedida = input.value / 10000;
-        resultado.innerHTML = resultadoMedida + " quilômetros";
-    }
-    else if (medidaInicial[5].selected && medidaFinal[2].selected){
-        resultadoMedida = input.value / 1000;
-        resultado.innerHTML = resultadoMedida + " hectômetros";
-    }
-    else if (medidaInicial[5].selected && medidaFinal[3].selected){
-        resultadoMedida = input.value / 100;
-        resultado.innerHTML = resultadoMedida + " decâmetros";
-    }
-    else if (medidaInicial[5].selected && medidaFinal[4].selected){
-        resultadoMedida = input.value / 10;
-        resultado.innerHTML = resultadoMedida + " metros";
-    }
-    else if (medidaInicial[5].selected && medidaFinal[5].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[5].selected && medidaFinal[6].selected){
-        resultadoMedida = input.value * 10 + " centímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[5].selected && medidaFinal[7].selected){
-        resultadoMedida = input.value * 100 + " milímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    /* ↑ DECIMETRO ↑ */
-    
-    /* ↓ CENTIMETRO ↓ */
-    else if (medidaInicial[6].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[6].selected && medidaFinal[1].selected){
-        resultadoMedida = input.value / 100000;
-        resultado.innerHTML = resultadoMedida + " quilômetros";
-    }
-    else if (medidaInicial[6].selected && medidaFinal[2].selected){
-        resultadoMedida = input.value / 10000;
-        resultado.innerHTML = resultadoMedida + " hectômetros";
-    }
-    else if (medidaInicial[6].selected && medidaFinal[3].selected){
-        resultadoMedida = input.value / 1000;
-        resultado.innerHTML = resultadoMedida + " decâmetros";
-    }
-    else if (medidaInicial[6].selected && medidaFinal[4].selected){
-        resultadoMedida = input.value / 100;
-        resultado.innerHTML = resultadoMedida + " metros";
-    }
-    else if (medidaInicial[6].selected && medidaFinal[5].selected){
-        resultadoMedida = input.value / 10 + " decimetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[6].selected && medidaFinal[6].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[6].selected && medidaFinal[7].selected){
-        resultadoMedida = input.value * 10 + " milímetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    /* ↑ CENTIMETRO ↑ */
-    
-    /* ↓ MILIMETRO ↓ */
-    else if (medidaInicial[7].selected && medidaFinal[0].selected){
-        resultado.innerHTML = erro;
-    }
-    else if (medidaInicial[7].selected && medidaFinal[1].selected){
-        resultadoMedida = input.value / 1000000;
-        resultado.innerHTML = resultadoMedida + " quilômetros";
-    }
-    else if (medidaInicial[7].selected && medidaFinal[2].selected){
-        resultadoMedida = input.value / 100000;
-        resultado.innerHTML = resultadoMedida + " hectômetros";
-    }
-    else if (medidaInicial[7].selected && medidaFinal[3].selected){
-        resultadoMedida = input.value / 10000;
-        resultado.innerHTML = resultadoMedida + " decâmetros";
-    }
-    else if (medidaInicial[7].selected && medidaFinal[4].selected){
-        resultadoMedida = input.value / 1000;
-        resultado.innerHTML = resultadoMedida + " metros";
-    }
-    else if (medidaInicial[7].selected && medidaFinal[5].selected){
-        resultadoMedida = input.value / 100 + " decimetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[7].selected && medidaFinal[6].selected){
-        resultadoMedida = input.value / 10 + " centimetros";
-        resultado.innerHTML = resultadoMedida;
-    }
-    else if (medidaInicial[7].selected && medidaFinal[7].selected){
-        resultado.innerHTML = erro;
-    }
-    /* ↑ MILIMETRO ↑ */
+  /* NENHUMA MEDIDA SELECIONADA: */
+  if (medida1[0].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  
+  /* QUILOMETROS: */
+  /* Mensgagem erro: */
+  else if (medida1[1].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  else if (medida1[1].selected && medida2[1].selected){
+      resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[1].selected && medida2[2].selected){
+      calculo('*', 10, 'hectometros');
+  }
+  else if (medida1[1].selected && medida2[3].selected){
+      calculo('*', 100, 'decâmetros');
+  }
+  else if (medida1[1].selected && medida2[4].selected){
+      calculo('*', 1000, 'metros');
+  }
+  else if (medida1[1].selected && medida2[5].selected){
+      calculo('*', 10000, 'decímetros');
+  }
+  else if (medida1[1].selected && medida2[6].selected){
+      calculo('*', 100000, 'centímetros');
+  }
+  else if (medida1[1].selected && medida2[7].selected){
+      calculo('*', 1000000, 'milímetros');
+  }
+  
+  /* HECTOMETROS: */
+  /* Mensagem erro: */
+  else if (medida1[2].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[2].selected && medida2[2].selected){
+      resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[2].selected && medida2[1].selected){
+      calculo('/', 10, 'quilômetros');
+  }
+  else if (medida1[2].selected && medida2[3].selected){
+      calculo('*', 10, 'decâmetros');
+  }
+  else if (medida1[2].selected && medida2[4].selected){
+      calculo('*', 100, 'metros');
+  }
+  else if (medida1[2].selected && medida2[5].selected){
+      calculo('*', 1000, 'decímetros');
+  }
+  else if (medida1[2].selected && medida2[6].selected){
+      calculo('*', 10000, 'centímetros');
+  }
+  else if (medida1[2].selected && medida2[7].selected){
+      calculo('*', 100000, 'milímetros');
+  }
+  
+  /* DECÂMETRO: */
+  /* Mensagem erro: */
+  else if (medida1[3].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[3].selected && medida2[3].selected){
+      resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[3].selected && medida2[1].selected){
+      calculo('/', 100, 'quilômetros');
+  }
+  else if (medida1[3].selected && medida2[2].selected){
+      calculo('/', 10, 'hectômetros');
+  }
+  else if (medida1[3].selected && medida2[4].selected){
+      calculo('*', 10, 'metros');
+  }
+  else if (medida1[3].selected && medida2[5].selected){
+      calculo('*', 100, 'decímetros');
+  }
+  else if (medida1[3].selected && medida2[6].selected){
+      calculo('*', 1000, 'centímetros');
+  }
+  else if (medida1[3].selected && medida2[7].selected){
+      calculo('*', 10000, 'milímetros');
+  }
+  
+  /* METROS: */
+  /* Mensagem erro: */
+  else if (medida1[4].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  else if (medida1[4].selected && medida2[4].selected) {
+      resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[4].selected && medida2[1].selected){
+      calculo('/', 1000, 'quilômetros');
+  }
+  else if (medida1[4].selected && medida2[2].selected){
+      calculo('/', 100, 'hectômetros');
+  }
+  else if (medida1[4].selected && medida2[3].selected){
+      calculo('/', 10, 'decâmetros');
+  }
+  else if (medida1[4].selected && medida2[5].selected){
+      calculo('*', 10, 'decímetros');
+  }
+  else if (medida1[4].selected && medida2[6].selected){
+      calculo('*', 100, 'centímetros');
+  }
+  else if (medida1[4].selected && medida2[7].selected){
+      calculo('*', 1000, 'milímetros');
+  }
+   
+  /* DECIMETRO: */
+  /* Mensagem erro: */
+  else if (medida1[5].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  else if (medida1[5].selected && medida2[5].selected) {
+  resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[5].selected && medida2[1].selected){
+      calculo('/', 10000, 'quilômetros');
+  }
+  else if (medida1[5].selected && medida2[2].selected){
+      calculo('/', 1000, 'hectômetros');
+  }
+  else if (medida1[5].selected && medida2[3].selected){
+      calculo('/', 100, 'decâmetros');
+  }
+  else if (medida1[5].selected && medida2[4].selected){
+      calculo('/', 10, 'metros');
+  }
+  else if (medida1[5].selected && medida2[6].selected){
+      calculo('*', 10, 'centímetros');
+  }
+  else if (medida1[5].selected && medida2[7].selected){
+      calculo('*', 100, 'milímetros');
+  }
+  
+  /* CENTIMETRO: */
+  /* Mensagem erro: */
+  else if (medida1[6].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  else if (medida1[6].selected && medida2[6].selected) {
+  resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[6].selected && medida2[1].selected){
+      calculo('/', 100000, 'quilômetros');
+  }
+  else if (medida1[6].selected && medida2[2].selected){
+      calculo('/', 10000, 'hectômetros');
+  }
+  else if (medida1[6].selected && medida2[3].selected){
+      calculo('/', 1000, 'decâmetros');
+  }
+  else if (medida1[6].selected && medida2[4].selected){
+      calculo('/', 100, 'metros');
+  }
+  else if (medida1[6].selected && medida2[5].selected){
+      calculo('/', 10, 'decímetros');
+  }
+  else if (medida1[6].selected && medida2[7].selected){
+      calculo('*', 10, 'milímetros');
+  }
+  
+  /* MILIMETRO: */
+  /* Mensagem erro: */
+  else if (medida1[7].selected && medida2[0].selected){
+      resultado.innerHTML = erro;
+  }
+  else if (medida1[7].selected && medida2[7].selected) {
+  resultado.innerHTML = erro;
+  }
+  /* Conversão: */
+  else if (medida1[7].selected && medida2[1].selected){
+      calculo('/', 1000000, 'quilômetros');
+  }
+  else if (medida1[7].selected && medida2[2].selected){
+      calculo('/', 100000, 'hectômetros');
+  }
+  else if (medida1[7].selected && medida2[3].selected){
+      calculo('/', 10000, 'decâmetros');
+  }
+  else if (medida1[7].selected && medida2[4].selected){
+      calculo('/', 1000, 'metros');
+  }
+  else if (medida1[7].selected && medida2[5].selected){
+      calculo('/', 100, 'decimetros');
+  }
+  else if (medida1[7].selected && medida2[6].selected){
+      calculo('/', 10, 'centimetros');
+  }
 }

@@ -1,75 +1,59 @@
+/* SELETORES: */
 const fotoCadeado = document.getElementsByClassName("cadeado");
 const resposta = document.getElementsByClassName("resposta");
+const inputEnigma = document.getElementsByClassName('inputEnigma');
+
+/* SCRIPT: */
+function resultado(index, senha) {
+  if (inputEnigma[index].value===senha){
+    /* Mostrar Mensagem Certa: */
+    resposta[index].style.visibility = 'visible';
+    resposta[index].style.position = 'relative';
+    resposta[index].innerHTML="A senha está CORRETA!";
+    fotoCadeado[index].src="https://i.imgur.com/LusLjmS.png";
+  }
+  else {
+    /* Mostrar Mensagem Errada: */
+    resposta[index].style.visibility = 'visible';
+    resposta[index].style.position = 'relative';
+    resposta[index].innerHTML="A senha está ERRADA!";
+    /* Ocultar Mensagem Errada: */
+    setTimeout(() => {
+      resposta[index].style.visibility='hidden';
+      resposta[index].style.position='absolute';
+    }, 3000);
+  }
+}
 
 function enigmaUm(){
-    const inputEnigmaUm = document.getElementById("inputEnigmaUm").value;
-    if (inputEnigmaUm === "472"){
-        resposta[0].innerHTML="A senha está CORRETA!";
-        fotoCadeado[0].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[0].innerHTML="A senha está ERRADA!";
-    }
+  resultado(0, '472');
 }
 function enigmaDois(){
-    const inputEnigmaDois = document.getElementById("inputEnigmaDois").value;
-    if (inputEnigmaDois === "095"){
-        resposta[1].innerHTML="A senha está CORRETA!";
-        fotoCadeado[1].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[1].innerHTML="A senha está ERRADA!";
-    }
+  resultado(1, '095');
 }
 function enigmaTres(){
-    const inputEnigmaTres = document.getElementById("inputEnigmaTres").value;
-    if (inputEnigmaTres === "713"){
-        resposta[2].innerHTML="A senha está CORRETA!";
-        fotoCadeado[2].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[2].innerHTML="A senha está ERRADA!";
-    }
+  resultado(2, '713');
 }
 function enigmaQuatro(){
-    const inputEnigmaQuatro = document.getElementById("inputEnigmaQuatro").value;
-    if (inputEnigmaQuatro === "473"){
-        resposta[3].innerHTML="A senha está CORRETA!";
-        fotoCadeado[3].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[3].innerHTML="A senha está ERRADA!";
-    }
+  resultado(3, '473');
 }
 function enigmaCinco(){
-    const inputEnigmaCinco = document.getElementById("inputEnigmaCinco").value;
-    if (inputEnigmaCinco === "459"){
-        resposta[4].innerHTML="A senha está CORRETA!";
-        fotoCadeado[4].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[4].innerHTML="A senha está ERRADA!";
-    }
+  resultado(4, '459');
 }
 function enigmaSeis(){
-    const inputEnigmaSeis = document.getElementById("inputEnigmaSeis").value;
-    if (inputEnigmaSeis === "042"){
-        resposta[5].innerHTML="A senha está CORRETA!";
-        fotoCadeado[5].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[5].innerHTML="A senha está ERRADA!";
-    }
+  resultado(5, '042');
 }
 function enigmaSete(){
-    const inputEnigmaSete = document.getElementById("inputEnigmaSete").value;
-    if (inputEnigmaSete === "139"){
-        resposta[6].innerHTML="A senha está CORRETA!";
-        fotoCadeado[6].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[6].innerHTML="A senha está ERRADA!";
-    }
+  resultado(6, '139');
 }
 function enigmaBonus(){
-    const inputEnigmaBonus = document.getElementById("inputEnigmaBonus").value;
-    if (inputEnigmaBonus === "0953"){
-        resposta[7].innerHTML="A senha está CORRETA!";
-        fotoCadeado[7].src="https://i.imgur.com/LusLjmS.png";
-    } else {
-        resposta[7].innerHTML="A senha está ERRADA!";
-    }
+  resultado(7, '0953');
 }
+inputEnigma[0].onchange=enigmaUm;
+inputEnigma[1].onchange=enigmaDois;
+inputEnigma[2].onchange=enigmaTres;
+inputEnigma[3].onchange=enigmaQuatro;
+inputEnigma[4].onchange=enigmaCinco;
+inputEnigma[5].onchange=enigmaSeis;
+inputEnigma[6].onchange=enigmaSete;
+inputEnigma[7].onchange=enigmaBonus;

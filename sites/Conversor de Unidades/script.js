@@ -1,48 +1,78 @@
+/* -- SELETORES: */
 const input = document.getElementsByTagName("input");
 const metro = document.getElementsByClassName("metro");
 const litro = document.getElementsByClassName("litro");
 const resultadoMetro = document.getElementById("respostaMetro");
 const resultadoLitro = document.getElementById("respostaLitro");
 
+/* -- SCRIPT: */
+let respostaMetro = null;
+let respostaLitro = null;
+
+function calMetro(sinal, valor, mensg) {
+  if (sinal === '*') {
+    respostaMetro = input[0].value * valor;
+    resultadoMetro.innerHTML = `${respostaMetro} ${mensg}`;
+  }
+  else if (sinal === '/') {
+    respostaMetro = input[0].value / valor;
+    resultadoMetro.innerHTML = `${respostaMetro} ${mensg}`;
+  }
+  else {
+    console.warn('SINAL INESPERADO NA FUNÇÃO: metro');
+  }
+}
+function calLitro(sinal, valor, mensg) {
+  if (sinal === '*') {
+    respostaLitro = input[1].value * valor;
+    resultadoLitro.innerHTML = `${respostaLitro} ${mensg}`;
+  }
+  else if (sinal === '/') {
+    respostaLitro = input[1].value / valor;
+    resultadoLitro.innerHTML = `${respostaLitro} ${mensg}`;
+  }
+  else {
+    console.warn('SINAL INESPERADO NA FUNÇÃO: litro');
+  }
+}
+
 function converterMetro(){
-    if(metro[1].selected){
-        let respostaMetro = input[0].value * 1000;
-        resultadoMetro.innerHTML = respostaMetro + " milimetros";
-    } else if(metro[2].selected){
-        let respostaMetro = input[0].value * 100;
-        resultadoMetro.innerHTML = respostaMetro + " centimetros";
-    } else if(metro[3].selected){
-        let respostaMetro = input[0].value * 10;
-        resultadoMetro.innerHTML = respostaMetro + " decimetros"; 
-    } else if(metro[4].selected){
-        let respostaMetro = input[0].value / 10;
-        resultadoMetro.innerHTML = respostaMetro + " decametros";
-    } else if(metro[5].selected){
-        let respostaMetro = input[0].value / 100;
-        resultadoMetro.innerHTML = respostaMetro + " hectometros";
-    } else if(metro[6].selected){
-        let respostaMetro = input[0].value / 1000;
-        resultadoMetro.innerHTML = respostaMetro + " quilometros";
-    }
+  if(metro[1].selected) {
+    calMetro('*', 1000, 'milimetros');
+  }
+  else if(metro[2].selected) {
+    calMetro('*', 100, 'centimetros');
+  }
+  else if(metro[3].selected) {
+    calMetro('*', 10, 'decímetros');
+  }
+  else if(metro[4].selected) {
+    calMetro('/', 10, 'decâmetros');
+  }
+  else if(metro[5].selected) {
+    calMetro('/', 100, 'hectômetros');
+  }
+  else if(metro[6].selected) {
+    calMetro('/', 1000, 'quilometros');
+  }
 }
 function converterLitro(){
-    if(litro[1].selected){
-        let respostaLitro = input[1].value * 1000;
-        resultadoLitro.innerHTML = respostaLitro + " mililitros";
-    } else if(litro[2].selected){
-        let respostaLitro = input[1].value * 100;
-        resultadoLitro.innerHTML = respostaLitro + " centilitros";
-    } else if(litro[3].selected){
-        let respostaLitro = input[1].value * 10;
-        resultadoLitro.innerHTML = respostaLitro + " decilitros"; 
-    } else if(litro[4].selected){
-        let respostaLitro = input[1].value / 10;
-        resultadoLitro.innerHTML = respostaLitro + " decalitros";
-    } else if(litro[5].selected){
-        let respostaLitro = input[1].value / 100;
-        resultadoLitro.innerHTML = respostaLitro + " hectolitros";
-    } else if(litro[6].selected){
-        let respostaLitro = input[1].value / 1000;
-        resultadoLitro.innerHTML = respostaLitro + " quilolitros";
-    }
+  if(litro[1].selected) {
+    calLitro('*', 1000, 'milílitros');
+  }
+  else if(litro[2].selected) {
+    calLitro('*', 100, 'centílitros');
+  }
+  else if(litro[3].selected) {
+    calLitro('*', 10, 'decilitros');
+  }
+  else if(litro[4].selected) {
+    calLitro('/', 10, 'decâlitros');
+  }
+  else if(litro[5].selected) {
+    calLitro('/', 100, 'hectôlitros');
+  }
+  else if(litro[6].selected) {
+    calLitro('/', 1000, 'quilôlitros');
+  }
 }

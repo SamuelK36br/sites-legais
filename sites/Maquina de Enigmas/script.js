@@ -1,42 +1,42 @@
+/* SELETORES: */
 const input = document.getElementsByClassName('respostaInput');
 const imagem = document.getElementsByClassName('imagemConfirmacao');
 const condicao = document.getElementsByClassName("condicao");
 
-// Template:
-// 1: Indice, 2: Resposta
-function resposta(i, resposta) {
-      // Resposta Vazia:
-   if (input[i].value.length === 0) {
-      condicao[i].innerHTML = "O Campo de Resposta Não Deve Estar Vazio.";
-      imagem[i].style.visibility='hidden';
-      imagem[i].style.position='absolute';
-      condicao[i].style.visibility='visible';
-      condicao[i].style.position='relative';
-      
-      // Resposta Maiúscula:
-   } else if (input[i].value !== input[i].value.toUpperCase()) {
-      condicao[i].innerHTML = "A Resposta Deve Estar Com Todas As Letras Maiúsculas.";
-      imagem[i].style.visibility='hidden';
-      imagem[i].style.position='absolute';
-      condicao[i].style.visibility='visible';
-      condicao[i].style.position='relative';
-      
-      // Resposta Correta:
-   } else if (input[i].value === resposta) {
-      imagem[i].src="https://i.imgur.com/7leMGBl.png";
-      imagem[i].style.visibility='visible';
-      imagem[i].style.position='relative';
-      condicao[i].style.visibility='hidden';
-      condicao[i].style.position='absolute';
-      
-      // Resposta Errada:
-    } else {
-       imagem[i].src='https://i.imgur.com/Sn52Arv.png';
-       imagem[i].style.visibility='visible';
-       imagem[i].style.position='relative';
-       condicao[i].style.visibility='hidden';
-       condicao[i].style.position='absolute';
-    }
+/* SCRIPT: */
+function resposta(index, resposta) {
+  // Resposta Vazia:
+  if (input[index].value.length === 0) {
+    condicao[index].innerHTML = "O Campo de Resposta Não Deve Estar Vazio.";
+    imagem[index].style.visibility='hidden';
+    imagem[index].style.position='absolute';
+    condicao[index].style.visibility='visible';
+    condicao[index].style.position='relative';
+ }
+ // Resposta Maiúscula:
+ else if (input[index].value !== input[index].value.toUpperCase()) {
+    condicao[index].innerHTML = "A Resposta Deve Estar Com Todas As Letras Maiúsculas.";
+    imagem[index].style.visibility='hidden';
+    imagem[index].style.position='absolute';
+    condicao[index].style.visibility='visible';
+    condicao[index].style.position='relative';
+    
+    // Resposta Correta:
+ } else if (input[index].value === resposta) {
+    imagem[index].src="https://i.imgur.com/7leMGBl.png";
+    imagem[index].style.visibility='visible';
+    imagem[index].style.position='relative';
+    condicao[index].style.visibility='hidden';
+    condicao[index].style.position='absolute';
+    
+    // Resposta Errada:
+  } else {
+    imagem[index].src='https://i.imgur.com/Sn52Arv.png';
+    imagem[index].style.visibility='visible';
+    imagem[index].style.position='relative';
+    condicao[index].style.visibility='hidden';
+    condicao[index].style.position='absolute';
+  }
 }
 
 // ENIGMAS:
