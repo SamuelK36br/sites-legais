@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <!-- SCRIPTS EXTERNOS OU CDNs: -->
+  
+  <!-- NÃO PRECISA MEXER: -->
+    <!-- Resolução: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mostrar Acentos: -->
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  
+  <!-- ICONE DO SITE: -->
+    <link rel="icon" href="IMAGEM" type="icon/png">
+  
+  <!-- TÍTULO DO SITE: -->
+    <title>Calculadora Liedshow</title>
+    
+  <!-- ESTILOS: -->
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+  <!-- CABEÇALHO: -->
+  <header>
+  <h1>
+    Bem vindo(a) à
+    <br>
+    <span>Calculadora Liedshow!!!!</span>
+  </h1>
+  <h2>
+    Você deseja fazer qual operação matemática?
+  </h2>
+  </header>
+  
+  <!-- PRINCIPAL: -->
+  <main>
+  <fieldset id='calculadora'>
+    <legend>
+      Calculadora Liedshow!
+    </legend>
+    
+    <label for='valor1'>
+      Valor número 1:
+    </label>
+    <input id='valor1' type='number'>
+    
+    <br>
+    
+    <label for='valor2'>
+      Valor número 2:
+    </label>
+    <input id='valor2' type='number'>
+    
+    <br><br>
+    
+    <select>
+      <option disabled selected>Escolha sua operação:</option>
+      <option>Adição +</option>
+      <option>Subtração -</option>
+      <option>Multiplicação ×</option>
+      <option>Divisão ÷</option>
+    </select>
+    
+    <br><br>
+    
+    <button id='calcular'>
+      Realizar Cálculo
+    </button>
+    
+    <br><br>
+    
+    <span id='resultado'></span>
+  </fieldset>
+  </main>
+  
+  <!-- RODAPÉ: -->
+  <footer>
+    <fieldset id='creditos'>
+      <legend>
+        Creditos:
+      </legend>
+      <span>
+        <strong>Criado por:</strong>
+        SamuelK36br
+      </span>
+      <br>
+      <span>
+        <strong>Idealizado por:</strong>
+        Liedshow
+      </span>
+    </fieldset>
+  </footer>
+  
+  <!-- SCRIPT: -->
+  <script src='script.js'></script>
+</body>
+</html>

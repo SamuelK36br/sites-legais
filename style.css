@@ -70,7 +70,7 @@ main {
   border-width: 8px;
 }
 #DIVsites{
-  height: 550px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -125,4 +125,14 @@ main {
   background-color: #BC002D;
   color: white;
   border: white solid;
+}
+#calculadoraLiedshow{
+  background-color: #1C1D1F;
+  border: #1A5986 solid;
+  color: white;
+}
+#cronometroEngracado{
+  background-color: darkorange;
+  border: white solid;
+  color: black;
 }

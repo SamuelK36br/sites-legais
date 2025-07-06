@@ -1,0 +1,71 @@
+body{
+  background-color: bisque;
+  text-align: center;
+  font-family: arial;
+}
+
+h1{
+  background-color: darkorange;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 50px;
+  border: white solid 8px;
+}
+
+footer{
+  margin-top: 30px;
+  font-size: 18px;
+  display: inline-block;
+}
+fieldset{
+  border: black dashed 5px;
+}
+legend{
+  font-size: 25px;
+  color: red;
+  background-color: white;
+  border-bottom: black solid 5px;
+  margin-bottom: 2px;
+}
+#gatoJoia{
+  width: 200px;
+  margin-top: 10px;
+}
+
+/* Cronometro: */
+section{
+  background-color: black;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 50px;
+  border: gray solid 8px;
+}
+
+p{
+  color: greenyellow;
+  font-family: times;
+  font-size: 26px;
+  margin: 0;
+}
+#crono{
+  background-color: white;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 8px;
+  margin: 0 0 20px 0;
+}
+button{
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  border: white solid 4px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.apertado{
+  background-color: firebrick;
+  border-color: white;
+  text-decoration: underline;
+}

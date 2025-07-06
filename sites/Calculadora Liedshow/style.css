@@ -1,0 +1,103 @@
+body{
+  background-color: #2D2F34;
+  color: white;
+}
+
+/* CABEÇALHO: */
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 2.5px;
+  padding-bottom: 4.5px;
+  background-color: #1C1D1F;
+  border: #1A5986 solid 6px;
+  border-radius: 20px;
+}
+header h1, header h2{
+  text-align: center;
+  margin: 0;
+  display: block;
+}
+header h1{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+header h2{
+  font-size: 24px;
+}
+header span{
+  color: #1A933C;
+  border-radius: 15px;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* RODAPÉ: */
+footer{
+  margin: 30px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#creditos{
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-style: inset;
+}
+#creditos strong{
+  color: skyblue;
+}
+
+/* PRINCIPAL: */
+main{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* fieldset e legend - Estilo Padrão: */
+fieldset{
+  background-color: #1C1D1F;
+  border: #1A5986 4px;
+}
+legend {
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  border-bottom: gray solid 3.5px;
+}
+/* Fieldset Calculadora: */
+#calculadora{
+  text-align: center;
+  padding: 12px 20px 20px 20px;
+  border-style: outset;
+}
+/* Fset calculadora -> Inputs, labels: */
+label[for='valor1'] {
+  color: red;
+}
+label[for='valor2'] {
+  color: aqua;
+}
+#calculadora input{
+  width: 85px;
+}
+/* Fset calculadora -> Botão, select e resultado: */
+#calcular, #calculadora select{
+  font-size: 18px;
+}
+#resultado{
+  color: greenyellow;
+}
+
+/* MEDIA QUERY: */
+@media (min-width: 500px) {
+  header{
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
