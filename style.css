@@ -50,6 +50,10 @@ body{
   padding: 5px;
   display: inline-block;
 }
+#creditos span{
+  color: black;
+  font-style: italic;
+}
 
 /* CONTEÚDO PRINCIPAL: */
 main {
@@ -60,7 +64,7 @@ main {
 }
 
 /* ESTILO PADRÃO LINKS SITES: */
-#DIVsites > a{
+#sites > a{
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   padding: 5px;
@@ -68,16 +72,16 @@ main {
   border-radius: 15px;
   border-width: 8px;
 }
-#DIVsites{
-  height: 650px;
+#sites{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
   align-items: center;
-}
+  height: 650px;
 /*A altura deve ser atualizada de acordo com a quantidade de sites adicionados.*/
+}
 
 /* ESTILO INDIVIDUAL LINKS SITES: */
 #regioesPolares{
