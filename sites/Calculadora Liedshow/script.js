@@ -34,22 +34,9 @@ function multiplicar(v1, v2) {
   resultado.innerHTML = `Resultado: ${a * b}`;
 }
 function dividir(v1, v2) {
-  if (v2 === '0') {
-    resultado.innerHTML = 'Erro! Divisão por zero! <br> Digite um novo "valor número 2" sem ser zero.';
-    sumirResultado();
-  }
-  else {
-    let a = converter(v1);
-    let b = converter(v2);
-    resultado.innerHTML = `Resultado: ${a / b}`;
-  }
-}
-
-/* SUMIR RESULTADO APÓS 5 SEGUNDOS: */
-function sumirResultado() {
-  setTimeout(() => {
-    resultado.innerHTML = '';
-  }, 3000);
+  let a = converter(v1);
+  let b = converter(v2);
+  resultado.innerHTML = `Resultado: ${a / b}`;
 }
 
 /* REALIZAR CÁLCULO: */
@@ -70,8 +57,9 @@ function realizarCalculo() {
 }
 calcular.onclick = realizarCalculo;
 
-/* HABILTAR SELECT E BOTÃO APÓS OS 2 INPUTS SEREM PREENCHIDOS: */
+/* VERIFICAÇÕES: */
 setInterval(() => {
+  /* Verificação input vazio: */
   if (valor1.value.length===0 || valor2.value.length===0) {
     select.disabled=true;
     calcular.disabled=true;
@@ -80,5 +68,18 @@ setInterval(() => {
     select.disabled=false;
     calcular.disabled=false;
   }
+  /* Verificação divisão por zero: */
+  if (valor2.value==='0') {
+    operacao[4].disabled=true;
+  }
+  else {
+  operacao[4].disabled = false;
+  }
+  if (operacao[4].selected&&valor2.value==='0') {
+    calcular.disabled=true;
+  }
+  else {
+    calcular.disabled=false;
+  }
 },0);
-select.onchange=realizarCalculo;
+select.onchange = realizarCalculo;
