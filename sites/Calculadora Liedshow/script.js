@@ -23,16 +23,19 @@ function somar(v1, v2) {
   let b = converter(v2);
   resultado.innerHTML = `Resultado: ${a + b}`;
 }
+
 function subtrair(v1, v2) {
   let a = converter(v1);
   let b = converter(v2);
   resultado.innerHTML = `Resultado: ${a - b}`;
 }
+
 function multiplicar(v1, v2) {
   let a = converter(v1);
   let b = converter(v2);
   resultado.innerHTML = `Resultado: ${a * b}`;
 }
+
 function dividir(v1, v2) {
   let a = converter(v1);
   let b = converter(v2);
@@ -60,26 +63,24 @@ calcular.onclick = realizarCalculo;
 /* VERIFICAÇÕES: */
 setInterval(() => {
   /* Verificação input vazio: */
-  if (valor1.value.length===0 || valor2.value.length===0) {
-    select.disabled=true;
+  if (valor1.value.length === 0 ||
+    valor2.value.length === 0) {
+    select.disabled = true;
     calcular.disabled=true;
-  }
-  else {
-    select.disabled=false;
-    calcular.disabled=false;
   }
   /* Verificação divisão por zero: */
-  if (valor2.value==='0') {
-    operacao[4].disabled=true;
+  else if (valor2.value.charAt(0).includes('0')) {
+    operacao[4].disabled = true;
+    select.disabled = false;
+    calcular.disabled = false;
+    if (operacao[4].selected) {
+      calcular.disabled = true;
+    }
   }
   else {
-  operacao[4].disabled = false;
+  select.disabled = false;
+  calcular.disabled = false;
+  operacao[4].disabled=false;
   }
-  if (operacao[4].selected&&valor2.value==='0') {
-    calcular.disabled=true;
-  }
-  else {
-    calcular.disabled=false;
-  }
-},0);
+}, 0);
 select.onchange = realizarCalculo;
