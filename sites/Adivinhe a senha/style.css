@@ -1,3 +1,4 @@
+/* FONTES: */
 @font-face{
   font-family: welbut;
   src: url('fonts/Welbut.ttf') format('truetype');
@@ -10,23 +11,26 @@
 body{
   background-color: black;
   color: white;
-  text-align: center;
+  font-family: arial;
 }
 
-.displayPaginaWeb{
-  display: inline-block;
+/* -- CABEÇALHO: */
+header span {
+  color: silver;
 }
-.titulo{
+#titulo {
+  text-align: center;
   font-family: start;
   font-size: 35px;
   background-color: black;
   color: greenyellow;
   border: grey solid 7.5px;
-  margin: 10px 0% 10px 0%;
-  padding: 10px 5px 10px 5px;
+  margin: 10px 0 10px 0;
+  padding: 10px 5px 5px 5px;
 }
-/*↓ Como Jogar ↓*/
-ol{
+/* Como Jogar: */
+header ol {
+  text-align: center;
   font-family: welbut;
   font-weight: normal;
   background-color: black;
@@ -34,43 +38,50 @@ ol{
   border: grey solid 7px;
   margin: 0 0 10px 0;
   padding: 2px 0 2px 30px;
-} li{
-  text-align: left;
 }
-/*↑ Como Jogar ↑*/
-.creditos{
+header li {text-align: left;}
+/* Creditos: */
+div#creditos {
+  text-align: center;
   font-family: welbut;
   font-size: 18px;
   background-color: black;
   color: greenyellow;
   border: grey solid 7px;
-  margin: 0 0 0 0;
-  padding: 3px;
+  margin: 0;
+  padding: 5px 0 5px 0;
+}
+#criador-dataCriacao {
+  margin-bottom: 10px;
+}
+div#fontes a {
+  color: red;
 }
 
-.enigma, .enigmaBonus{
-  font-family: arial;
+/* -- CONTEÚDO PRINCIPAL: */
+main section{
+  text-align: center;
+}
+/* ESTILO ENIGMAS: */
+.tituloEnigma {
+  font-family: welbut;
   background-color: black;
   color: greenyellow;
   border: grey solid 6.5px;
   border-radius: 20px 0 20px 0;
   padding: 2px 3% 4px 15px;
-  margin: 120px 0% 30px 0;
+  margin: 100px 0% 10px 0;
   display: inline-block;
   position: relative;
-  right: 30%;
+  text-align: left;
 }
-.enigmaBonus{
-  right: 7%;
-}
-
-.cadeado{
+img.cadeado {
   background-color: white;
   border-radius: 40px;
   width: 150px;
   height: 150px;
 }
-input{
+main section input {
   width: 100px; height: 20px;
   text-align: center;
   font-family: start;
@@ -80,9 +91,9 @@ input{
   border: gray solid 6px;
   border-radius: 10px;
   margin: 5px 0 5px 0;
-  padding: 3px 10px 5px 10px;
+  padding: 5px 10px 3px 10px;
 }
-button{
+main section button {
   background-color: greenyellow;
   color: black;
   border: dimgrey solid 4px;
@@ -91,36 +102,40 @@ button{
   font-family: start;
   padding: 8px 10px 5px 10px;
   margin: 0 0 10px 0;
+  cursor: pointer;
 }
-.resposta{
+main section .resposta {
   font-family: welbut;
   font-size: 18px;
   background-color: black;
   border-radius: 20px;
   margin: 0 20% 0 20%;
 }
-/*↓ Dica ↓*/
-.dica-div{
+/* Estilo conteiner dicas: */
+div.dica {
   background-color: black;
   color: greenyellow;
   border: grey solid 8px;
   border-radius: 20px;
   margin: 10px 0 0 0;
 }
-.dica-h2{
+.tituloDica {
   margin: 0 0 0 0;
   padding: 6px 0 2px 0;
   font-family: start;
 }
-.dica-p{
-  margin: 0 0 0 0;
+div.dica p {
+  margin: 0;
   padding: 0 0 3px 7px;
   font-family: welbut;
   font-size: 15px;
   text-align: left;
 }
-/*↑ Dica ↑*/
 
-.vermelho{
-  color: red;
+/* -- MEDIA QUERY: */
+@media (min-width: 500px) {
+  body{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }

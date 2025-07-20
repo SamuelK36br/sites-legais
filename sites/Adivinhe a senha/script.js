@@ -1,59 +1,58 @@
 /* SELETORES: */
 const fotoCadeado = document.getElementsByClassName("cadeado");
 const resposta = document.getElementsByClassName("resposta");
-const inputEnigma = document.getElementsByClassName('inputEnigma');
+const input = document.getElementsByClassName('inputEnigma');
+const botao = document.getElementsByTagName('button');
 
 /* SCRIPT: */
+function ocultar(elemento) {
+  elemento.style.visibility='hidden';
+  elemento.style.position='absolute';
+}
+function mostrar(elemento) {
+  elemento.style.visibility = 'visible';
+  elemento.style.position = 'relative';
+}
+
+let timeout = null;
 function resultado(index, senha) {
-  if (inputEnigma[index].value===senha){
-    /* Mostrar Mensagem Certa: */
-    resposta[index].style.visibility = 'visible';
-    resposta[index].style.position = 'relative';
+  /* Mostrar Mensagem Certa: */
+  if (input[index].value===senha){
+    mostrar(resposta[index]);
     resposta[index].innerHTML="A senha está CORRETA!";
     fotoCadeado[index].src="https://i.imgur.com/LusLjmS.png";
+    /* Alteração do Estilo do Input: */
+    input[index].disabled=true;
+    input[index].style.color='silver';
+    input[index].style.borderColor='green';
+    clearTimeout(timeout);
   }
+  /* Mostrar Mensagem Errada: */
   else {
-    /* Mostrar Mensagem Errada: */
-    resposta[index].style.visibility = 'visible';
-    resposta[index].style.position = 'relative';
+    mostrar(resposta[index]);
     resposta[index].innerHTML="A senha está ERRADA!";
     /* Ocultar Mensagem Errada: */
-    setTimeout(() => {
-      resposta[index].style.visibility='hidden';
-      resposta[index].style.position='absolute';
+    timeout = setTimeout(() => {
+      ocultar(resposta[index]);
     }, 3000);
   }
 }
 
-function enigmaUm(){
-  resultado(0, '472');
+const e = [
+  {ind: 0, s: '472'},
+  {ind: 1, s: '095'},
+  {ind: 2, s: '713'},
+  {ind: 3, s: '473'},
+  {ind: 4, s: '459'},
+  {ind: 5, s: '042'},
+  {ind: 6, s: '139'},
+  {ind: 7, s: '0953'}
+]
+for (let i = 0; i < e.length; i++) {
+  botao[i].onclick=() => {
+    resultado(e[i].ind, e[i].s);
+  }
+  input[i].onchange=() => {
+    resultado(e[i].ind, e[i].s)
+  }
 }
-function enigmaDois(){
-  resultado(1, '095');
-}
-function enigmaTres(){
-  resultado(2, '713');
-}
-function enigmaQuatro(){
-  resultado(3, '473');
-}
-function enigmaCinco(){
-  resultado(4, '459');
-}
-function enigmaSeis(){
-  resultado(5, '042');
-}
-function enigmaSete(){
-  resultado(6, '139');
-}
-function enigmaBonus(){
-  resultado(7, '0953');
-}
-inputEnigma[0].onchange=enigmaUm;
-inputEnigma[1].onchange=enigmaDois;
-inputEnigma[2].onchange=enigmaTres;
-inputEnigma[3].onchange=enigmaQuatro;
-inputEnigma[4].onchange=enigmaCinco;
-inputEnigma[5].onchange=enigmaSeis;
-inputEnigma[6].onchange=enigmaSete;
-inputEnigma[7].onchange=enigmaBonus;
