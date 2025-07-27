@@ -3,8 +3,8 @@
 <html lang="pt-BR">
 <head>
   <!-- CONSOLE ERUDA: -->
-    <!--<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>eruda.init();</script>-->
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
   
   <!-- SCRIPTS EXTERNOS OU CDNs: -->
   
@@ -38,51 +38,42 @@
   
   <!-- PRINCIPAL: -->
   <main>
-  <fieldset id='calculadora'>
-    <legend>
-      Calculadora Liedshow!
-    </legend>
-    
-    <label for='valor1'>
-      Valor número 1:
-    </label>
-    <input id='valor1' type='number'>
-    
-    <br>
-    
-    <label for='valor2'>
-      Valor número 2:
-    </label>
-    <input id='valor2' type='number'>
-    
-    <br><br>
-    
-    <select>
-      <option disabled selected>Escolha sua operação:</option>
-      <option>Adição +</option>
-      <option>Subtração -</option>
-      <option>Multiplicação ×</option>
-      <option>Divisão ÷</option>
-    </select>
-    
-    <br><br>
-    
-    <button id='calcular'>
-      Realizar Cálculo
-    </button>
-    
-    <br><br>
-    
-    <span id='resultado'></span>
-  </fieldset>
+    <fieldset id='calculadora'>
+      <legend>Calculadora Liedshow!</legend>
+      
+      <!-- Valor número 1: -->
+      <div class="label-input">
+        <label for='valor1'>Valor número 1:</label>
+        <input type='number'>
+      </div>
+      
+      <!-- Valor número 2: -->
+      <div class="label-input">
+        <label for='valor2'>Valor número 2:</label>
+        <input type='number'>
+      </div>
+      
+      <select>
+        <option disabled selected>Escolha sua operação:</option>
+        <option>Adição +</option>
+        <option>Subtração -</option>
+        <option>Multiplicação ×</option>
+        <option>Divisão ÷</option>
+        <option>Potência ^</option>
+      </select>
+      
+      <br />
+      
+      <button id='calcular'>Realizar Cálculo</button>
+      
+      <p id='resultado'></p>
+    </fieldset>
   </main>
   
   <!-- RODAPÉ: -->
   <footer>
     <fieldset id='creditos'>
-      <legend>
-        Creditos:
-      </legend>
+      <legend>Creditos:</legend>
       <span>
         <strong>Criado por:</strong>
         SamuelK36br

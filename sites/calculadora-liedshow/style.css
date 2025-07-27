@@ -5,7 +5,7 @@ body{
 }
 
 /* CABEÇALHO: */
-header{
+header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,19 +17,17 @@ header{
   border: #1A5986 solid 6px;
   border-radius: 20px;
 }
-header h1, header h2{
+header h1, header h2 {
   text-align: center;
   margin: 0;
   display: block;
 }
-header h1{
+header h1 {
   font-size: 30px;
   margin-bottom: 10px;
 }
-header h2{
-  font-size: 24px;
-}
-header span{
+header h2 {font-size: 24px;}
+header span {
   color: #1A933C;
   border-radius: 15px;
   text-decoration: underline;
@@ -37,31 +35,30 @@ header span{
 }
 
 /* RODAPÉ: */
-footer{
+footer {
   margin: 30px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#creditos{
+#creditos {
   text-align: center;
   padding-left: 25px;
   padding-right: 25px;
   border-style: inset;
 }
-#creditos strong{
-  color: skyblue;
-}
+#creditos strong {color: skyblue;}
 
 /* PRINCIPAL: */
-main{
+main {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/* fieldset e legend - Estilo Padrão: */
-fieldset{
+
+/* FIELDSET E LEGEND - Estilo Padrão: */
+fieldset {
   background-color: #1C1D1F;
   border: #1A5986 4px;
 }
@@ -71,28 +68,31 @@ legend {
   font-size: 22px;
   border-bottom: gray solid 3.5px;
 }
+.label-input {margin-bottom: 2px;}
+
 /* Fieldset Calculadora: */
-#calculadora{
+#calculadora {
   text-align: center;
-  padding: 12px 20px 20px 20px;
+  padding: 12px 20px 10px 20px;
   border-style: outset;
 }
-/* Fset calculadora -> Inputs, labels: */
-label[for='valor1'] {
-  color: red;
-}
-label[for='valor2'] {
-  color: aqua;
-}
-#calculadora input{
-  width: 85px;
-}
-/* Fset calculadora -> Botão, select e resultado: */
-#calcular, #calculadora select{
+
+/* Inputs, labels: */
+label[for='valor1'] {color: red;}
+label[for='valor2'] {color: aqua;}
+#calculadora input {width: 85px;}
+
+/* Botão, select e resultado: */
+#calcular, #calculadora select {
   font-size: 18px;
 }
-#resultado{
+select {
+  margin: 14px 0;
+}
+
+#resultado {
   color: greenyellow;
+  margin: 10px 0 0 0;
 }
 
 /* MEDIA QUERY: */
