@@ -1,0 +1,89 @@
+body{
+  background-color: maroon;
+  color: white;
+  font-family: arial;
+}
+
+header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+header h1 {
+  background-color: #fff;
+  color: black;
+  border: black dashed 6px;
+  margin-bottom: 15px;
+}
+header span { /* Criado por: SamuelK36br*/
+font-size: 18px;
+  border: black solid 4px;
+  color: black;
+  background-color: white;
+  padding: 3px;
+}
+
+/* CONTEÚDO PRINCIPAL: */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+/* Contâiner Dado: */
+.containerDado {
+  background-color: black;
+  border: white dashed 6px;
+  margin-bottom: 40px;
+  padding: 0 16px;
+  width: 70%;
+  /* Display: */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.containerDado h2{
+  margin: 10px 0;
+  background-color: white;
+  color: black;
+  padding: 0 5px;
+}
+.containerDado button {
+  padding: 12px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.containerDado .fotoDado {
+  max-width: 150px;
+  text-align: center;
+  margin: 10px 0;
+}
+.containerDado .mensagem {
+  font-style: italic;
+  padding: 5px;
+  margin: 0 0 10px 0;
+}
+.containerDado .ultimoValor {
+  margin: 0 0 10px 0;
+}
+
+/* OCULTAR ELEMENTOS: */
+.oculto {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* MEDIA QUERY: */
+@media (min-width: 500px) {
+  body {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  header h1 {
+    margin-left: 23%;
+    margin-right: 23%;
+  }
+}

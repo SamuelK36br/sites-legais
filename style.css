@@ -64,7 +64,7 @@ main {
 }
 
 /* ESTILO PADRÃO LINKS SITES: */
-#sites > a{
+#sites > a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   padding: 5px;
@@ -72,70 +72,75 @@ main {
   border-radius: 15px;
   border-width: 8px;
 }
-#sites{
+#sites {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  height: 650px;
+  height: 700px;
 /*A altura deve ser atualizada de acordo com a quantidade de sites adicionados.*/
 }
 
 /* ESTILO INDIVIDUAL LINKS SITES: */
-#regioesPolares{
+#regioesPolares {
   color: white;
   background-color: #6997ac;
   border: #4c88bc solid;
 }
-#aTalConversa{
+#aTalConversa {
   color: black;
   background-color: white;
   border: red solid;
 }
-#aTalConversa2{
+#aTalConversa2 {
   color: black;
   background-color: white;
   border: blue solid;
 }
-#aTalConversaWiki{
+#aTalConversaWiki {
   color: black;
   background-color: white;
   border: forestgreen solid;
 }
-#adivinheSenha{
+#adivinheSenha {
   background-color: black;
   color: greenyellow;
   border: grey solid;
 }
-#maquinaEnigmas{
+#maquinaEnigmas {
   background-color: navajowhite;
   color: black;
   border: peru solid;
 }
-#conversorDeUnidades{
+#conversorDeUnidades {
   background-color: plum;
   color: black;
   border: crimson inset;
 }
-#ultraConversorDeUnidades{
+#ultraConversorDeUnidades {
   background-color: mediumblue;
   color: white;
   border: aqua outset;
 }
-#curiosidadeAnime{
+#curiosidadeAnime {
   background-color: #BC002D;
   color: white;
   border: white solid;
 }
-#calculadoraLiedshow{
+#calculadoraLiedshow {
   background-color: #1C1D1F;
   border: #1A5986 solid;
   color: white;
 }
-#cronometroEngracado{
+#cronometroEngracado {
   background-color: darkorange;
   border: white solid;
   color: black;
+}
+#lancadorDeDados {
+  background-color: #fff;
+  color: black;
+  border: black dashed;
 }
