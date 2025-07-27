@@ -14,12 +14,16 @@ header h1 {
   border: black dashed 6px;
   margin-bottom: 15px;
 }
-header span { /* Criado por: SamuelK36br*/
-font-size: 18px;
+header span {
+  font-size: 18px;
   border: black solid 4px;
   color: black;
   background-color: white;
   padding: 3px;
+  display: inline-block;
+}
+header span em {
+  font-weight: bold;
 }
 
 /* CONTEÚDO PRINCIPAL: */
