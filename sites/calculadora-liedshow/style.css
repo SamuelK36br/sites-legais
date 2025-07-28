@@ -102,3 +102,10 @@ select {
     margin-right: 28%;
   }
 }
+
+/* CLASSES SCRIPTADAS: */
+.oculto {
+  visibility: hidden;
+  position: relative;
+  left: 0px;
+}
