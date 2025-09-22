@@ -79,7 +79,7 @@ main {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  height: 700px;
+  height: 800px;
 /*A altura deve ser atualizada de acordo com a quantidade de sites adicionados.*/
 }
 
@@ -143,4 +143,9 @@ main {
   background-color: #fff;
   color: black;
   border: black dashed;
+}
+#significados {
+  background-color: #A36C0F;
+  color: #ffffff;
+  border: black solid;
 }

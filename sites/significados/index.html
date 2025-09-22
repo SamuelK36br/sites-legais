@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- CONSOLE ERUDA: -->
+  <!-- Desativar quando o site estiver para ser publicado!!! -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>-->
+  
+  <!-- CDNs ou IMPORTMAP: -->
+  
+  <!-- COISAS PADRÃO: -->
+    <!-- Resolução: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mostrar Acentos: -->
+    <meta charset="UTF-8">
+  
+  <!-- ICONE DO SITE: -->
+    <link rel="icon" href="../../icon.png" type="icon/png">
+  
+  <!-- TÍTULO DO SITE: -->
+    <title>Significados</title>
+  
+  <!-- ESTILOS: -->
+    <link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+  <header>
+    <h1>Significados</h1>
+    
+    <div id="creditos" role="contentinfo">
+      <b>Feito por:</b> <span>SamuelK36br</span>
+      <br>
+      <b>Idea Grandiosa de:</b> <span id="ray">Ray</span>
+      <br />
+      <b>Áudios Utilizados:</b>
+      <br />
+      <a href="https://pixabay.com/pt/sound-effects/the-correct-answer-33-183620/">Correto</a>
+      <br />
+      <a href="https://pixabay.com/pt/sound-effects/failfare-86009/">Errado</a>
+    </div>
+    
+    <div id="comoJogar" role="contentinfo">
+      <details>
+        <summary>Como Jogar?</summary>
+          <ol>
+            <li>Uma palavra aleatória surgirá.</li>
+            <li>Você deve escolher o verbete do dicionário que condiz com o real significado da palavra.</li>
+            <li>Há 3 verbetes falsos e 1 correto.</li>
+            <li>Se você escolher o errado, você perde.</li>
+            <li>Se você escolher o certo, você ganha.</li>
+            <li>O principal objetivo desse jogo não é ganhar ou perder, mas expandir seu vocabulário!</li>
+            <li>Há 418 palavras no total. Boa sorte, e divirta-se aumentando seu vocabulário!</li>
+          </ol>
+      </details>
+    </div>
+  
+    <div role="switch">
+      <img id="imgAudio">
+    </div>
+    
+    <div id="recordes">
+      <b>Recorde Atual:</b> <span>N</span>
+      <br>
+      <b>Maior Recorde:</b> <span>N</span>
+    </div>
+  </header>
+  
+  <div class="divisoria"></div>
+  
+  <main>
+    <div id="palavra-e-verbetes">
+      <h2>Carregando...</h2>
+      <ol id="verbetes">
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
+      </ol>
+      
+      <select>
+        <option disabled selected>Qual verbete é o correto?</option>
+        <option class="verbete">Verbete 1</option>
+        <option class="verbete">Verbete 2</option>
+        <option class="verbete">Verbete 3</option>
+        <option class="verbete">Verbete 4</option>
+      </select>
+      <button class="oculto">Verificar Resposta</button>
+    </div>
+    
+    <div class="divisoria oculto"></div>
+    
+    <div id="resposta" class="oculto" role="alert">
+      <h2>Resultado</h2>
+      <p>O verbete X era o correto!</p>
+      <button>Jogar Novamente</button>
+    </div>
+  </main>
+  
+  <!-- ÁUDIOS: -->
+  <audio id="correto" src="audio/correto.mp3"></audio>
+  <audio id="errado" src="audio/errado.mp3"></audio>
+  <!-- SCRIPTS: -->
+  <script type='module' src='script.js'></script>
+</body>
+</html>

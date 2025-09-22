@@ -1,0 +1,288 @@
+/* -> FONTES: */
+/* CalSans: */
+@font-face {
+  font-family: calSans;
+  src: url('fontes/CalSans-Regular.ttf');
+}
+/* Quicksand: */
+@font-face {
+  font-family: quicksand;
+  src: url('fontes/Quicksand-VariableFont_wght.ttf');
+}
+/* Ray: */
+@font-face {
+  font-family: ray;
+  src: url("fontes/ray.ttf");
+}
+/*****************************************/
+/* -> ESTILO DA PÁGINA: */
+html {
+  font-family: arial;
+  background-color: #ffe3ae;
+  font-size: 16px;
+}
+
+
+/* > HEADER: */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  cursor: default;
+}
+header h1 {
+  color: white;
+  background-color: #a36d0f;
+  font-family: calSans;
+  font-size: 4.1rem;
+  font-weight: normal;
+  border-radius: 25px;
+  border: black solid 7px;
+  border-right: none;
+  border-top: none;
+  margin: 10px 0 20px 0;
+  padding: 4px 12px;
+  user-select: none;
+  box-shadow: 0 0 20px gold;
+}
+/* div: Creditos e Recordes: */
+div#creditos, div#recordes {
+  background-color: #e8b458;
+  border: white ridge 5.5px;
+  font-size: 1.2rem;
+  font-family: quicksand;
+  font-weight: 450;
+  text-align: center;
+  margin: 10px 0;
+  padding: 2.5px 5px;
+}
+/* Créditos: */
+div#creditos b {color: darkred;}
+div#creditos span#ray {
+  font-family: ray;
+  font-size: 1.6rem;
+}
+/* Recordes: */
+div#recordes {
+  margin: 5px 0 0 0;
+  background-color: #a36d0f;
+  color: #fff;
+  border-color: lightslategray;
+}
+div#recordes b {
+}
+/* Como jogar: */
+div#comoJogar details {
+  border: white inset 5px;
+  border-radius: 10px 0;
+  font-family: quicksand;
+  font-weight: 500;
+  cursor: text;
+}
+div#comoJogar summary {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline dashed white;
+  color: black;
+  background-color: #e8b458;
+  padding: 5px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+div#comoJogar ol {
+  margin: 0;
+  background-color: #d19d40;
+  color: white;
+  padding: 5px 0 5px 30px;
+  font-size: 1.1rem;
+}
+div#comoJogar li::marker {
+  color: black;
+  font-weight: bold;
+  text-shadow: 0 0 3px white;
+}
+/* Seção de Áudio: */
+#imgAudio {
+  margin: 20px 0 0 0;
+  background-color: #a36d0f;
+  border: inset lightslategray 2.5px;
+  padding: 2px;
+  border-radius: 50%;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+
+/* > MAIN: */
+/* H2: */
+div#palavra-e-verbetes h2,
+div#resposta h2 {
+  font-family: calSans;
+  font-size: 3rem;
+  margin: 0;
+  cursor: default;
+  user-select: none;
+  text-shadow:
+  0 0px 10px white,
+  1px 0px 10px white,
+  -1px 0px 10px white;
+}
+
+div#resposta h2 {
+  margin-top: 20px;
+  font-style: italic;
+  color: whitesmoke;
+  text-shadow:
+  0 0px 20px black,
+  1px 0px 20px black,
+  -1px 0px 20px black;
+}
+
+/* BOTÕES: */
+div#palavra-e-verbetes button,
+div#resposta button {
+  background-color: #d19d40;
+  color: white;
+  font-size: 20px;
+  font-weight: 450;
+  font-family: quicksand;
+  padding: 6px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border-width: 4px;
+  border-style: inset;
+  cursor: pointer;
+  animation:
+  shadowBotao 1s linear 1200ms infinite alternate,
+  aparecer 1200ms linear 1 forwards;
+}
+
+/* BOTÕES HOVER: */
+div#palavra-e-verbetes button:hover,
+div#resposta button:hover {
+  font-style: italic;
+  text-decoration: underline solid 1.2px;
+}
+
+/* PALAVRA ALEATÓRIA E VERBETES: */
+div#palavra-e-verbetes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+/* Verbetes: */
+ol#verbetes {
+  font-family: times;
+  background-color: #a36d0f;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 15px 5px 40px;
+  margin: 5px 0 5px 0;
+}
+ol#verbetes li {
+  margin: 10px 0;
+  list-style-type: upper-roman;
+  font-size: 1.15em;
+}
+ol#verbetes li:first-child,
+ol#verbetes li:last-child {margin: 5px 0;}
+ol#verbetes li::marker {
+  color: gold;
+  font-weight: bold;
+  text-shadow: 0 0 3px black;
+}
+/* Select: */
+div#palavra-e-verbetes select {
+  text-align: center;
+  font-size: 23px;
+  font-family: quicksand;
+  font-weight: bold;
+  background-color: #e8b458;
+  border: white groove 5px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  padding: 1px 3px;
+  cursor: pointer;
+}
+
+/* RESPOSTA: */
+div#resposta:not(.oculto) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+div#resposta p{
+  font-family: quicksand;
+  font-weight: 475;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0 25px 0;
+  user-select: none;
+  cursor: default;
+}
+div#resposta button {
+  border-radius: 0 20px;
+  border-color: white;
+  border-style: outset;
+  color: black;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+
+/* > DIVISORIA: */
+.divisoria {
+  background-color: #462f1f;
+  border: #91785e solid 2.5px;
+  border-radius: 10px;
+  padding: 4px 0;
+  margin: 20px 0 5px 0;
+}
+/*****************************************/
+/* -> MEDIA QUERY: */
+@media (min-width: 500px) {
+  ol#verbetes {
+    margin-left: 26%;
+    margin-right: 26%;
+  }
+}
+/*****************************************/
+/* -> KEYFRAMES: */
+@keyframes shadowBotao {
+  from {box-shadow: 0 0 0px 0px maroon;}
+  to {box-shadow: 0 0 20px 5px maroon;}
+}
+@keyframes aparecer {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/*****************************************/
+/* -> CLASSES SCRIPTADAS: */
+.oculto {
+  display: none;
+}
+
+/* Classes: certo e errado: */
+ol#verbetes li.cer {
+  background-color: rgba(0, 255, 0, 0.3);
+  border-radius: 10px;
+  padding: 0 5px;
+}
+ol#verbetes li.err {
+  background-color: rgba(255, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 0 5px;
+}
+ol#verbetes li.cer::before {
+  content: "✅ ";
+}
+ol#verbetes li.err::before {
+  content: "⛔ ";
+}
