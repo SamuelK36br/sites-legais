@@ -72,6 +72,11 @@ main {
   border-radius: 15px;
   border-width: 8px;
 }
+#sites > a:hover {
+  transform: scale(1.2);
+  font-style: italic;
+  transition: transform 0.5s;
+}
 #sites {
   display: flex;
   flex-direction: column;
@@ -79,7 +84,9 @@ main {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  height: 800px;
+  height: auto;
+  padding: 10px 0;
+  gap: 20px;
 /*A altura deve ser atualizada de acordo com a quantidade de sites adicionados.*/
 }
 
@@ -148,4 +155,18 @@ main {
   background-color: #A36C0F;
   color: #ffffff;
   border: black solid;
+}
+#dadoCasa {
+  color: #fff;
+  background-color: #000;
+  border: white solid;
+}
+
+@keyframes size {
+  from {
+    
+  }
+  to {
+    
+  }
 }

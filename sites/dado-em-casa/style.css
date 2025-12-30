@@ -1,0 +1,162 @@
+/* -> FONTES: */
+
+/* ------------------------------------- */
+/* -> HTML & ROOT (variáveis): */
+html {
+  font-family: arial;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+:root {
+  
+}
+/* ------------------------------------- */
+/* -> ESTILIZAÇÃO: */
+/* Cabeçalho: */
+div#titulo {
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 auto;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#titulo>h1 {
+  font-size: clamp(1rem, 9vw, 12rem);
+  margin: 5px 0;
+}
+
+.dadoGif {
+  width: 20%;
+}
+
+/* Jogar dados: */
+div#botoesDado {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#botoesDado>button {
+  font-size: 1.5rem;
+  padding: 10px;
+  flex: 0 1 auto;
+}
+
+/* DIV: Soma & Quantidade de dados: */
+div#soma-quantidadeDados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*  - Quantidade dados: */
+div#quantidadeInput-Label {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+input#numDados {
+  accent-color: black;
+}
+
+label[for=numDados] {
+  color: #000;
+  margin-left: 10px;
+}
+
+/*  - Valor somado ao dados: */
+input#soma {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+/* Todos os dados jogados: */
+main#todosDadosJogados {
+  margin-top: 25px;
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: black;
+  margin: 25px 15% 0 15%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+div#dadosJogados {
+  padding: 1px 5px;
+  border: red solid 2px;
+  animation: fadein 1s ease 1 normal forwards;
+}
+
+#dadosJogados p#valor {
+  margin: 0;
+  border-bottom: gray 1px solid;
+}
+
+div#dadosJogados p#valor:last-child {
+  border: none;
+}
+
+/* Indicador de dado jogado: */
+#indicador {
+  color: black;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* ------------------------------------- */
+/* -> MEDIA QUERY: */
+@media (min-width: 500px) {
+  #titulo h1 {
+    
+  }
+  
+  #botoesDado>button {
+    font-size: 3rem;
+  }
+  
+  main#todosDadosJogados {
+    margin-top: 50px;
+    font-size: 3rem;
+  }
+  
+  div#dadosJogados {
+    border: red solid 5px;
+  }
+  
+  #quantidadeInput-Label,
+  #soma-quantidadeDados span,
+  #soma {
+    transform: scale(2);
+    transform-origin: top;
+  }
+  
+  #soma-quantidadeDados span {
+    margin: 25px 0 20px 0;
+  }
+}
+/* ------------------------------------- */
+/* KEYFRAMES: */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ------------------------------------- */
+/* -> CLASSES SCRIPTADAS: */
