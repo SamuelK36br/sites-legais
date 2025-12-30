@@ -64,7 +64,7 @@ main {
 }
 
 /* ESTILO PADRÃO LINKS SITES: */
-#sites > a {
+nav#sites > a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   padding: 5px;
@@ -72,12 +72,12 @@ main {
   border-radius: 15px;
   border-width: 8px;
 }
-#sites > a:hover {
+nav#sites > a:hover {
   transform: scale(1.2);
   font-style: italic;
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
-#sites {
+nav#sites {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -126,7 +126,7 @@ main {
   color: black;
   border: crimson inset;
 }
-#ultraConversorDeUnidades {
+#ultraConversor {
   background-color: mediumblue;
   color: white;
   border: aqua outset;
@@ -160,13 +160,4 @@ main {
   color: #fff;
   background-color: #000;
   border: white solid;
-}
-
-@keyframes size {
-  from {
-    
-  }
-  to {
-    
-  }
 }
