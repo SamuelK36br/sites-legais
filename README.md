@@ -1,5 +1,5 @@
 # Bem vindo ao...
-!['Logo do Site'](https://i.imgur.com/RuHR0aR.png)
+!['Sites Legais!'](https://i.imgur.com/RuHR0aR.png)
 
 Este é um site onde "hospedo" outros sites *(legais)* que eu criei.
 
