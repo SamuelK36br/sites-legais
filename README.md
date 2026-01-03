@@ -4,4 +4,4 @@
 Este é um site onde "hospedo" outros sites *(legais)* que eu criei.
 
 ## Oferecimento, Gato Joia:
-!['Gato Joia'](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhBOAV9bO41MENAjVMjGNlvpD-0q8KlKPcfspoXzRlCDi_g_EE-U_8dd4&s=10)
+!['Imagem do Gato Joia'](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhBOAV9bO41MENAjVMjGNlvpD-0q8KlKPcfspoXzRlCDi_g_EE-U_8dd4&s=10)
