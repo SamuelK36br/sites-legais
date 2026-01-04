@@ -4,9 +4,10 @@ const dados = {
 	d12: document.querySelector("#d12"),
 	d8: document.querySelector("#d8"),
 	d6: document.querySelector("#d6"),
-	d4: document.querySelector("#d4")
+	d4: document.querySelector("#d4"),
+	d100: document.querySelector("#d100")
 };
-const { d20, d12, d8, d6, d4 } = dados;
+const { d20, d12, d8, d6, d4, d100 } = dados;
 
 const soma = document.querySelector("#soma");
 
@@ -20,8 +21,7 @@ const gifDados = document.querySelectorAll(".dadoGif");
 /* ------------------------------------- */
 // -→ SCRIPT:
 function jogarDado(indicador, dado) {
-	const div = document.createElement("div");
-	div.id="dadosJogados";
+	const div = criarDiv();
 	indicadorDadoJogado([indicador, div]);
 	for (let i = 0; i < numDados.value; i++) {
 		const rngResult = rng(dado);
@@ -30,10 +30,32 @@ function jogarDado(indicador, dado) {
 	todosDadosJogados.appendChild(div);
 }
 
+/* DIV: */
+let coresIndex = 0;
+function criarDiv() {
+  const cores = ['red', 'blue', 'orange', 'purple', 'gold', 'green', 'aqua', 'Gray', 'DodgerBlue', 'DeepPink'];
+  const div = document.createElement("div");
+  div.id = "dadosJogados";
+  div.style.borderColor = cores[coresIndex];
+  if (coresIndex >= cores.length-1) {
+    coresIndex = 0;
+  } else {
+    coresIndex++;
+  }
+  return div;
+}
+
 /* RNG: */
 function rng(num) {
-	const a = Math.ceil(Math.random() * num);
-	return a;
+  if (num == 100) {
+    const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    const rngValArr = Math.floor(Math.random() * arr.length);
+    return arr[rngValArr];
+  }
+  else {
+  	const rngVal = Math.ceil(Math.random() * num);
+  	return rngVal;
+  }
 }
 
 /* Exibição dos dados: */
@@ -65,3 +87,4 @@ d12.onclick = () => jogarDado("D12: ", 12);
 d8.onclick = () => jogarDado("D8: ", 8);
 d6.onclick = () => jogarDado("D6: ", 6);
 d4.onclick = () => jogarDado("D4: ", 4);
+d100.onclick = () => jogarDado("D100 ", 100);
