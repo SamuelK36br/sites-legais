@@ -30,21 +30,6 @@ function jogarDado(indicador, dado) {
 	todosDadosJogados.appendChild(div);
 }
 
-/* DIV: */
-let coresIndex = 0;
-function criarDiv() {
-  const cores = ['red', 'blue', 'orange', 'purple', 'gold', 'green', 'aqua', 'Gray', 'DodgerBlue', 'DeepPink'];
-  const div = document.createElement("div");
-  div.id = "dadosJogados";
-  div.style.borderColor = cores[coresIndex];
-  if (coresIndex >= cores.length-1) {
-    coresIndex = 0;
-  } else {
-    coresIndex++;
-  }
-  return div;
-}
-
 /* RNG: */
 function rng(num) {
   if (num == 100) {
@@ -58,7 +43,21 @@ function rng(num) {
   }
 }
 
-/* Exibição dos dados: */
+/* Exibição de dados jogados: */
+let coresIndex = 0;
+function criarDiv() {
+  const div = document.createElement("div");
+  div.id = "dadosJogados";
+  
+  const cores = ['red', 'blue', 'orange', 'purple', 'gold', 'green', 'aqua', 'Gray', 'DodgerBlue', 'DeepPink'];
+  div.style.borderColor = cores[coresIndex];
+  if (coresIndex >= cores.length-1) {
+    coresIndex = 0;
+  } else {
+    coresIndex++;
+  }
+  return div;
+}
 function lista(rng, somaRng, div) {
 	const Soma = Number(somaRng);
 	const p = document.createElement("p");

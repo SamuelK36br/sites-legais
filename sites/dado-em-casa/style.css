@@ -29,7 +29,7 @@ div#titulo {
   width: 20%;
 }
 
-/* Jogar dados: */
+/* Botões Jogar dados: */
 div#botoesDado {
   display: flex;
   flex-direction: row;
@@ -93,7 +93,7 @@ main#todosDadosJogados {
 }
 div#dadosJogados {
   padding: 1px 5px;
-  border: dashed 5px;
+  border: transparent solid 5px;
   animation: fadein 1.5s ease 1 normal forwards;
 }
 #dadosJogados p#valor {
@@ -114,9 +114,7 @@ div#dadosJogados p#valor:last-child {
 
 /* ------------------------------------- */
 /* -> MEDIA QUERY: */
-@media (min-width: 500px) {
-  #titulo h1 {}
-  
+@media (min-width: 576px) {
   #botoesDado>button {
     font-size: 3rem;
     padding: 20px;
