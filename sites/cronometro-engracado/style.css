@@ -30,11 +30,17 @@ h1 {
 /* Cronometro: */
 #cronometro-box {
   background-color: black;
-  display: inline-block;
   padding: 20px;
   border-radius: 50px;
   border: gray solid 8px;
-  margin: 50px 0;
+  margin: 50px 10vw;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
 }
 
 section > p {
@@ -44,12 +50,18 @@ section > p {
   margin: 0;
 }
 
-#crono {
+#hr-min-seg {
   background-color: white;
+  padding: 10px;
   border-radius: 20px;
-  display: inline-block;
-  padding: 8px;
-  margin: 0 0 20px 0;
+  font-size: 1.8rem;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex: 0 1 auto;
 }
 
 button {
@@ -62,10 +74,19 @@ button {
   padding: 10px;
 }
 
-.apertado {
+button:hover {
+  cursor: pointer;
+}
+
+.btn-apertado {
   background-color: firebrick;
   border-color: white;
   text-decoration: underline;
+}
+
+.separador {
+  white-space: pre;
+  font-weight: bold;
 }
 
 
@@ -86,8 +107,11 @@ footer > p {
 }
 /* ------------------------------------- */
 /* -→ MEDIA QUERY: */
-@media (min-width: 576px) {}
-
+@media (min-width: 576px) {
+ #cronometro-box {
+   margin: 20px 30vw;
+ } 
+}
 /* ------------------------------------- */
 /* -→ KEYFRAMES: */
 

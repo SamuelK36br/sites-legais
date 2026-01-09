@@ -1,54 +1,68 @@
 // -- SELETORES:
-const botao = document.querySelector('button');
-const cronoText = document.getElementById('crono');
+const elmt = {
+  hr: document.querySelector("#hr"),
+  min: document.querySelector("#min"),
+  seg: document.querySelector("#seg")
+}
 
+const varl = {
+  hr: 0,
+  min: 0,
+  seg: 0,
+}
+
+const btn = document.querySelector("button");
 // -- SCRIPT:
-/* Cronometro: */
-let segundos = 0;
-let minutos = 0;
-let horas = 0;
+let cronometroVarl;
+function cronometro() {
+  cronometroVarl = setInterval(() => {
+    varl.seg++;
+    if (varl.seg > 59) {
+      varl.min++;
+      varl.seg = 0;
+    }
+    updateHtml()
+  }, 1000);
+}
 
-let intervalo = null;
-let clique = 0;
-
-function cronometrar(){
-  if (intervalo === null && clique === 0) {
-    botao.innerHTML='Parar Cronometragem';
-    botao.classList.add('apertado');
-    clique=1;
-    
-    intervalo = setInterval(() => {
-      if (segundos >= 0 && segundos < 59) {
-        segundos++;
-        display();
-      }
-      else if (segundos === 59) {
-        segundos = 0;
-        minutos++;
-        display();
-      }
-      if (minutos === 59) {
-        minutos=0;
-        horas++;
-      }
-    }, 1000);
+function updateHtml() {
+  const hrStrg = String(varl.hr);
+  const minStrg = String(varl.min);
+  const segStrg = String(varl.seg);
+  
+  if (segStrg.length > 1) {
+    elmt.seg.innerHTML = varl.seg;
+  } else {
+    elmt.seg.innerHTML = `0${varl.seg}`;
   }
-  else if (clique === 1) {
-    parar();
+  
+  if (minStrg.length > 1) {
+    elmt.min.innerHTML = varl.min;
+  } else {
+    elmt.min.innerHTML = `0${varl.min}`;
+  }
+  
+  if (hrStrg.length > 1) {
+    elmt.hr.innerHTML = varl.hr;
+  } else {
+    elmt.hr.innerHTML = `0${varl.hr}`;
   }
 }
 
-const display = () => {
-  cronoText.innerHTML = `${horas}h : ${minutos}m : ${segundos}s`;
+// Evento botão:
+btn.onclick = () => {
+  // Desativar Cronometro:
+  if 
+  (btn.classList.value
+  .includes("btn-apertado")) {
+    btn.classList.remove("btn-apertado");
+    btn.innerHTML = "Iniciar cronometragem";
+    clearInterval(cronometroVarl);
+  }
+  // Ativar Cronometro.
+  else {
+    btn.classList.add("btn-apertado");
+    btn.innerHTML = "Parar cronometragem";
+    cronometro()
+  }
 }
-
-function parar() {
-  clearInterval(intervalo);
-  botao.innerHTML='Iniciar Cronometragem';
-  botao.classList.remove('apertado');
-  intervalo=null;
-  clique=0;
-}
-
-// Eventos:
-botao.onclick=cronometrar;
