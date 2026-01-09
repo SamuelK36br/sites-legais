@@ -1,60 +1,58 @@
-body{
+/* -→ FONTES: */
+
+/* ------------------------------------- */
+/* -> HTML, BODY & ROOT (variáveis): */
+html,
+body {
+  font-family: Arial, sans-serif;
+  font-size: 100%;
   background-color: bisque;
   text-align: center;
-  font-family: arial;
 }
 
-h1{
+:root {}
+
+/* ------------------------------------- */
+/* -→ ESTILO DA PÁGINA: */
+
+/* ! Header: */
+h1 {
   background-color: darkorange;
   display: inline-block;
   padding: 5px;
-  border-radius: 50px;
-  border: white solid 8px;
+  box-shadow:
+  8px 8px 0 0 white,
+  -6px -6px 0 0 limegreen;
 }
 
-footer{
-  margin-top: 30px;
-  font-size: 18px;
-  display: inline-block;
-}
-fieldset{
-  border: black dashed 5px;
-}
-legend{
-  font-size: 25px;
-  color: red;
-  background-color: white;
-  border-bottom: black solid 5px;
-  margin-bottom: 2px;
-}
-#gatoJoia{
-  width: 200px;
-  margin-top: 10px;
-}
 
+/* ! Main: */
 /* Cronometro: */
-section{
+#cronometro-box {
   background-color: black;
   display: inline-block;
   padding: 20px;
   border-radius: 50px;
   border: gray solid 8px;
+  margin: 50px 0;
 }
 
-p{
+section > p {
   color: greenyellow;
   font-family: times;
   font-size: 26px;
   margin: 0;
 }
-#crono{
+
+#crono {
   background-color: white;
   border-radius: 20px;
   display: inline-block;
   padding: 8px;
   margin: 0 0 20px 0;
 }
-button{
+
+button {
   background-color: green;
   color: white;
   font-size: 20px;
@@ -64,8 +62,34 @@ button{
   padding: 10px;
 }
 
-.apertado{
+.apertado {
   background-color: firebrick;
   border-color: white;
   text-decoration: underline;
 }
+
+
+/* ! Footer: */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer > p {
+  font-size: 1.4rem;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow:
+  8px 8px 0 0 black,
+  -6px -6px 0 0 dimgray;
+}
+/* ------------------------------------- */
+/* -→ MEDIA QUERY: */
+@media (min-width: 576px) {}
+
+/* ------------------------------------- */
+/* -→ KEYFRAMES: */
+
+/* ------------------------------------- */
+/* -→ CLASSES SCRIPTADAS: */
