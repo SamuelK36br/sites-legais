@@ -24,6 +24,7 @@ const audioDado = document.querySelector("#audioDado");
 // -→ SCRIPT:
 function jogarDado(indicador, dado) {
   audioDado.play();
+  cooldown();
   
   const div = criarDiv();
   indicadorDadoJogado([indicador, div]);
@@ -33,6 +34,7 @@ function jogarDado(indicador, dado) {
   }
   todosDadosJogados.appendChild(div);
 }
+
 
 /* RNG: */
 function rng(num) {
@@ -46,6 +48,7 @@ function rng(num) {
     return rngVal;
   }
 }
+
 
 /* Exibição de dados jogados: */
 let coresIndex = 0;
@@ -83,9 +86,23 @@ function indicadorDadoJogado(p) {
   p[1].appendChild(nome);
 }
 
+
 /* Quantidade de dados - LABEL & INPUT: */
 labelNumDados.innerHTML = numDados.value;
 numDados.oninput = () => labelNumDados.innerHTML = numDados.value;
+
+
+/* Cooldown dado: */
+function cooldown() {
+  const dadosArr = ["d20", "d12", "d8", "d6", "d4", "d100"];
+  for (let i = 0; i < dadosArr.length; i++) {
+    dados[dadosArr[i]].disabled=true;
+    setTimeout(() => {
+      dados[dadosArr[i]].disabled=false;
+    }, 1500);
+  }
+}
+
 
 /* Eventos dados: */
 d20.onclick = () => jogarDado("D20: ", 20);
