@@ -1,11 +1,11 @@
 // -→ SELETORES: {
 const dados = {
-	d20: document.querySelector("#d20"),
-	d12: document.querySelector("#d12"),
-	d8: document.querySelector("#d8"),
-	d6: document.querySelector("#d6"),
-	d4: document.querySelector("#d4"),
-	d100: document.querySelector("#d100")
+  d20: document.querySelector("#d20"),
+  d12: document.querySelector("#d12"),
+  d8: document.querySelector("#d8"),
+  d6: document.querySelector("#d6"),
+  d4: document.querySelector("#d4"),
+  d100: document.querySelector("#d100")
 };
 const { d20, d12, d8, d6, d4, d100 } = dados;
 
@@ -17,17 +17,21 @@ const labelNumDados = document.querySelector("label[for=numDados]");
 const numDados = document.querySelector("#numDados");
 
 const gifDados = document.querySelectorAll(".dadoGif");
+
+const audioDado = document.querySelector("#audioDado");
 //}
 /* ------------------------------------- */
 // -→ SCRIPT:
 function jogarDado(indicador, dado) {
-	const div = criarDiv();
-	indicadorDadoJogado([indicador, div]);
-	for (let i = 0; i < numDados.value; i++) {
-		const rngResult = rng(dado);
-		lista(rngResult, soma.value, div);
-	}
-	todosDadosJogados.appendChild(div);
+  audioDado.play();
+  
+  const div = criarDiv();
+  indicadorDadoJogado([indicador, div]);
+  for (let i = 0; i < numDados.value; i++) {
+    const rngResult = rng(dado);
+    lista(rngResult, soma.value, div);
+  }
+  todosDadosJogados.appendChild(div);
 }
 
 /* RNG: */
@@ -38,42 +42,45 @@ function rng(num) {
     return arr[rngValArr];
   }
   else {
-  	const rngVal = Math.ceil(Math.random() * num);
-  	return rngVal;
+    const rngVal = Math.ceil(Math.random() * num);
+    return rngVal;
   }
 }
 
 /* Exibição de dados jogados: */
 let coresIndex = 0;
+
 function criarDiv() {
   const div = document.createElement("div");
   div.id = "dadosJogados";
   
   const cores = ['red', 'blue', 'orange', 'purple', 'gold', 'green', 'aqua', 'Gray', 'DodgerBlue', 'DeepPink'];
   div.style.borderColor = cores[coresIndex];
-  if (coresIndex >= cores.length-1) {
+  if (coresIndex >= cores.length - 1) {
     coresIndex = 0;
   } else {
     coresIndex++;
   }
   return div;
 }
+
 function lista(rng, somaRng, div) {
-	const Soma = Number(somaRng);
-	const p = document.createElement("p");
-	p.id="valor";
-	if (Soma) {
-		p.innerHTML = `${rng} + ${Soma} = ${rng + Soma}`;
-	} else {
-		p.innerHTML = rng;
-	}
-	div.appendChild(p);
+  const Soma = Number(somaRng);
+  const p = document.createElement("p");
+  p.id = "valor";
+  if (Soma) {
+    p.innerHTML = `${rng} + ${Soma} = ${rng + Soma}`;
+  } else {
+    p.innerHTML = rng;
+  }
+  div.appendChild(p);
 }
+
 function indicadorDadoJogado(p) {
-	const nome = document.createElement("p");
-	nome.id="indicador";
-	nome.innerHTML = p[0];
-	p[1].appendChild(nome);
+  const nome = document.createElement("p");
+  nome.id = "indicador";
+  nome.innerHTML = p[0];
+  p[1].appendChild(nome);
 }
 
 /* Quantidade de dados - LABEL & INPUT: */

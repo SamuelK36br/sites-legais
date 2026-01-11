@@ -8,25 +8,46 @@ html {
   color: white;
   overflow-x: hidden;
 }
-:root {}
 
+:root {}
 /* ------------------------------------- */
 /* -> ESTILIZAÇÃO: */
 /* Cabeçalho: */
-div#titulo {
+#titulo {
   display: flex;
   flex-direction: row;
   flex: 0 1 auto;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: clamp(10px, 1vh, 40px);
 }
+
 #titulo>h1 {
   font-size: clamp(1rem, 9vw, 12rem);
-  margin: 5px 0;
+  margin: 0;
 }
-.dadoGif {
-  width: 20%;
+
+#creditos {
+  font-size: 0.8rem;
+  margin: 0;
+  margin-bottom: clamp(30px, 6vh, 60px);
+  padding: 5px;
+  box-shadow: 5px 5px 0 0 gray;
+  background-color: #fff;
+  color: #000;
+  
+  /* Flexbox: */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-self: center;
+}
+#creditos-principal {
+  margin-bottom: 10px;
+}
+#creditos-audioDado {
+  text-align: center;
 }
 
 /* Botões Jogar dados: */
@@ -36,11 +57,13 @@ div#botoesDado {
   justify-content: space-around;
   align-items: center;
 }
+
 #botoesDado>button {
   font-size: 1.5rem;
   padding: 8px;
   flex: 0 1 auto;
 }
+
 
 /* DIV: Soma & Quantidade de dados: */
 div#soma-quantidadeDados {
@@ -49,6 +72,7 @@ div#soma-quantidadeDados {
   justify-content: space-around;
   align-items: center;
 }
+
 /*  - Quantidade dados: */
 div#quantidadeInput-Label {
   display: flex;
@@ -62,10 +86,12 @@ div#quantidadeInput-Label {
   margin-top: 5px;
   width: 70vw;
 }
+
 input#numDados {
   accent-color: black;
   width: 100%;
 }
+
 label[for=numDados] {
   color: #000;
   margin-left: 10px;
@@ -79,11 +105,11 @@ input#soma {
   text-align: center;
 }
 
+
 /* Todos os dados jogados: */
 main#todosDadosJogados {
   margin-top: 25px;
   font-size: 1.6rem;
-  background-color: #fff;
   color: black;
   margin: 25px 15% 0 15%;
   display: flex;
@@ -91,19 +117,24 @@ main#todosDadosJogados {
   justify-content: flex-start;
   align-items: stretch;
 }
+
 div#dadosJogados {
   padding: 1px 5px;
   border: transparent solid 5px;
   animation: fadein 1.5s ease 1 normal forwards;
+    background-color: #fff;
 }
+
 #dadosJogados p#valor {
   margin: 0;
   margin-left: 5px;
   border-bottom: gray 1px solid;
 }
+
 div#dadosJogados p#valor:last-child {
   border: none;
 }
+
 
 /* Indicador de dado jogado: */
 #indicador {
@@ -120,14 +151,22 @@ div#dadosJogados p#valor:last-child {
     padding: 20px;
   }
   
+  #creditos {
+    font-size: 1.65rem;
+    margin-bottom: clamp(70px, 10vh, 100px);
+    box-shadow: 10px 10px 0 0 gray;
+    padding: 10px;
+  }
+  
   main#todosDadosJogados {
-    margin-top: 50px;
+    margin-top: 80px;
     font-size: 3rem;
   }
   
   div#dadosJogados {
-    border: dashed 10px;
+    border-width: 10px;
   }
+  
   div#dadosJogados p#valor {
     margin-left: 20px;
   }
@@ -151,17 +190,12 @@ div#dadosJogados p#valor:last-child {
     width: 10%;
   }
 }
-
 /* ------------------------------------- */
 /* KEYFRAMES: */
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
+  from {opacity: 0;}
   
-  to {
-    opacity: 1;
-  }
+  to {opacity: 1;}
 }
 /* ------------------------------------- */
 /* -> CLASSES SCRIPTADAS: */

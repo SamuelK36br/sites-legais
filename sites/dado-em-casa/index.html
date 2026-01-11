@@ -4,7 +4,7 @@
 <head>
   <!-- CONSOLE ERUDA: -->
   <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <!-- <script>eruda.init();</script> -->
+    <script>eruda.init();</script>
   
   <!-- CDNs ou IMPORTMAP: -->
   
@@ -31,6 +31,20 @@
       <h1>🎲 Dado em Casa! 🎲</h1>
     </div>
     
+    <div id="creditos" role="contentinfo">
+      <div id="creditos-principal">
+        <b>Feito por: </b>SamuelK36br
+        |
+        <u><i>30 de dezembro de 2025</i></u>
+      </div>
+      
+      <div id="creditos-audioDado">
+        <a href="https://freesound.org/people/Flem0527/sounds/629982/">Dice Rolling on Table</a> by <a href="https://freesound.org/people/Flem0527/">Flem0527</a>
+        <br>
+        License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>
+      </div>
+    </div>
+    
     <div id="botoesDado">
       <button id="d20">D20</button>
       <button id="d12">D12</button>
@@ -54,6 +68,16 @@
   </header>
   
   <main id="todosDadosJogados"></main>
+  
+  <!-- AUDIOS: -->
+  <audio id="audioDado">
+    <source src="audio/dado.wav"
+    type="audio/wav">
+    <source src="audio/dado.mp3"
+    type="audio/mpeg">
+    
+    Não foi possível reproduzir o áudio.
+  </audio>
   
   <!-- SCRIPTS: -->
   <script src='script.js'></script>
