@@ -22,21 +22,27 @@ const audioDado = document.querySelector("#audioDado");
 //}
 /* ------------------------------------- */
 // -→ SCRIPT:
+// Função para jogar dado:
 function jogarDado(indicador, dado) {
+  /* Aúdio de dado lançado: */
   audioDado.play();
   cooldown();
   
+  /* Criação do div: */
   const div = criarDiv();
+  
   indicadorDadoJogado([indicador, div]);
+  
   for (let i = 0; i < numDados.value; i++) {
     const rngResult = rng(dado);
     lista(rngResult, soma.value, div);
   }
+  
+  /* Anexação do div à página: */
   todosDadosJogados.appendChild(div);
 }
 
-
-/* RNG: */
+// RNG:
 function rng(num) {
   if (num == 100) {
     const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
@@ -49,8 +55,7 @@ function rng(num) {
   }
 }
 
-
-/* Exibição de dados jogados: */
+// Exibição de dados jogados:
 let coresIndex = 0;
 
 function criarDiv() {
@@ -86,25 +91,28 @@ function indicadorDadoJogado(p) {
   p[1].appendChild(nome);
 }
 
-
-/* Quantidade de dados - LABEL & INPUT: */
+// Quantidade de dados: <label> & <input>:
 labelNumDados.innerHTML = numDados.value;
 numDados.oninput = () => labelNumDados.innerHTML = numDados.value;
 
-
-/* Cooldown dado: */
-function cooldown() {
+// Cooldown dado:
+function disabledDados(valor) {
   const dadosArr = ["d20", "d12", "d8", "d6", "d4", "d100"];
+  
   for (let i = 0; i < dadosArr.length; i++) {
-    dados[dadosArr[i]].disabled=true;
-    setTimeout(() => {
-      dados[dadosArr[i]].disabled=false;
-    }, 1500);
+    dados[dadosArr[i]].disabled=valor;
   }
 }
 
+function cooldown() {
+  disabledDados(true);
+  
+  audioDado.onended = () => {
+    disabledDados(false);
+  }
+}
 
-/* Eventos dados: */
+// Eventos dados:
 d20.onclick = () => jogarDado("D20: ", 20);
 d12.onclick = () => jogarDado("D12: ", 12);
 d8.onclick = () => jogarDado("D8: ", 8);

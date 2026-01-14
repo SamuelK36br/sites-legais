@@ -108,14 +108,17 @@ input#soma {
 
 /* Todos os dados jogados: */
 main#todosDadosJogados {
-  margin-top: 25px;
-  font-size: 1.6rem;
-  color: black;
-  margin: 25px 15% 0 15%;
+  /* flexbox: */
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: stretch;
+  gap: 15px;
+  
+  margin-top: 25px;
+  font-size: 1.6rem;
+  color: black;
+  margin: 25px 15% 0 15%;
 }
 
 div#dadosJogados {
