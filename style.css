@@ -1,163 +1,161 @@
-/* FONTES: */
-/* Bungee Shade: */
+/* >> FONTES: {*/
 /* "Bungee Shade", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
-/* Varela Round: */
 /* "Varela Round", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-/* Mountserrat: */
 /* "Montserrat", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+/* >> VARIÁVEIS: */
+:root {
+  --bordaWidth: 1.5vw;
+}
+
+/* >> ESTILO DA PÁGINA: */
+body {
   background-color: black;
-  text-align: center;
   color: white;
-  margin: 0;
 }
 
-/* CABEÇALHO: */
-.titulo{
-  font-family: "Bungee Shade", sans-serif;
-  font-size: 40px;
-  color: blue;
-  background-color: white;
-  border: dimgray solid 8px;
-  border-radius: 0 25px 0 25px;
-  padding: 0 5px 0 5px;
-  margin: 8px 0 0 0;
-  display: inline-block;
-}
-.possivelmente{
-  font-style: italic;
-  font-family: arial;
-  font-size: 8px;
-  color: dimgray;
-  margin: 5px 0 20px 0;
-}
-
-/* RODAPÉ: */
-#creditos, #creditosFontes{
-  font-family: "Varela Round", sans-serif;
-  font-size: 25px;
-  color: red;
-  background-color: white;
-  border: dimgray solid 10px;
-  border-radius: 25px 0 25px 0;
-  margin: 20px 8px 8px 8px;
-  padding: 5px;
-  display: inline-block;
-}
-#creditos span{
-  color: black;
-  font-style: italic;
-}
-
-/* CONTEÚDO PRINCIPAL: */
-main {
-  background-color: #0D1B2A;
-  display: inline-block;
-  padding: 5px 20px 5px 20px;
-  border-radius: 40px;
-}
-
-/* ESTILO PADRÃO LINKS SITES: */
-nav#sites > a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  padding: 5px;
-  display: inline-block;
-  border-radius: 15px;
-  border-width: 8px;
-}
-nav#sites > a:hover {
-  transform: scale(1.2);
-  font-style: italic;
-  transition: transform 0.3s;
-}
-nav#sites {
+/* Cabeçalho: */
+header {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
   align-items: center;
-  height: auto;
-  padding: 10px 0;
-  gap: 20px;
-/*A altura deve ser atualizada de acordo com a quantidade de sites adicionados.*/
+  gap: 1.5vh;
 }
 
-/* ESTILO INDIVIDUAL LINKS SITES: */
-#regioesPolares {
-  color: white;
-  background-color: #6997ac;
-  border: #4c88bc solid;
-}
-#aTalConversa {
-  color: black;
+header h1 {
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 9vw;
+  color: blue;
   background-color: white;
-  border: red solid;
+  border: dimgray solid 1.8vw;
+  border-radius: 0 5vw;
+  padding: 0 8px;
+  margin-top: 2vw;
 }
-#aTalConversa2 {
-  color: black;
+
+header div#creditos {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 350;
+  font-size: 4.5vw;
+  padding: 2.5px;
+  box-shadow: 1.2vw 1.2vw 0 gray;
+  color: red;
+  background-color: #fff;
+}
+
+/* Rodapé: */
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer div#fontes{
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  font-size: 3vw;
+  color: red;
   background-color: white;
-  border: blue solid;
+  border: dimgray solid 1vw;
+  border-radius: 5vw 0;
+  padding: 1.2vw;
 }
-#aTalConversaWiki {
-  color: black;
-  background-color: white;
-  border: forestgreen solid;
+
+/* Conteúdo principal: */
+main {
+  margin: 5vh 0;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+nav {
+  background-color: #0D1B2A;
+  padding: 3vw 3vw;
+  border-radius: 10vw;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+/* !>> Estilo padrão links sites: */
+nav a {
+  font-size: 4vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 1.5vw;
+  border-radius: 3.5vw;
+}
+
+nav a:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+  font-style: italic;
+}
+
+/* !>> Estilo individual links sites: */
 #adivinheSenha {
   background-color: black;
   color: greenyellow;
   border: grey solid;
+  border-width: var(--bordaWidth);
 }
+
 #maquinaEnigmas {
   background-color: navajowhite;
   color: black;
   border: peru solid;
+  border-width: var(--bordaWidth);
 }
-#conversorDeUnidades {
-  background-color: plum;
-  color: black;
-  border: crimson inset;
-}
+
 #ultraConversor {
   background-color: mediumblue;
   color: white;
   border: aqua outset;
+  border-width: var(--bordaWidth);
 }
-#curiosidadeAnime {
-  background-color: #BC002D;
-  color: white;
-  border: white solid;
-}
+
 #calculadoraLiedshow {
   background-color: #1C1D1F;
-  border: #1A5986 solid;
   color: white;
+  border: #1A5986 solid;
+  border-width: var(--bordaWidth);
 }
+
 #cronometroEngracado {
   background-color: darkorange;
+  color: black;
   border: white solid;
-  color: black;
+  border-width: var(--bordaWidth);
 }
-#lancadorDeDados {
-  background-color: #fff;
-  color: black;
-  border: black dashed;
-}
+
 #significados {
   background-color: #A36C0F;
   color: #ffffff;
   border: black solid;
+  border-width: var(--bordaWidth);
 }
+
 #dadoCasa {
-  color: #fff;
   background-color: #000;
+  color: #fff;
   border: white solid;
+  border-width: var(--bordaWidth);
 }
+
+/* >> KEYFRAMES: */
+/*...*/
+
+/* >> CLASSES SCRIPTADAS: */
+/*...*/
+
+/* >> MEDIA QUERIES: */
+@media (min-width: 576px) {}
