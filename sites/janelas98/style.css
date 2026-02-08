@@ -1,0 +1,490 @@
+/* >> FONTES: */
+@font-face {
+  font-family: w95;
+  src: url("fonts/W95FA.otf");
+}
+
+/* >> VARIÁVEIS: */
+:root {
+  --wallpaper01: url("wallpapers/01.jpg");
+  --wallpaper02: url("wallpapers/02.jpg");
+  --wallpaper03: url("wallpapers/03.jpg");
+  --wallpaper04: url("wallpapers/04.jpg");
+  --wallpaper05: url("wallpapers/05.jpg");
+  --wallpaper06: url("wallpapers/06.jpg");
+  --wallpaper07: url("wallpapers/07.jpg");
+  --wallpaper08: url("wallpapers/08.jpg");
+}
+
+/* >> ESTILO DA PÁGINA: */
+body {
+  background-position: center top;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  font-family: w95;
+}
+
+/* MAIN: */
+main { height: 96.3vh }
+
+/* -> Programas área de trabalho: */
+.programas {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 50vw;
+  gap: 10px;
+  margin: 3px;
+}
+
+.programa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 25%;
+  cursor: pointer;
+}
+
+.programa.erro:not(#notepad-programa) {cursor: not-allowed}
+
+.programa span {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.programa img {
+  max-width: 40px;
+  user-select: none;
+}
+
+/* -> Programa aberto: */
+.programa-aberto {
+  background: #C0C0C0;
+  padding: 2px;
+  width: 70vw;
+  margin: 0 auto;
+  transform: translateY(50px);
+  user-select: none;
+  
+  border: black outset 1.5px;
+  border-top-color: white;
+  border-left-color: white;
+}
+
+.programa-aberto--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  background:
+  linear-gradient(to left, #2B2BCA, #0D0D7C);
+  padding: 3px;
+  font-size: 1.4rem;
+}
+
+.programa-aberto--header .img-e-nome {
+  display: flex;
+  align-items: end;
+  gap: 0 5px;
+}
+
+.img-e-nome img { width: 15px; }
+
+.programa-botao {
+  background-color: #C0C0C0;
+  border: white solid 2px;
+  border-right-color: dimgray;
+  border-bottom-color: dimgray;
+  cursor: pointer;
+}
+
+/* -> Programa Wallpaper: */
+.seletor-wallpaper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 5px 0;
+}
+
+.wallpaper-opt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px 0;
+  
+  color: #000;
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.wallpaper-opt > img {
+  border: black outset 1.5px;
+  border-top-color: dimgray;
+  border-left-color: dimgray;
+  width: 50px;
+}
+
+/* -> Programa Notepad: */
+.notepad-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.notepad-main .botoes-em-cima {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 10px;
+  
+  color: #000;
+  padding: 5px;
+}
+
+.notepad-main textarea {
+  border: black solid 1.5px;
+  border-right-color: gray;
+  border-bottom-color: gray;
+  border-radius: 0px;
+  width: 100%;
+  font-size: 1rem;
+  resize: none;
+  aspect-ratio: 1 / 1;
+}
+
+.botoes-em-cima span {cursor: not-allowed}
+
+/* -> Programa internet: */
+.internet-main {
+  color: #000;
+}
+
+/* o que está em cima do viewport: */
+.parte-superior {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+/* botões arquivo, editar, etc: */
+.botoes-edicao {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  padding: 4px;
+  padding-bottom: 3px;
+  border: white 1.5px groove;
+  font-size: 1rem;
+}
+
+.botoes-edicao span { cursor: not-allowed }
+
+/* botões voltar, refresh, início, etc: */
+.botoes-navegacao {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  
+  padding: 2px;
+  border: white 1.5px groove;
+  border-top: none;
+}
+
+.botoes-navegacao hr {
+  width: 1px;
+  height: 30px;
+}
+
+.botao-navegacao {
+  display: flex;
+  gap: 2px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: not-allowed;
+  font-size: 0.85rem;
+}
+
+.botao-navegacao img { width: 18px }
+
+/* barra de endereço: */
+.barra-endereco {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 2px;
+  border: white 1.5px groove;
+  border-top: none;
+}
+
+.barra-endereco span {
+  padding-left: 2px;
+}
+
+.url {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 1px;
+
+  border: black 1px solid;
+  border-right-color: gray;
+  border-bottom-color: gray;
+}
+
+.url img { width: 12px }
+
+/* viewport */
+.pagina-web {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #fff;
+  padding: 20px 0;
+  border: black solid 1.2px;
+}
+
+.pagina-web img { width: 150px }
+
+.pagina-web .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.botoes-e-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px 0;
+}
+
+.botoes-e-input input {
+  all: initial;
+  border: black 1px solid;
+  border-right-color: gray;
+  border-bottom-color: gray;
+  font-family: w95;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 2px;
+}
+
+.botoes-div {
+  display: flex;
+  gap: 0 5px;
+}
+
+.botoes-div button {
+  font-family: w95;
+  background-color: #BCBCBC;
+  border: gray solid 1px;
+  font-size: 1rem;
+  padding: 2px 10px;
+  cursor: not-allowed;
+}
+
+
+/* -> Alerta erro: */
+.erro-main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+  padding: 10px;
+}
+
+.erro-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 10px;
+  
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.erro-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.erro-botao button {
+  border: dotted 1.4px dimgray;
+  border-radius: 1px;
+  background: none;
+  margin: 1.5px;
+  padding: 0 15px;
+  font-family: w95;
+  cursor: pointer;
+}
+
+.erro-botao--borda:hover {
+  background-color: #ACACAC;
+}
+
+.erro-botao--borda {
+  border: black solid 1px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+
+
+/* FOOTER: */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  color: #000;
+  background-color: #C0C0C0;
+  border-top: white 1.5px solid;
+  padding: 2.5px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  font-size: 1.2rem;
+}
+
+/* Creditos */
+.creditos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 5px;
+  
+  background-color: #BABABA;
+  border: gray groove 1px;
+  padding: 2.5px 1px;
+}
+
+
+/* Exibição da hora no canto direito: */
+#hora {
+  user-select: none;
+  background-color: #BABABA;
+  border: white inset 1px;
+  padding: 2px 2px 1px 2px;
+}
+
+/* botão inicar: */
+.botao-iniciar {
+  display: flex;
+  align-items: center;
+  gap: 0 1px;
+  
+  background-color: #C2BFC2;
+  padding: 0 2px;
+  font-family: w95;
+  user-select: none;
+  
+  border: black outset 1px;
+  border-top-color: white;
+  border-left-color: white;
+}
+
+.botao-iniciar:hover {
+  background-color: #ACACAC;
+  cursor: pointer;
+}
+
+/* menu iniciar: */
+.menu-iniciar {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  
+  position: absolute;
+  bottom: 25px;
+  left: 0px;
+  
+  background-color: #C0C0C0;
+  padding: 2px;
+  border: black outset 1.5px;
+  border-top-color: white;
+  border-left-color: white;
+}
+
+/* Lista de executáveis do menu iniciar: */
+.lista-exec {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+  width: 100%;
+}
+
+.lista-exec hr {
+  margin: 0 4px;
+}
+
+.lista--item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 5px;
+  cursor: pointer;
+  color: #000;
+  padding: 0 4px;
+  user-select: none;
+}
+
+.lista--item.erro { cursor: not-allowed }
+
+.lista--item:hover {
+  background-color: #0D0D7C;
+  color: #fff;
+}
+
+.lista--item > img { width: 28px; }
+
+/* barra lateral do menu iniciar: */
+.barra-lateral {
+  writing-mode: sideways-lr;
+  padding: 4px;
+  color: #fff;
+  font-size: 2rem;
+  user-select: none;
+  background: linear-gradient(to top, #2B2BCA, #0D0D7C 35%);
+}
+
+
+/* >> KEYFRAMES: ↓ */
+/* ... */
+
+/* >> CLASSES SCRIPTADAS: */
+.botao-iniciar.ativo {
+  background-color: #ACACAC;
+}
+
+.wallpaper-opt.atual {
+  border: red dashed 1.5px;
+}
+
+/* outros: */
+.hidden {
+  display: none;
+}
+.borda {
+  border: dashed yellow 1px;
+}
+.borda1 {
+  border: dashed red 1px;
+}
+
+/* >> MEDIA QUERIES: ↓ */
+@media (min-width: 576px) {}

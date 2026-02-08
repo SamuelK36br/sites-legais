@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- CONSOLE ERUDA: -->
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <!-- >> erudaConfig: -->
+  <script src="https://samuelk36br.github.io/meusCDNs/erudaConfig.js"></script>
+  
+  <!-- CDNs ou IMPORTMAP: -->
+  <!--...-->
+  
+  <!-- METAs: -->
+  <!-- >> Resolução: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- >> Mostrar Acentos: -->
+  <meta charset="UTF-8">
+  
+  <!-- ICONE DO SITE: -->
+  <link rel="icon" href="icon.png" type="icon/png">
+  
+  <!-- TÍTULO DO SITE: -->
+  <title>Janelas 98</title>
+  
+  <!-- ESTILOS: -->
+  <!-- >> padrao.css: -->
+  <link rel='stylesheet' href='https://samuelk36br.github.io/meusCDNs/padrao.css'>
+  <!-- >> style.css: -->
+  <link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+  <main>
+    <!-- Área de Trabalho: -->
+    <div class="programas">
+      <!-- Lixeira: -->
+      <div class="programa erro">
+        <img src="https://win98icons.alexmeub.com/icons/png/recycle_bin_full-2.png">
+        <span >Lixeira</span>
+      </div>
+      <!-- Meu Computador: -->
+      <div class="programa erro">
+        <img src="https://win98icons.alexmeub.com/icons/png/computer_2_cool-4.png">
+        <span >Meu Computador</span>
+      </div>
+      <!-- Bloco de Notas: -->
+      <div id="notepad-programa" class="programa">
+        <img src="https://win98icons.alexmeub.com/icons/png/notepad-5.png">
+        <span >Bloco de Notas</span>
+      </div>
+      <!-- Explorador de Internet: -->
+      <div id="internet-programa" class="programa">
+        <img src="https://win98icons.alexmeub.com/icons/png/msie2-2.png">
+        <span >Explorador de Internet</span>
+      </div>
+      <!-- Pintura: -->
+      <div class="programa erro">
+        <img src="https://win98icons.alexmeub.com/icons/png/paint_file-5.png">
+        <span>Pintura</span>
+      </div>
+      <!-- Campo Minado: -->
+      <div class="programa erro">
+        <img src="https://win98icons.alexmeub.com/icons/png/game_mine_1-0.png">
+        <span>Campo Minado</span>
+      </div>
+      <!-- Paciência Aranha: -->
+      <div class="programa erro">
+        <img src="https://win98icons.alexmeub.com/icons/png/game_spider-0.png">
+        <span>Paciência Aranha</span>
+      </div>
+    </div>
+    
+    <!-- Programa Wallpaper: -->
+    <div id="wallpaper"
+      class="programa-aberto hidden">
+      
+      <div class="programa-aberto--header">
+        <div class="img-e-nome">
+          <img src="https://win98icons.alexmeub.com/icons/png/display_properties-5.png"/>
+          <span>Wallpapers</span>
+        </div>
+        
+        <img id="fecharWallpaper" class="programa-botao" src="https://win98icons.alexmeub.com/images/close-icon.png">
+      </div>
+      <div class="seletor-wallpaper">
+        <!--Padrão: -->
+        <div class="wallpaper-opt">
+          <img src="wallpapers/01.jpg">
+          <span>Padrão</span>
+        </div>
+        <!-- Rosa & Branco: -->
+        <div class="wallpaper-opt">
+          <img src="wallpapers/02.jpg">
+          <span>Rosa & Branco</span>
+        </div>
+        <!-- Nublado: -->
+        <div class="wallpaper-opt">
+          <img src="wallpapers/03.jpg">
+          <span>Nublado</span>
+        </div>
+        <!-- Árvore Frutífera: -->
+        <div class="wallpaper-opt">
+          <img src="wallpapers/04.jpg">
+          <span>Árvore Frutífera</span>
+        </div>
+        <!-- Ondas: -->
+        <div class="wallpaper-opt">
+          <img src="wallpapers/05.jpg">
+          <span>Ondas</span>
+        </div>
+        <!-- Carinha: -->
+        <div class="wallpaper-opt">
+          <img src="wallpapers/06.jpg">
+          <span>'-'</span>
+        </div>
+        <!-- Música: -->
+        <div class="wallpaper-opt">
+          <img src="wallpapers/07.jpg">
+          <span>Música</span>
+        </div>
+        
+        <div class="wallpaper-opt">
+          <img src="wallpapers/08.jpg">
+          <span>Brasil</span>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Programa bloco de notas: -->
+    <div id="notepad" class="programa-aberto hidden">
+      <div class="programa-aberto--header">
+        <div class="img-e-nome">
+          <img src="https://win98icons.alexmeub.com/icons/png/notepad-5.png"/>
+          <span>Sem título - Bloco de Notas</span>
+        </div>
+        <img src="https://win98icons.alexmeub.com/images/close-icon.png" class="programa-botao">
+      </div>
+      <div class="notepad-main">
+        <div class="botoes-em-cima">
+          <span>Arquivo</span>
+          <span>Editar</span>
+          <span>Procurar</span>
+          <span>Ajuda</span>
+        </div>
+        <textarea></textarea>
+      </div>
+    </div>
+    
+    <!-- Programa internet: -->
+    <div id="internet" class="programa-aberto hidden">
+      <!-- Parte Superior do <div>: -->
+      <div class="programa-aberto--header">
+        <div class="img-e-nome">
+          <img src="https://win98icons.alexmeub.com/icons/png/html-3.png"/>
+          <span>Explorador de Internet</span>
+        </div>
+        <img class="programa-botao" src="https://win98icons.alexmeub.com/images/close-icon.png"/>
+      </div>
+      
+      <!-- Parte do meio (principal): -->
+      <div class="internet-main">
+        <!-- em cima do viewport: -->
+        <div class="parte-superior">
+          
+          <!-- arquivo, editar, etc: -->
+          <div class="botoes-edicao">
+            <span>Arquivo</span>
+            <span>Editar</span>
+            <span>Ver</span>
+            <span>Favoritos</span>
+            <span>Ferramentas</span>
+            <span>Ajuda</span>
+          </div>
+          
+          <!-- voltar, avançar, etc: -->
+          <div class="botoes-navegacao">
+            <!-- Voltar: -->
+            <div class="botao-navegacao">
+              <img
+              style="transform: scale(-1);"
+              src="https://c.feridinha.com/yZq0b.png">
+              <span>Voltar</span>
+              </div>
+            <!-- Avançar: -->
+            <div class="botao-navegacao">
+              <img src="https://c.feridinha.com/yZq0b.png">
+              <span>Avançar</span>
+            </div>
+            <!-- Parar: -->
+            <div class="botao-navegacao">
+              <img src="https://win98icons.alexmeub.com/icons/png/msg_error-2.png">
+              <span>Parar</span>
+            </div>
+            <!-- Reiniciar: -->
+            <div class="botao-navegacao">
+              <img src="https://c.feridinha.com/9Extl.png">
+              <span>Reiniciar</span>
+            </div>
+            <!-- Inicio: -->
+            <div class="botao-navegacao">
+              <img src="https://win98icons.alexmeub.com/icons/png/homepage_alt.png">
+              <span>Início</span>
+            </div>
+            
+            <hr>
+            
+            <!-- Procurar: -->
+            <div class="botao-navegacao">
+              <img src="https://f.feridinha.com/GCN1S.png">
+              <span>Procurar</span>
+            </div>
+            <!-- Favoritos: -->
+            <div class="botao-navegacao">
+              <img src="https://win98icons.alexmeub.com/icons/png/directory_favorites-2.png">
+              <span>Favoritos</span>
+            </div>
+            <!-- Histórico: -->
+            <div class="botao-navegacao">
+              <img src="https://win98icons.alexmeub.com/icons/png/history-0.png">
+              <span>Histórico</span>
+            </div>
+            
+          </div>
+          
+          <!-- url: -->
+          <div class="barra-endereco">
+            <span>Endereço:</span>
+            <div class="url">
+              <img src="https://win98icons.alexmeub.com/icons/png/html-3.png">
+              <span>https://joiapesquisas.com</span>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- viewport: -->
+        <div class="pagina-web">
+          <img src="https://f.feridinha.com/zUOdF.png">
+          
+          <div class="botoes-e-input">
+            <input type="text">
+            <div class="botoes-div">
+              <button>Joia Pesquisar</button>
+              <button>Estou com sorte</button>
+            </div>
+          </div>
+          
+          <div class="copyright">
+            <span>© 2026</span>
+            <span>SamuelK36br</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Aviso de Erro: -->
+    <div id="erro" class="programa-aberto hidden">
+      <audio id="som-erro" src="erro.mp3"></audio>
+      <div id="fecharErro" class="programa-aberto--header">
+        <span>Erro Inesperado</span>
+        <img class="programa-botao" src="https://win98icons.alexmeub.com/images/close-icon.png">
+      </div>
+      <div class="erro-main">
+        <div class="erro-message">
+          <img src="https://win98icons.alexmeub.com/icons/png/msg_error-0.png">
+          <p>Ocorreu um erro ao tentar abrir o programa.</p>
+        </div>
+        <div class="erro-botao">
+          <div class="erro-botao--borda">
+            <button>Beleza!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Barra de Tarefas: -->
+  <footer>
+    <!-- Botão Iniciar: -->
+    <button class="botao-iniciar">
+      <img
+      src="https://win98icons.alexmeub.com/icons/png/windows-0.png"
+      width="18px"/>
+      <b>Iniciar</b>
+    </button>
+    <!-- Menu Iniciar: -->
+    <div class="menu-iniciar hidden">
+      <!-- Barra Lateral: -->
+      <div class="barra-lateral">
+        <b>Janelas</b>98
+      </div>
+      <!-- Lista de Executáveis: -->
+      <div class="lista-exec">
+        <!-- >> Atualização Janelas: -->
+        <div class="lista--item" id="atualizar">
+          <img src="https://win98icons.alexmeub.com/icons/png/windows_update_large-5.png">
+          <span>Atualizar Janelas98</span>
+        </div>
+        
+        <hr>
+        
+        <!-- >> Atualizar Janelas: -->
+        <div class="lista--item erro">
+          <img src="https://win98icons.alexmeub.com/icons/png/appwizard-5.png">
+          <span><u>P</u>rogramas</span>
+        </div>
+        <!-- >> Favoritos: -->
+        <div class="lista--item erro">
+          <img src="https://win98icons.alexmeub.com/icons/png/directory_favorites-2.png">
+          <span><u>F</u>avoritos</span>
+        </div>
+        <!-- >> Documentos: -->
+        <div class="lista--item erro">
+          <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png">
+          <span>Documento<u>s</u></span>
+        </div>
+        <!-- >> Configurações: -->
+        <div class="lista--item erro">
+          <img src="https://win98icons.alexmeub.com/icons/png/settings_gear-4.png">
+          <span><u>C</u>onfigurações</span>
+        </div>
+        <!-- >> Encontrar: -->
+        <div class="lista--item erro">
+          <img src="https://win98icons.alexmeub.com/icons/png/search_directory-5.png">
+          <span>Encontra<u>r</u></span>
+        </div>
+        <!-- >> Ajuda: -->
+        <div class="lista--item erro">
+          <img src="https://win98icons.alexmeub.com/icons/png/help_book_cool-4.png">
+          <span><u>A</u>juda</span>
+        </div>
+        <!-- >> Executar: -->
+        <div class="lista--item erro">
+          <img src="https://win98icons.alexmeub.com/icons/png/application_hourglass_small-4.png">
+          <span><u>E</u>xecutar...</span>
+        </div>
+        
+        <hr />
+        
+        <!-- >> Wallpaper: -->
+        <div id="wallpaper-lista-exec" class="lista--item">
+          <img src="https://win98icons.alexmeub.com/icons/png/display_properties-5.png">
+          <span><u>W</u>allpapers</span>
+        </div>
+        <!-- >> Desligar: -->
+        <div class="lista--item" id="desligar">
+          <img src="https://win98icons.alexmeub.com/icons/png/shut_down_cool-5.png">
+          <span><u>D</u>esligar...</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Creditos: -->
+    <div class="creditos">
+      <i><b>Feito por:</b> SamuelK36br</i>
+      <b>|</b>
+      <nav>
+        <a href="https://win98icons.alexmeub.com/">Ícones</a>
+        
+        <b>-</b>
+        
+        <a href="https://www.dafont.com/w95fa.font?l[]=10&l[]=1">Fonte</a>
+        
+        <b>-</b>
+        
+        <a href="https://freesound.org/people/Heshl/sounds/269170/">Error Sound</a>
+      </nav>
+    </div>
+      
+    <!-- Hora no canto direito: -->
+    <span id="hora">00:00</span>
+  </footer>
+  
+  
+  <!-- SCRIPTS: -->
+  <script src='script.js'></script>
+</body>
+
+</html>

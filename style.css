@@ -1,4 +1,4 @@
-/* >> FONTES: {*/
+/* >> FONTES: */
 /* "Bungee Shade", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
@@ -157,6 +157,12 @@ nav a:hover {
   color: #fff;
   border: white solid;
   border-width: var(--bordaWidth);
+}
+
+#janelas98 {
+  background-color: #C0C0C0;
+  color: #000;
+  border: solid var(--bordaWidth) #0D0D7C;
 }
 
 /* >> KEYFRAMES: */
