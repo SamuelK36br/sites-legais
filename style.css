@@ -160,9 +160,12 @@ nav a:hover {
 }
 
 #janelas98 {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
   background-color: #C0C0C0;
   color: #000;
-  border: solid var(--bordaWidth) #0D0D7C;
+  border: solid var(--bordaWidth) #2B2BCA;
 }
 
 /* >> KEYFRAMES: */
