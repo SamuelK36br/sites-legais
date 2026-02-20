@@ -1,0 +1,203 @@
+/* >> FONTES: */
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+/* >> VARIÁVEIS: */
+:root {}
+
+/* >> ESTILO DA PÁGINA: */
+body {
+  background-image: url("assets/madeira.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  background: url("assets/papel-textura.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  color: #000;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+  
+  margin: 5% 3%;
+  padding: 2%;
+  
+  box-shadow: 0 0px 10px 5px black;
+}
+
+/* Criar tarefa: */
+#criar-tarefa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  margin: 10px 0 5px;
+  background-color: #d8fd7c;
+  padding: 0 15px 0 4px;
+  
+  font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#criar-tarefa form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0 3.5px;
+  
+  border: black double thick;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#criar-tarefa form input {
+  all: initial;
+  
+  width: 100%;
+  margin-right: 5px;
+  color: #000;
+  font-size: 1.8rem;
+  font-family: cursive;
+  border-bottom: black solid thin;
+}
+
+#criar-tarefa form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: lightslategray;
+  padding: 3px;
+  border-radius: 50%;
+  border: dimgray solid 2px;
+  cursor: pointer;
+}
+
+/* Tarefas Escritas: */
+section.tarefas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tarefasAnotadas {
+  max-height: 30vh;
+  width: 100%;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: black double medium;
+}
+
+/* Tarefa individual: */
+#tarefasAnotadas .tarefa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 10px;
+  
+  font-size: 2.2rem;
+  font-family: cursive;
+  padding: 5px;
+  user-select: none;
+  border-bottom: medium black double;
+  accent-color: red;
+}
+
+#tarefasAnotadas .tarefa:last-child {
+  border-bottom: none;
+}
+
+#tarefasAnotadas .inputELabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 5px;
+}
+
+.inputELabel img {
+  cursor: pointer;
+}
+
+/* Rodapé: */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  
+  margin: 5vh auto 0;
+  padding: 5px;
+  background-color: #0074b4;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 0 0px 10px 2px black;
+}
+
+footer>h1 {
+  font-style: italic;
+  text-decoration: underline red dashed;
+}
+
+footer>span {
+  margin-top: 5px;
+  font-size: 1.4rem;
+  color: #000;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+footer nav {
+  margin-top: 18px;
+}
+
+footer ul {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+
+footer ul li a {
+  color: lime;
+}
+
+footer ul li::marker {
+  color: red;
+}
+
+/* >> KEYFRAMES: ↓ */
+/*...*/
+
+/* >> CLASSES SCRIPTADAS: */
+label.cortado {
+  text-decoration: line-through red solid;
+}
+
+#tarefasAnotadas.hidden {
+  display: none;
+}
+
+/* >> MEDIA QUERIES: ↓ */
+@media (min-width: 576px) {
+  main {
+    zoom: 1.5;
+    margin: 10% 5vw;
+  }
+  
+  footer {
+    zoom: 1.5;
+    width: 45%;
+  }
+}

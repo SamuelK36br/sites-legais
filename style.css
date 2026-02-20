@@ -155,8 +155,7 @@ nav a:hover {
 #dadoCasa {
   background-color: #000;
   color: #fff;
-  border: white solid;
-  border-width: var(--bordaWidth);
+  border: white solid var(--bordaWidth);
 }
 
 #janelas98 {
@@ -166,6 +165,12 @@ nav a:hover {
   background-color: #C0C0C0;
   color: #000;
   border: solid var(--bordaWidth) #2B2BCA;
+}
+
+#tarefinhas {
+  color: #000;
+  background-color: #fff;
+  border: #0074b4 solid var(--bordaWidth);
 }
 
 /* >> KEYFRAMES: */

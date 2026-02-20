@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- CONSOLE ERUDA: -->
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <!-- >> erudaConfig: -->
+  <script src="https://samuelk36br.github.io/meusCDNs/erudaConfig.js"></script>
+  
+  <!-- CDNs ou IMPORTMAP: -->
+  <!-- ... -->
+  
+  <!-- METAs: -->
+  <!-- >> Resolução: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- >> Mostrar Acentos: -->
+  <meta charset="UTF-8">
+  
+  <!-- ICONE DO SITE: -->
+  <link rel="icon" href="icon.png" type="icon/png">
+  
+  <!-- TÍTULO DO SITE: -->
+  <title>SITE</title>
+  
+  <!-- ESTILOS: -->
+  <!-- >> padrao.css: -->
+  <link rel='stylesheet' href='https://samuelk36br.github.io/meusCDNs/padrao.css'>
+  <!-- >> style.css: -->
+  <link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+  <main>
+    <section id="criar-tarefa">
+      <audio id="saltarTarefa-audio" src="assets/salvarTarefa.wav"></audio>
+      <audio id="apagarTarefa-audio" src="assets/apagarTarefa.mp3"></audio>
+      
+      <h1>Crie sua tarefa!</h1>
+      
+      <form>
+        <!-- Escrever Tarefa: -->
+        <input required type="text">
+        
+        <!-- Transcrever texto: -->
+        <button type="button" id="stt">
+          <img src="assets/mic.svg" alt="voz">
+        </button>
+        
+        <!-- Salvar tarefa: -->
+        <button type="submit" id="salvarTarefa">
+          <img src="assets/criar-tarefa.svg" alt="enviar">
+        </button>
+      </form>
+    </section>
+    
+    <section class="tarefas">
+      <h1>tarefas anotadas:</h1>
+      <div class="hidden" id="tarefasAnotadas"></div>
+    </section>
+  </main>
+  
+  <footer>
+    <h1>Feito por: SamuelK36br</h1>
+    <span>20/02/2026</span>
+    <nav class="atribuicoes">
+      <ul>
+        <!-- Áudio salvar tarefa: -->
+        <li>
+          <a href="https://freesound.org/people/JellyDaisies/sounds/761655/">Pencil Scribble (18)</a> by <a href="https://freesound.org/people/JellyDaisies/">JellyDaisies</a> | License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>
+        </li>
+        <!-- Áudio apagar tarefa: -->
+        <li>
+          <a href="https://freesound.org/people/Iamgiorgio/sounds/371374/">E8_eraser.mp3</a> by <a href="https://freesound.org/people/Iamgiorgio/">Iamgiorgio</a> | License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>
+        </li>
+        <!-- Textura de papeL: -->
+        <li>
+          <a href="https://nlink.at/textura_papel">White crumpled paper texture for background</a> designed by <a href="https://www.freepik.com/">Freepik</a>
+        </li>
+        <!-- Fundo do site: -->
+        <li>
+          <a href="https://nlink.at/pixabay_fundo_madeira">Fundo do site</a> de <a href="https://nlink.at/perfil_pixabay_PIRO">PIRO</a> por <a href="https://pixabay.com/pt//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1516370">Pixabay</a>
+        </li>
+        <!-- Google Fonts: -->
+        <li>
+          Fonte: <a href="https://fonts.google.com/specimen/Homemade+Apple?preview.text=Impact&specimen.preview.text=Impact">Homemade Apple</a>
+        </li>
+        <!-- Ićones: -->
+        <li>
+          Ícones baixados do <a href="https://fonts.google.com/icons">Material Symbols and Icons</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+  
+  <!-- SCRIPTS: -->
+  <script src='script.js'></script>
+</body>
+
+</html>
