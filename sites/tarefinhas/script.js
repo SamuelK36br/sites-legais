@@ -17,50 +17,29 @@ const tarefasAnotadas = document.querySelector("#tarefasAnotadas");
 // Cancelar envio do formulário:
 criarTarefa.form.onsubmit = e => e.preventDefault();
 
-// Speech to Text:
-const captarVoz = new webkitSpeechRecognition();
-
-captarVoz.onresult = (e) => criarTarefa.input.value = e.results[0][0].transcript;
-
-captarVoz.onnomatch = () => alert("Não foi possível transcrever sua voz.");
-
-criarTarefa.stt.onclick = () => captarVoz.start();
-
 // Criar Tarefas:
-criarTarefa.salvarTarefa.onclick = () => {
-	if (criarTarefa.input.value != 0) {
-		tarefasAnotadas.classList.remove("hidden");
-		criarTarefa.audio.salvar.play();
-		criarTarefa.salvarTarefa.disabled = true;
-		escreverNovaTarefa();
-		
-		criarTarefa.audio.salvar.onended = () => criarTarefa.salvarTarefa.disabled = false;
-	}
-}
-
 let tarefasCriadas = 0;
+
 function escreverNovaTarefa() {
 	// Contagem de tarefas criadas:
 	tarefasCriadas++;
 	
-  // Elemetos:
-  const tarefa = criarElemento.div();
+	// Elemetos:
+	const tarefa = criarElemento.div();
 	const inputELabel = criarElemento.inputELabel();
 	const checkbox = criarElemento.checkbox();
 	const label = criarElemento.label();
 	const img = criarElemento.img();
 	
-  //	Anexar elementos:
-  	/* checkbox e input em div.inputELabel: */
-		inputELabel.appendChild(checkbox);
-		inputELabel.appendChild(label);
-		
-		/* div-inputELabel e img ao div.tarefa: */
-		tarefa.appendChild(inputELabel);
-		tarefa.appendChild(img);
-		
-		/* tudo: */
-		tarefasAnotadas.appendChild(tarefa);
+	//	Anexar elementos:
+	/* checkbox e input em div.inputELabel: */
+	inputELabel.appendChild(checkbox);
+	inputELabel.appendChild(label);
+	/* div-inputELabel e img ao div.tarefa: */
+	tarefa.appendChild(inputELabel);
+	tarefa.appendChild(img);
+	/* tudo: */
+	tarefasAnotadas.appendChild(tarefa);
 	
 	// Concluir tarefa tarefa:
 	const todosOsInputs = tarefa.querySelectorAll("input");
@@ -92,23 +71,22 @@ function escreverNovaTarefa() {
 	})
 }
 
-// Funções da criação de cada elemento:
 const criarElemento = {
-	div: function () {
+	div: function() {
 		const div = document.createElement("div");
 		div.classList.add("tarefa");
 		
 		return div;
 	},
 	
-	inputELabel: function () {
+	inputELabel: function() {
 		const inputELabel = document.createElement("div");
 		inputELabel.classList.add("inputELabel");
 		
 		return inputELabel;
 	},
 	
-	checkbox: function () {
+	checkbox: function() {
 		const checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.id = `tarefa${tarefasCriadas}`;
@@ -116,7 +94,7 @@ const criarElemento = {
 		return checkbox;
 	},
 	
-	label: function () {
+	label: function() {
 		const label = document.createElement("label");
 		label.textContent = criarTarefa.input.value;
 		label.setAttribute("for", `tarefa${tarefasCriadas}`);
@@ -124,11 +102,37 @@ const criarElemento = {
 		return label;
 	},
 	
-	img: function () {
+	img: function() {
 		const img = document.createElement("img");
 		img.src = "assets/deletarTarefa.svg";
 		img.setAttribute("id", `img${tarefasCriadas}`);
 		
 		return img;
 	}
+}
+
+criarTarefa.salvarTarefa.onclick = () => {
+	if (criarTarefa.input.value != 0) {
+		tarefasAnotadas.classList.remove("hidden");
+		criarTarefa.audio.salvar.play();
+		criarTarefa.salvarTarefa.disabled = true;
+		escreverNovaTarefa();
+		
+		criarTarefa.audio.salvar.onended = () => criarTarefa.salvarTarefa.disabled = false;
+	}
+}
+
+// Speech to Text:
+const captarVoz = new webkitSpeechRecognition();
+
+captarVoz.onresult = (e) => criarTarefa.input.value = e.results[0][0].transcript;
+
+captarVoz.onnomatch = () => alert("Não foi possível transcrever sua voz.");
+
+criarTarefa.stt.onclick = () => captarVoz.start();
+
+// Aviso ao sair:
+window.onbeforeunload = function(e) {
+	e.preventDefault();
+	e.returnValue = "";
 }
