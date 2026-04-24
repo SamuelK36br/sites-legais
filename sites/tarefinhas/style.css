@@ -81,13 +81,13 @@ main h1 {
 }
 
 /* Tarefas Escritas: */
-section.tarefas {
+.tarefas-anotadas {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#tarefasAnotadas {
+.tarefas-container {
   max-height: 30vh;
   width: 100%;
   hyphens: auto;
@@ -99,7 +99,7 @@ section.tarefas {
 }
 
 /* Tarefa individual: */
-#tarefasAnotadas .tarefa {
+.tarefas-container .tarefa {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,11 +114,11 @@ section.tarefas {
   accent-color: red;
 }
 
-#tarefasAnotadas .tarefa:last-child {
+.tarefas-container .tarefa:last-child {
   border-bottom: none;
 }
 
-#tarefasAnotadas .inputELabel {
+.tarefas-container .inputELabel {
   display: flex;
   flex-direction: row;
   align-items: center;

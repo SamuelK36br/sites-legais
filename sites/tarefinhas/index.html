@@ -31,9 +31,13 @@
 
 <body>
   <main>
+    <!-- Criar tarefa: -->
     <section id="criar-tarefa">
-      <audio id="saltarTarefa-audio" src="assets/salvarTarefa.wav"></audio>
-      <audio id="apagarTarefa-audio" src="assets/apagarTarefa.mp3"></audio>
+      <!-- Áudios: -->
+      <div class="hidden">
+        <audio id="salvarTarefa-audio" src="assets/salvarTarefa.wav"></audio>
+        <audio id="apagarTarefa-audio" src="assets/apagarTarefa.mp3"></audio>
+      </div>
       
       <h1>Crie sua tarefa!</h1>
       
@@ -53,9 +57,20 @@
       </form>
     </section>
     
-    <section class="tarefas">
+    <section class="tarefas-anotadas">
       <h1>tarefas anotadas:</h1>
-      <div class="hidden" id="tarefasAnotadas"></div>
+      
+      <div class="tarefas-container">
+        <div class="tarefa">
+          <div class="inputELabel">
+            <input type="checkbox">
+            <label for="tarefa1">
+              Lorem ipsum dolor sit amet.
+            </label>
+          </div>
+          <img src="assets/deletarTarefa.svg">
+        </div>
+      </div>
     </section>
   </main>
   
