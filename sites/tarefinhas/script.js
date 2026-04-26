@@ -15,7 +15,7 @@ const input = document.querySelector("#criar-tarefa input");
 const tarefasContainer = document.querySelector(".tarefas-container");
 
 // >> SCRIPT:
-// Cancelar envio do formulário:
+// Cancelar reload do formulário:
 form.onsubmit = e => e.preventDefault();
 
 // Criar Tarefas:
@@ -55,6 +55,7 @@ function criarElementos(c = false, l = input.value) {
 			tarefa.remove();
 			audio.apagar.play();
 			salvarElementosCriados();
+			esconderTarefasContainer();
 		};
 	}
 	
@@ -68,12 +69,15 @@ function criarElementos(c = false, l = input.value) {
 	// Salvar elementos:
 	salvarElementosCriados();
 }
+/* Executar função ao clicar no botão: */
 salvarTarefa.onclick = () => {
 	if (!(input.validity.valueMissing)) {
 		audio.salvar.play();
-		criarElementos()
+		criarElementos();
+		esconderTarefasContainer();
 	}
 }
+
 
 // Salvar elementos criados:
 function salvarElementosCriados() {
@@ -93,11 +97,10 @@ function salvarElementosCriados() {
 	
 	localStorage.setItem(
 		"tarefinhas-save",
-		JSON.stringify(arr, null, 2)
+		JSON.stringify(arr)
 	)
-	
-	console.log(localStorage.getItem("tarefinhas-save"));
 }
+
 
 // Criar elementos que estão no localStorage:
 function criarElementosPeloSave(item) {
@@ -105,8 +108,22 @@ function criarElementosPeloSave(item) {
 		criarElementos(obj.checkbox, obj.label);
 	})
 }
-const item = localStorage.getItem("tarefinhas-save");
-if (item) criarElementosPeloSave(item);
+/* Criar elementos ao carregar a página: */
+const storage = localStorage.getItem("tarefinhas-save");
+if (storage) criarElementosPeloSave(storage);
+
+
+// Esconder div.tarefas-container, quando não tiver nenhum filho:
+function esconderTarefasContainer() {
+	if (tarefasContainer.childElementCount < 1) {
+		tarefasContainer.classList.add("hidden");
+	} else {
+		tarefasContainer.classList.remove("hidden")
+	}
+}
+/* Esconder ao carregar a página: */
+esconderTarefasContainer();
+
 
 // Voz para texto (stt):
 const captarVoz = new webkitSpeechRecognition();
