@@ -4,10 +4,8 @@
 <head>
   <!-- CONSOLE ERUDA: -->
   <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-  <!-- <script>eruda.init();</script> -->
-  
-  <!-- CDNs ou IMPORTMAP: -->
-  
+  <!-- >> erudaConfig: -->
+  <script src="https://samuelk36br.github.io/meusCDNs/erudaConfig.js"></script>
   
   <!-- METAs: -->
   <!-- -→ Resolução: -->
@@ -61,7 +59,7 @@
       <!-- Qunatidade de dados: -->
       <span>Quantidade de Dados</span>
       <div id="quantidadeInput-Label">
-        <input type="range" id="numDados" value="1" min="1" max="10"/>
+        <input type="range" id="numDados" value="1" min="1" max="10" />
         <label for="numDados"></label>
       </div>
     </div>
@@ -71,10 +69,8 @@
   
   <!-- AUDIOS: -->
   <audio id="audioDado">
-    <source src="audio/dado.wav"
-    type="audio/wav">
-    <source src="audio/dado.mp3"
-    type="audio/mpeg">
+    <source src="audio/dado.wav" type="audio/wav">
+    <source src="audio/dado.mp3" type="audio/mpeg">
     
     Não foi possível reproduzir o áudio.
   </audio>
