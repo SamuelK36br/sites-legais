@@ -28,7 +28,7 @@ header h1 {
   text-align: center;
   color: blue;
   background-color: white;
-  border: dimgray solid 1.8vw;
+  border: dimgray solid 8px;
   border-radius: 0 5vw;
   padding: 0 8px;
   margin-top: 2vw;
@@ -74,7 +74,7 @@ header h1 {
 
 /* Conteúdo principal: */
 main {
-  margin: 10% auto;
+  margin: 45px auto;
   width: 70%;
   
   display: flex;
