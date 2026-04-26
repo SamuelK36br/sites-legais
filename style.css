@@ -9,12 +9,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ========================================= */
-/* >> VARIÁVEIS: */
-:root {
-  --bordaWidth: 1.5vw;
-}
-
-/* ========================================= */
 /* >> ESTILO DA PÁGINA: */
 body {
   background-color: black;
@@ -26,12 +20,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
 header h1 {
   font-family: "Bungee Shade", sans-serif;
-  font-size: 9vw;
+  font-size: 3.9rem;
+  text-align: center;
   color: blue;
   background-color: white;
   border: dimgray solid 1.8vw;
@@ -40,36 +34,42 @@ header h1 {
   margin-top: 2vw;
 }
 
-header div#creditos {
+#info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px 0;
+  margin-top: 10px;
+}
+
+#info p {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-weight: 350;
-  font-size: 4.5vw;
+  font-size: 1.6rem;
   padding: 2.5px;
   box-shadow: 1.2vw 1.2vw 0 gray;
   color: red;
   background-color: #fff;
 }
 
-/* Rodapé: */
-footer {
-  margin-bottom: 50px;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+#info p b {
+  color: #000;
 }
 
-footer #github, #fontes{
+#info nav {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+
+#info #fontes {
+  color: whitesmoke;
   text-align: center;
-  font-family: "Varela Round", sans-serif;
-  font-size: 3vw;
-  color: red;
-  background-color: white;
-  border: dimgray solid 1vw;
-  border-radius: 5vw 0;
-  padding: 1.2vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.15rem;
+  text-decoration: underline;
+  font-style: italic;
 }
 
 /* Conteúdo principal: */
@@ -82,7 +82,7 @@ main {
   align-items: center;
 }
 
-nav {
+.sites {
   background-color: #0D1B2A;
   padding: 3vw 3vw;
   border-radius: 10vw;
@@ -96,16 +96,17 @@ nav {
 }
 
 /* Estilo padrão links sites: */
-nav a {
-  font-size: 3.5vw;
+.sites a {
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-align: center;
-  padding: 1.5vw;
-  border-radius: 3.5vw;
+  padding: 5px;
+  border-width: 5px;
+  border-radius: 40px;
 }
 
-nav a:hover {
+.sites a:hover {
   transform: scale(1.2);
   transition: transform 0.3s;
   font-style: italic;
@@ -115,49 +116,50 @@ nav a:hover {
 #adivinheSenha {
   background-color: black;
   color: greenyellow;
-  border: grey solid;
-  border-width: var(--bordaWidth);
+  border-color: gray;
+  border-style: solid;
 }
 
 #maquinaEnigmas {
   background-color: navajowhite;
   color: black;
-  border: peru solid;
-  border-width: var(--bordaWidth);
+  border-color: peru;
+  border-style: solid;
 }
 
 #ultraConversor {
   background-color: mediumblue;
   color: white;
-  border: aqua outset;
-  border-width: var(--bordaWidth);
+  border-color: aqua;
+  border-style: outset;
 }
 
 #calculadoraLiedshow {
   background-color: #1C1D1F;
   color: white;
-  border: #1A5986 solid;
-  border-width: var(--bordaWidth);
+  border-color: #1A5986;
+  border-style: solid;
 }
 
 #cronometroEngracado {
   background-color: darkorange;
   color: black;
-  border: white solid;
-  border-width: var(--bordaWidth);
+  border-color: white;
+  border-style: solid;
 }
 
 #significados {
   background-color: #A36C0F;
   color: #ffffff;
-  border: black solid;
-  border-width: var(--bordaWidth);
+  border-color: #000;
+  border-style: solid;
 }
 
 #dadoCasa {
   background-color: #000;
   color: #fff;
-  border: white solid var(--bordaWidth);
+  border-color: white;
+  border-style: solid;
 }
 
 #janelas98 {
@@ -166,13 +168,15 @@ nav a:hover {
   gap: 0 5px;
   background-color: #C0C0C0;
   color: #000;
-  border: solid var(--bordaWidth) #2B2BCA;
+  border-color: #2B2BCA;
+  border-style: solid;
 }
 
 #tarefinhas {
   color: #000;
   background-color: #fff;
-  border: #0074b4 solid var(--bordaWidth);
+  border-color: #0074b4;
+  border-style: solid;
 }
 
 /* ========================================= */
