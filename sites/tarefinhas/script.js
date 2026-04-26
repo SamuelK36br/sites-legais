@@ -14,6 +14,8 @@ const input = document.querySelector("#criar-tarefa input");
 
 const tarefasContainer = document.querySelector(".tarefas-container");
 
+const apagarTodasTarefas_btn = document.getElementById("apagarTodasTarefas");
+
 // >> SCRIPT:
 // Cancelar reload do formulário:
 form.onsubmit = e => e.preventDefault();
@@ -117,12 +119,28 @@ if (storage) criarElementosPeloSave(storage);
 function esconderTarefasContainer() {
 	if (tarefasContainer.childElementCount < 1) {
 		tarefasContainer.classList.add("hidden");
+		apagarTodasTarefas_btn.classList.add("hidden");
 	} else {
 		tarefasContainer.classList.remove("hidden")
+		apagarTodasTarefas_btn.classList.remove("hidden")
 	}
 }
 /* Esconder ao carregar a página: */
 esconderTarefasContainer();
+
+
+// Apagar as tarefas do localStorage e do DOM:
+function apagarTodasTarefas() {
+	const resposta = confirm("Isso irá apagar todas as suas tarefas escritas. Tem certeza?");
+	if (resposta) {
+		audio.apagar.play();
+		audio.apagar.onended = function () {
+			localStorage.removeItem("tarefinhas-save");
+			location.reload();
+		}
+	}
+}
+apagarTodasTarefas_btn.onclick = apagarTodasTarefas;
 
 
 // Voz para texto (stt):

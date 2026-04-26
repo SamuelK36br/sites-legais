@@ -80,7 +80,7 @@ main h1 {
   cursor: pointer;
 }
 
-/* Tarefas Escritas: */
+/* Tarefas: */
 .tarefas-anotadas {
   display: flex;
   flex-direction: column;
@@ -98,7 +98,6 @@ main h1 {
   border: black double medium;
 }
 
-/* Tarefa individual: */
 .tarefas-container .tarefa {
   display: flex;
   flex-direction: row;
@@ -129,6 +128,20 @@ main h1 {
 input[type=checkbox] { zoom: 1.3; }
 
 .tarefas-container img { cursor: pointer; }
+
+#apagarTodasTarefas {
+  background: none;
+  border: none;
+}
+
+#apagarTodasTarefas img {
+  background-color: red;
+  padding: 3px;
+  border-radius: 50%;
+  border: darkred solid 2.5px;
+  cursor: pointer;
+  margin: 0 0 20px 0;
+}
 
 /* Rodapé: */
 footer {
