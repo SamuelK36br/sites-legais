@@ -8,11 +8,13 @@
 /* "Montserrat", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ========================================= */
 /* >> VARIÁVEIS: */
 :root {
   --bordaWidth: 1.5vw;
 }
 
+/* ========================================= */
 /* >> ESTILO DA PÁGINA: */
 body {
   background-color: black;
@@ -93,7 +95,7 @@ nav {
   flex: 0 1 auto;
 }
 
-/* !>> Estilo padrão links sites: */
+/* Estilo padrão links sites: */
 nav a {
   font-size: 3.5vw;
   font-family: "Montserrat", sans-serif;
@@ -109,7 +111,7 @@ nav a:hover {
   font-style: italic;
 }
 
-/* !>> Estilo individual links sites: */
+/* Estilo individual links sites: */
 #adivinheSenha {
   background-color: black;
   color: greenyellow;
@@ -173,11 +175,21 @@ nav a:hover {
   border: #0074b4 solid var(--bordaWidth);
 }
 
-/* >> KEYFRAMES: */
-/*...*/
-
+/* ========================================= */
 /* >> CLASSES SCRIPTADAS: */
 /*...*/
 
-/* >> MEDIA QUERIES: */
+/* ========================================= */
+/* >> KEYFRAMES: */
+/*...*/
+
+/* ========================================= */
+/* >> BREAKPOINTS (media queries): */
+/* Tablets: */
 @media (min-width: 576px) {}
+
+/* Desktop pequeno: */
+@media (min-width: 768px) {}
+
+/* Desktop médio: */
+@media (min-width: 992px) {}
