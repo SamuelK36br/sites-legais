@@ -1,0 +1,172 @@
+/* >> FONTES: */
+@font-face {
+	font-family: Cairopixel;
+	src: url('Cairopixel.ttf');
+}
+
+/* ========================================= */
+/* >> ESTILO: */
+/* • body, html e root: */
+/*...*/
+
+/* • página web: */
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0 0;
+	margin: 2vh 1.8vw;
+	font-family: Cairopixel;
+}
+
+header h1 {
+	font-size: 15vw;
+	text-align: center;
+	margin: 0;
+	background: white;
+	color: #000;
+	padding: 0 2vw;
+	box-shadow:
+	-7px -7px 0 gray,
+	7px 7px 0 gray;
+}
+
+header p {
+	text-align: center;
+	font-size: 5vw;
+	line-height: 0.8;
+}
+
+header #criacao {
+	background: black;
+	color: #fff;
+	margin: 2.5vh 0;
+	padding: 0.8vh 2vw;
+	box-shadow:
+	5px 5px 0 white,
+	0px 0px 0 2px darkgray inset;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+footer button {
+	font-family: Cairopixel;
+	font-size: 6vw;
+	background: white;
+	padding: 1vw 3vw;
+	border: none;
+	text-decoration: underline;
+}
+
+#baixar {
+	color: teal;
+	box-shadow: 5px 5px 0 gray;
+}
+
+#redefinir {
+	color: red;
+	box-shadow: -5px -5px 0 gray;
+}
+
+footer button:hover {
+	font-style: italic;
+	text-decoration: underline dashed;
+}
+
+#avatar-box {
+	border: white ridge 2vw;
+	width: 89.5vw;
+	margin: 3.5vh auto;
+}
+
+#persona {
+	border-bottom: white ridge 2vw;
+	
+}
+
+#colors {
+	border-top: white ridge 2vw;
+}
+
+.action-box {
+	display: flex;
+	flex-direction: column;
+	gap: 3vh 0;
+	max-height: 22vh;
+	overflow-y: scroll;
+  overscroll-behavior: none;
+	margin: 0 auto;
+	padding: 1vh 2vw;
+}
+
+.action-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 6vw;
+	font-family: Cairopixel;
+	text-align: center;
+}
+
+#colors .action-item {
+	 display: grid; 
+	 grid-template-columns: repeat(3, 1fr);
+	 justify-items: center;
+	 align-items: center;
+}
+
+.prox, .antr {
+	padding: 1vw 3vw;
+	font-weight: bold;
+	vertical-align: middle;
+	font-size: 1.1em;
+}
+
+/* ========================================= */
+/* >> CLASSES SCRIPTADAS: */
+.hidden { display: none; }
+
+/* ========================================= */
+/* >> KEYFRAMES: */
+/*...*/
+
+/* ========================================= */
+/* >> BREAKPOINTS (media queries): */
+/* Tablets: */
+@media (min-width: 576px) {}
+
+/* Desktop pequeno: */
+@media (min-width: 768px) {
+	header h1 { font-size: 12vw; }
+	
+	header p { /* font-size: ; */ }
+	
+	#avatar-box {
+		width: 50vw;
+		border-width: 1.5vw;
+	}
+	
+	#persona {
+		border-width: 1.5vw;
+	}
+	
+	#colors {}
+	
+	.action-box { gap: 1.5vh 0; }
+	
+	.action-item { font-size: 3.5vw; }
+	
+	.prox, .antr {
+		padding: 0.7vw 2vw;
+	}
+	
+	.cor { transform: scale(2); }
+}
+
+/* Desktop médio: */
+@media (min-width: 992px) {}

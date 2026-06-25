@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- CONSOLE ERUDA: -->
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <!-- -- erudaConfig: -->
+  <script src="https://samuelk36br.github.io/meusCDNs/erudaConfig.js"></script>
+  
+  <!-- METAs: -->
+  <!-- -- resolução: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- -- mostrar acentos: -->
+  <meta charset="UTF-8">
+  
+  <!-- ICONE DO SITE: -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <!-- TÍTULO DO SITE: -->
+  <title>Pixelart Avatar</title>
+  
+  <!-- ESTILOS: -->
+  <!-- -- padrao.css: -->
+  <link rel='stylesheet' href='https://samuelk36br.github.io/meusCDNs/padrao.css'>
+  <!-- -- style.css: -->
+  <link rel='stylesheet' href='style.css'>
+  
+  <!-- CDNs ou IMPORTMAP: -->
+  <script type="importmap">
+    {
+    "imports": {
+      "api": "https://samuelk36br.github.io/meusCDNs/api.js"
+    }
+  }
+  </script>
+  
+  <!-- SCRIPTS: -->
+  <script type="module" src='script.js' defer></script>
+</head>
+
+<body class="hidden">
+  <header>
+    <h1>Pixelart Avatar</h1>
+    
+    <p id="criacao">
+      Feito por: <i>SamuelK36br</i>
+      <br>
+      25 de junho de 2026
+    </p>
+    
+    <p id="dicebear">
+      <a href="https://www.figma.com/community/file/1198754108850888330">Pixel Art</a> feita por: <a href="https://www.dicebear.com/">DiceBear</a>, licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.
+    </p>
+    
+    <p id="fonte">
+      Fonte: <a href="https://www.dafont.com/pt/cairopixel.font?text=PIXELART+AVATAR+pixelart+avatar&a=on&l[]=10&l[]=1">Cairopixel</a>, baixada em: <a href="https://www.dafont.com/pt/">DaFont.com</a>.
+    </p>
+  </header>
+  
+  <div id="avatar-box">
+    <div id="persona"></div>
+    
+    <div class="action-box" id="customs">
+      <div id="skin" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Cor de pele</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+      
+      <div id="beard" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Barba</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+      
+      <div id="clothes" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Roupa</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+      
+      <div id="eyes" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Olhos</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+      
+      <div id="glasses" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Óculos</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+      
+      <div id="hair" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Cabelo</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+      
+      <div id="hat" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Chapéu</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+      
+      <div id="mouth" class="action-item">
+        <button class="antr">&lt;&lt;</button>
+        <p>Boca</p>
+        <i class="count"></i>
+        <button class="prox">&gt;&gt;</button>
+      </div>
+    </div>
+    
+    <div class="action-box" id="colors">
+      <div id="backgroundColor" class="action-item">
+        <p>Cor de fundo</p>
+        <input class="cor" type="color" />
+        <i></i>
+      </div>
+      
+      <div id="clothingColor" class="action-item">
+        <p>Cor roupa</p>
+        <input class="cor" type="color">
+        <i></i>
+      </div>
+      
+      <div id="eyesColor" class="action-item">
+        <p>Cor olhos</p>
+        <input type="color" class="cor">
+        <i></i>
+      </div>
+      
+      <div id="glassesColor" class="action-item">
+        <p>Cor óculos</p>
+        <input type="color" class="cor">
+        <i></i>
+      </div>
+      
+      <div id="hairColor" class="action-item">
+        <p>Cor cabelo</p>
+        <input type="color" class="cor">
+        <i></i>
+      </div>
+      
+      <div id="hatColor" class="action-item">
+        <p>Cor chapéu</p>
+        <input type="color" class="cor">
+        <i></i>
+      </div>
+      
+      <div id="mouthColor" class="action-item">
+        <p>Cor boca</p>
+        <input type="color" class="cor">
+        <i></i>
+      </div>
+  </div>
+  </div>
+  
+  <footer>
+    <button id="redefinir">Redefinir</button>
+    <button id="baixar">Baixar</button>
+  </footer>
+</body>
+
+</html>
