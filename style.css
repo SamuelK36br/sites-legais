@@ -179,6 +179,15 @@ main {
   border-style: solid;
 }
 
+#pixelart-avatar {
+  background-color: #fff;
+  color: #000;
+  border-radius: 0;
+  box-shadow:
+  5px 5px 0 gray,
+  -5px -5px 0 gray;
+}
+
 /* ========================================= */
 /* >> CLASSES SCRIPTADAS: */
 /*...*/
