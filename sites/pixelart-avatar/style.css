@@ -120,6 +120,14 @@ footer button:hover {
 	 align-items: center;
 }
 
+.hex-value {
+	text-align: center;
+	font-size: 1em;
+	width: 7ch;
+	font-family: Cairopixel;
+	border: groove gainsboro 2px;
+}
+
 .prox, .antr {
 	padding: 1vw 3vw;
 	font-weight: bold;

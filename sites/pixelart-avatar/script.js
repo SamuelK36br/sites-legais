@@ -18,7 +18,9 @@ const antr = Array.from(document.getElementsByClassName("antr"));
 
 const count = Array.from(document.getElementsByClassName("count"));
 
-const cor = Array.from(document.getElementsByClassName("cor"));
+const cores = Array.from(document.getElementsByClassName("cor"));
+
+const hexValues = Array.from(document.getElementsByClassName('hex-value'));
 
 const baixar = document.getElementById('baixar');
 
@@ -103,10 +105,23 @@ function updateCustoms(e) {
 function updateColors(e) {
 	const id = e.target.parentElement.id;
 	const corEscolhida = e.target.value.split("#").pop();
-	const textoCor = e.target.nextElementSibling;
+	const hexValue = e.target.nextElementSibling;
 	
 	colors[id] = corEscolhida;
-	textoCor.innerHTML = "#" + corEscolhida;
+	hexValue.value = corEscolhida;
+		
+	updatePersona();
+	save.colors = colors;
+	save.set();
+}
+
+function updateHexValues(e) {
+	const id = e.target.parentElement.id;
+	const corEscolhida = e.target.value.split("#").pop();
+	const corInput = e.target.previousElementSibling;
+	
+	colors[id] = corEscolhida;
+	corInput.value = "#" + corEscolhida;
 	
 	updatePersona();
 	save.colors = colors;
@@ -138,7 +153,8 @@ function redefinirAvatar() {
 
 prox.forEach(b => b.onclick = updateCustoms);
 antr.forEach(b => b.onclick = updateCustoms);
-cor.forEach(i => i.onchange = updateColors);
+cores.forEach(i => i.onchange = updateColors);
+hexValues.forEach(hv => hv.onchange = updateHexValues);
 baixar.onclick = baixarAvatar;
 redefinir.onclick = redefinirAvatar;
 
@@ -153,13 +169,13 @@ count.forEach((c) => {
 	c.innerHTML = `(${key.i+1}/${key.arr.length})`;
 });
 
-/* Mostrar cores: */
-cor.forEach((c) => {
-	const textoCor = c.nextElementSibling
+/* Mostrar input cores: */
+cores.forEach((c) => {
 	const value = colors[c.parentElement.id];
+	const hexValue = c.nextElementSibling;
 	
-	textoCor.innerHTML = "#" + value;
 	c.value = "#" + value;
+	hexValue.value = value;
 });
 
 save.set();
